@@ -1,0 +1,80 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 6
+  - var title = 'Buttons'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'Pages',
+      "href": '#'
+    },
+    2: {
+      "title": 'Buttons',
+      "href": ''
+    }
+  },
+  'breadcrumbs-parallax'
+  )
+  section.section-50.section-md-75.section-md-100.section-lg-120.section-xl-150
+    .shell
+      h1 Buttons
+      p(style='max-width: 735px') Easily insert buttons and call-to-actions in any page, use amazing custom options to spice up your pages.
+      .range.offset-top-40.offset-md-top-60.offset-lg-top-70
+        .cell-xl-8.cell-lg-10
+          h2 Button sizes
+          p.offset-top-10 4 different sizes: large, default, middle and small
+          .group.offset-top-30.group-xl
+            a.btn.btn-lg.btn-default(href='#') Large
+            a.btn.btn-default(href='#') Default
+            a.btn.btn-sm.btn-default(href='#') Middle
+            a.btn.btn-xs.btn-default(href='#') Small
+      .range.offset-top-40.offset-md-top-60.offset-lg-top-70.offset-xl-top-90
+        .cell-xl-8.cell-lg-10
+          h2 Button shapes
+          p.offset-top-10 4 different shapes: default, round 1, round 2, and circle.
+          .group.offset-top-30.group-xl
+            a.btn.btn-default(href='#') Default
+            a.btn.btn-default.btn-round(href='#') round 1
+            a.btn.btn-default.btn-round-lg(href='#') round 2
+            a.btn.btn-default.btn-circle(href='#') Circle
+      .range.offset-top-40.offset-md-top-60.offset-lg-top-70.offset-xl-top-90
+        .cell-xl-8.cell-lg-10
+          h2 Buttons with Icons
+          p.offset-top-10 Buttons are fully integrated with 900+ icons.
+          .group.offset-top-30.group-xl
+            a.btn.btn-default.btn-icon.btn-icon-right(href='#') icon right
+              span.icon.fa-bomb
+            a.btn.btn-default.btn-icon.btn-icon-left(href='#')
+              span.icon.fa-briefcase
+              | icon left
+            a.btn.btn-default-outline.btn-icon.btn-icon-right(href='#') icon right
+              span.icon.fa-bomb
+            a.btn.btn-default-outline.btn-icon.btn-icon-left(href='#')
+              span.icon.fa-briefcase
+              | icon left
+      .range.offset-top-40.offset-md-top-60.offset-lg-top-70.offset-xl-top-90
+        .cell-xl-8.cell-lg-10
+          h2 Buttons with Shadow
+          p.offset-top-10 Enhance your buttons with a shadow effect.
+          .group.offset-top-30.group-xl
+            a.btn.btn-default.btn-shadow(href='#') Shadow
+            a.btn.btn-default-outline.btn-shadow(href='#') Shadow
+  // Page Footer
+  include ../sections/_footer-classic

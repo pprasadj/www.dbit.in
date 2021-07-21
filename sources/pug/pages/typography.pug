@@ -1,0 +1,140 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 6
+  - var title = 'Typography'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'Pages',
+      "href": '#'
+    },
+    2: {
+      "title": 'typography',
+      "href": ''
+    }
+  },
+  'breadcrumbs-parallax-02'
+  )
+  section.section-50.section-md-75.section-md-100.section-lg-120.section-xl-150
+    .shell
+      .range
+        .cell-lg-11.cell-xl-10
+          h1 H1 Poppins 84pt/90pt
+          p.inset-xl-right-120 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company.
+          h2 H2 Poppins 40pt/50pt
+          p.inset-xl-right-120 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company.
+          h3 H3 Poppins 30pt/38pt
+          p.inset-xl-right-120 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company.
+          h4 H4 Poppins 26pt/34pt
+          p.inset-xl-right-120 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company.
+          h5 H5 Poppins 24pt/32pt
+          p.inset-xl-right-120 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company.
+          h6 H6 Poppins 18pt/26pt
+          p.inset-xl-right-120.offset-top-20 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company.
+
+          h2.offset-top-60.offset-sm-top-70.offset-md-top-125 Blockquote
+          blockquote.quote-default.offset-top-20.text-sm-left
+            h5: q “ Sed velit nunc, accumsan nec convallis vitae, sollicitudin sit amet nisl. Aliquam ultricies felis vitae ex finibus, eget luctus est venenatis. Aliquam vel mauris posuere, viverra dui ut, facilisis quam. ”
+            h6.offset-top-30.offset-md-top-45: cite Peter Handerson
+            span.offset-top-10.small-xs Bachelor of Economics
+
+          h2.offset-top-60.offset-sm-top-70.offset-md-top-125 Text Formatting
+          p.offset-top-25.p-wrap
+            span.text-primary Link text
+            | .
+            ="\t"
+            span.text-school-bus-yellow Hover link text
+            | .
+            ="\t"
+            span.text-silver-chalice Press link
+            | .
+            ="\t"
+            span.text-bold This is a bold text.
+            ="\t"
+            span.mark Highlighted text.
+            ="\t"
+            span.text-strike Strikethrough text.
+            ="\t"
+            span.text-underline Underlined text.
+      .range.offset-top-60.offset-sm-top-70.offset-md-top-125
+        .cell-sm-6.cell-lg-4.cell-xl-3
+          h2 Unordered list
+          ul.list.list-marked.list-marked-primary.list-xs.offset-top-20
+            li Our company
+            li Our services
+            li Careers
+            li Certifications
+            li Our history
+        .cell-sm-6.cell-lg-4.cell-xl-3
+          h2 Ordered list
+          ol.list.list-xs.offset-top-20.list-order.text-left
+            li Our company
+            li Our services
+            li Careers
+            li Certifications
+            li Our history
+      h2.offset-top-60.offset-sm-top-70.offset-md-top-125 Icon List
+      .range
+        .cell-sm-6.cell-lg-4.cell-xl-3
+          span.icon.icon-primary.icon-xl.linearicons-graduation-hat.icon-typography
+          h5 Post-Graduate Education
+          p.text-justify Suspendisse potenti. Integer et sem facilisis, consequat neque ac, eleifend ex. Duis eu enim eu enim pellentesque varius. Phasellus lacus metus, iaculis.
+        .cell-sm-6.cell-lg-4.cell-xl-3.offset-top-50.offset-sm-top-0.cell-xl-preffix-1
+          span.icon.icon-primary.icon-xl.linearicons-library2.icon-typography
+          h5.postfix-xl-right--25 Online Courses
+          p.text-justify Nullam in tincidunt nunc. Maecenas fermentum justo ac libero dapibus, non scelerisque orci consequat. Nulla pharetra sollicitudin.
+        .cell-sm-6.cell-lg-4.cell-xl-3.offset-top-50.offset-lg-top-0.cell-xl-preffix-1
+          span.icon.icon-primary.icon-xl.linearicons-license2.icon-typography
+          h5 Paid E-Certificates
+          p.text-justify Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dapibus nibh orci, eu semper ex aliquam in. Sed libero justo mollis auctor tellus.
+
+      .range.offset-top-60.offset-sm-top-70.offset-md-top-125
+        .cell-xl-8.cell-lg-11
+          h2 Image centered
+          .offset-top-20
+            +jpg_responsive('typography-01-985x676')
+            p.offset-top-25 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company.
+
+          h2.offset-top-60.offset-sm-top-70.offset-md-top-125 Image left
+          .unit.unit-sm-horizontal.unit-spacing-xl.offset-top-25.text-sm-left
+            .unit-left
+              +jpg_responsive('typography-02-360x247')
+            .unit-body
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+              p.veil.reveal-md-block It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+
+          h2.offset-top-60.offset-sm-top-70.offset-md-top-125 Image right
+          .unit.unit-sm-horizontal.unit-spacing-xl.offset-top-25.text-sm-left
+            .unit-body
+              p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+              p.veil.reveal-md-block It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+            .unit-right
+              +jpg_responsive('typography-02-360x247')
+
+
+
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-classic

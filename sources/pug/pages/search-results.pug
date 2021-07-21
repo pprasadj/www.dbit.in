@@ -1,0 +1,26 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 6
+
+block title
+  title Search results
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  section.section-50
+    .shell
+      // RD Search
+      form.rd-search.offset-top-40(action="search-results.html", method="GET", data-search-live="rd-search-results-live")
+        .form-group
+          label(for="rd-search-form-input" class="form-label") Search
+          input(class="form-control" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+        button.rd-search-form-submit.material-icons-search(type='submit')
+      h2.offset-top-30 Search results
+      .rd-search-results.offset-top-30
+
+  // Page Footer
+  include ../sections/_footer-classic

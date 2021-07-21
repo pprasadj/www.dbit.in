@@ -1,0 +1,60 @@
+//- Img-set-dimensions
+
+//- imgPath - path to image
+//- imgClass - class for image
+
+mixin img-set-dimensions(imgPath, imgClass)
+  -
+    var pos = 0,
+        imgWidth,
+        imgHeight,
+        defPos,
+        xPos,
+        dotPos;
+
+    while(true) {
+      var tpmPos = imgPath.indexOf("-", pos);
+      if(tpmPos == -1) break;
+      defPos = tpmPos;
+      pos = defPos + 1;
+    }
+
+    xPos = imgPath.indexOf('x');
+    dotPos = imgPath.indexOf('.');
+
+    imgWidth = imgPath.substring(defPos + 1, xPos);
+    imgHeight = imgPath.substring(xPos + 1, dotPos);
+
+  img(src= imgPath, width= imgWidth, height= imgHeight, alt="", class= imgClass)
+
+//- Jpg image
+mixin jpg(name)
+  - var size = name.split('-').pop().split('x');
+  img(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1])
+
+//- Jpeg Responsive Circle
+mixin jpg_responsive-circle(name)
+  - var size = name.split('-').pop().split('x');
+  img.img-responsive.img-circle(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1])
+
+//- Jpeg Responsive
+mixin jpg_responsive(name)
+  - var size = name.split('-').pop().split('x');
+  img.img-responsive(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1])
+
+//- Png image
+mixin png(name)
+  - var size = name.split('-').pop().split('x');
+  img(src='images/' + name + '.png', alt='', width=size[0], height=size[1])
+
+//- Png image
+mixin png_responsive(name)
+  - var size = name.split('-').pop().split('x');
+  img.img-responsive(src='images/' + name + '.png', alt='', width=size[0], height=size[1])
+
+//- Thumbnail Default
+mixin thumbnail-default(image)
+  - var originalSize = image.name_orginal.split('-').pop()
+  figure.thumbnail-default
+    a(data-lightgallery='item' href='images/' + image.name_orginal + '.jpg')
+      +jpg_responsive(image.name)

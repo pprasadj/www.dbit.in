@@ -1,0 +1,102 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 1
+  - var title = 'About'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'about',
+      "href": ''
+    }
+  },
+  'breadcrumbs-parallax-01'
+  )
+
+  section.section-50.section-sm-top-80.section-md-top-100.section-lg-top-150.bg-image.bg-revail-lg.bg-top-right(style='background-image: url(images/bg-about-01.jpg)')
+    .shell
+      .range
+        .cell-lg-6
+          h1 About us
+          h2 Alma University – Innovative Education
+          p Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+          p Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+          .unit.unit-horizontal.unit-middle.unit-spacing-xl.text-left.unit-align-center.unit-md-align-left
+            .unit-left
+              +png_responsive('about-01-109x102')
+            .unit-body
+              h6 Samantha Smith
+              span.small Founder, Executive Director
+
+  // Counters
+  section.section-75.section-md-120.section-xl-130.bg-wild-sand
+    include ../sections/_section-counters
+
+  include ../sections/_section-out-team
+
+  ="\n"
+
+  section.bg-darker.section-75.section-md-120.section-lg-150.section-lg-bottom-130
+    .shell
+      .range.range-xs-center
+        .cell-lg-12.cell-md-8
+          .range.spacing-55
+            .cell-lg-5.cell-xl-6.spacing-40
+              h2 Our Core Values
+              .unit.unit-sm-horizontal.unit-spacing-custom.text-sm-left
+                .unit-left
+                  span.icon.icon-primary.icon-xl.linearicons-graduation-hat
+                .unit-body
+                  h5
+                    span.small TECHNOLOGies
+                    | Innovative education for our students
+                  p.inset-xl-right-40 Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue
+                    | ullamcorper ultricies nisi.
+              .unit.unit-sm-horizontal.unit-spacing-custom.text-sm-left
+                .unit-left
+                  span.icon.icon-primary.icon-xl.linearicons-license2
+                .unit-body
+                  h5
+                    span.small Certifications
+                    | Certified to deliver the best education
+                  p.inset-xl-right-40 PNam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem
+                    | maecenas nec odio et ante tincidunt tempus.
+              .unit.unit-sm-horizontal.unit-spacing-custom.text-sm-left
+                .unit-left
+                  span.icon.icon-primary.icon-xl.linearicons-library2
+                .unit-body
+                  h5
+                    span.small Distance Education
+                    | Best education even for foreign students
+                  p.inset-xl-right-40 Duis leo. Sed fringilla mauris sit amet nibh donec
+                    | sodales sagittis magna.
+            .cell-lg-7.cell-xl-6.spacing-40
+              h2 Our mission
+              p Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.
+              .embed-responsive.embed-responsive-16by9
+                iframe.embed-responsive-item(src='https://www.youtube.com/embed/POx1160Rtf0')
+
+
+
+  ="\n"
+
+  include ../sections/_section-testimonails
+
+  // Page Footer
+  include ../sections/_footer-classic

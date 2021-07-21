@@ -1,0 +1,105 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 3
+  - var title = 'News'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'News',
+      "href": '#'
+    }
+  },
+  'breadcrumbs-parallax-01'
+  )
+
+  section.section-75.section-md-100.section-lg-150
+    .shell
+      .range
+        .cell-lg-6
+          h1 News
+          p Sed tincidunt, ex id tempor dignissim, nibh orci cursus risus, vulputate egestas lectus orci porta enim. Nullam convallis magna ex. Nulla condimentum at sapien ac consequat.
+      .range.range-md-middle.blog.range-sm-center.range-md-left.range-news
+        .cell-lg-4.cell-md-5
+          a(href='blog-post.html')
+            +jpg_responsive('blog-01-435x280')
+        .cell-lg-6.cell-md-7.cell-xl-5.offset-top-30.offset-md-top-0.cell-sm-8
+          h5
+            a.text-primary(href='blog-post.html') Consider MBA Programs That
+              br.veil.reveal-xl-block
+              ="\t"
+              | Offer Summer Prep
+          p.postfix-xl-right--10 Donec placerat tincidunt auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue pretium enim vel aliquet. Etiam et risus ut libero auctor ultrices. Sed porta elit id ipsum tincidunt elementum.
+          p.text-darker: time(datetime='2016') September 14, 2018
+
+      .range.range-md-middle.blog.range-sm-center.range-md-left.range-news
+        .cell-lg-4.cell-md-5
+          a(href='blog-post.html')
+            +jpg_responsive('blog-02-435x280')
+        .cell-lg-6.cell-md-7.cell-xl-5.offset-top-30.offset-md-top-0.cell-sm-8
+          h5
+            a.text-primary(href='blog-post.html') New Alma University Housing
+              br.veil.reveal-xl-block
+              ="\t"
+              | Master Plan for Fall 2018
+          p.postfix-xl-right--10 Sed commodo tempor elit, sed egestas tellus sagittis eu. Phasellus tristique vel massa nec laoreet. Phasellus sed sapien non dolor aliquam elementum. Etiam eu velit nisi. . Nullam convallis magna ex.
+          p.text-darker: time(datetime='2016') August 27, 2018
+
+      .range.range-md-middle.blog.range-sm-center.range-md-left.range-news
+        .cell-lg-4.cell-md-5
+          a(href='blog-post.html')
+            +jpg_responsive('blog-03-435x280')
+        .cell-lg-6.cell-md-7.cell-xl-5.offset-top-30.offset-md-top-0.cell-sm-8
+          h5
+            a.text-primary(href='blog-post.html') 5 Ways to Pay for Community
+              br.veil.reveal-xl-block
+              ="\t"
+              | College in the USA
+          p.postfix-xl-right--10 Donec a libero nec quam blandit ornare eu eu dolor. Integer sed mattis erat, vel pharetra nisl. Nulla pulvinar consequat metus, eu aliquet orci rutrum sit amet. Donec finibus iaculis ex.
+          p.text-darker: time(datetime='2016') August 14, 2018
+
+      .range.range-md-middle.blog.range-sm-center.range-md-left.range-news
+        .cell-lg-4.cell-md-5
+          a(href='blog-post.html')
+            +jpg_responsive('blog-04-435x280')
+        .cell-lg-6.cell-md-7.cell-xl-5.offset-top-30.offset-md-top-0.cell-sm-8
+          h5
+            a.text-primary(href='blog-post.html') Lots of Students Seek Admission
+              br.veil.reveal-xl-block
+              ="\t"
+              | to Alma’s 2018 Admission Class
+          p.postfix-xl-right--10 Integer diam quam, molestie sed sapien at, ornare lobortis nibh. Phasellus sem nulla, porta non lorem vitae, condimentum finibus est. Donec ipsum turpis, euismod id odio nec, finibus dapibus mi.
+          p.text-darker: time(datetime='2016') April 27, 2018
+
+      .range.range-md-middle.blog.range-sm-center.range-md-left.range-news
+        .cell-lg-4.cell-md-5
+          a(href='blog-post.html')
+            +jpg_responsive('blog-05-435x280')
+        .cell-lg-6.cell-md-7.cell-xl-5.offset-top-30.offset-md-top-0.cell-sm-8
+          h5
+            a.text-primary(href='blog-post.html') Early Success for Innovative Program Students
+          p.postfix-xl-right--25 Donec finibus iaculis ex. Aliquam sit amet massa quis nulla imperdiet finibus eget sit amet augue. Etiam bibendum tellus et mauris accumsan fermentum. Quisque efficitur maximus orci et tempus.
+          p.text-darker: time(datetime='2016') December 27, 2017
+
+      ul.pagination-custom
+        li: span.disabled Prev
+        li: a(href='#') Next
+
+  // Page Footer
+  include ../sections/_footer-classic

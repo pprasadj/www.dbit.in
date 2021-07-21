@@ -1,0 +1,119 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 4
+  - var title = 'Cobbles Gallery'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'Gallery',
+      "href": '#'
+    },
+    2: {
+      "title": 'Cobbles Gallery',
+      "href": '#'
+    }
+  },
+  'breadcrumbs-parallax-01'
+  )
+
+  section.section-75.section-md-100.section-lg-150
+    .shell
+      .range.range-md-justify
+        .cell-md-8.cell-lg-7.cell-xl-6
+          .inset-md-right-30.inset-lg-right-0
+            h1 Our Gallery
+            p Fusce euismod libero at blandit dapibus. Etiam in erat vel turpis pharetra semper. Aenean a dignissim libero, et posuere est.
+    .container
+      .row
+        // Isotope Filters
+        .col-lg-12
+          .isotope-filters.isotope-filters-horizontal
+            ul.list-isotop
+              li
+                a.active(data-isotope-filter='*', data-isotope-group='gallery', href='#') All
+              li
+                a(data-isotope-filter='Housing', data-isotope-group='gallery', href='#') Housing
+              li
+                a(data-isotope-filter='Campus', data-isotope-group='gallery', href='#') Campus
+              li
+                a(data-isotope-filter='Studying', data-isotope-group='gallery', href='#') Studying
+              li
+                a(data-isotope-filter='Sports', data-isotope-group='gallery', href='#') Sports
+
+        // Isotope Content
+        .col-lg-12
+          .row.isotope.row-cobbles(data-isotope-layout='masonry', data-isotope-group='gallery')
+
+            .isotope-item.col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-3(data-filter='Housing')
+              .product.product-custom
+                +jpg_responsive('projects-cobbles-03-360x319')
+                a(href='single-event.html')
+                    .product-content
+                      .small Affordable Accommodation
+
+            .isotope-item.col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-3(data-filter='Housing')
+              .product.product-custom
+                +jpg_responsive('projects-cobbles-02-360x319')
+                a(href='single-event.html')
+                  .product-content
+                    .small Online Education
+
+            .isotope-item.col-xs-12.col-sm-6.col-lg-6.col-xl-6(data-filter='Studying')
+              .product.product-custom
+                +jpg_responsive('projects-cobbles-01-736x653')
+                a(href='single-event.html')
+                  .product-content
+                    .small Educational Resources
+
+            .isotope-item.col-xs-12.col-sm-6.col-lg-6.col-xl-6(data-filter='Studying')
+              .product.product-custom
+                +jpg_responsive('projects-cobbles-04-735x319')
+                a(href='single-event.html')
+                  .product-content
+                    .small Extensive Library
+
+            .isotope-item.col-xs-12.col-sm-6.col-md-9.col-lg-9.col-xl-9(data-filter='Sports')
+              .product.product-custom
+                +jpg_responsive('projects-cobbles-07-1110x653')
+                a(href='single-event.html')
+                  .product-content
+                    .small Dining Rooms
+
+            .isotope-item.col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-3(data-filter='Campus')
+              .product.product-custom
+                +jpg_responsive('projects-cobbles-05-360x319')
+                a(href='single-event.html')
+                  .product-content
+                    .small Sports Facilities
+
+            .isotope-item.col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-3(data-filter='Campus')
+              .product.product-custom
+                +jpg_responsive('projects-cobbles-06-360x319')
+                a(href='single-event.html')
+                  .product-content
+                    .small University Park
+
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-classic

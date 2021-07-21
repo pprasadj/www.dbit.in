@@ -1,0 +1,126 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 1
+  - var title = 'Team member'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'About',
+      "href": 'about.html'
+    },
+    2: {
+      "title": 'Team member profile',
+      "href": '#'
+    }
+  },
+  'breadcrumbs-parallax-02'
+  )
+
+  section.section-75.section-md-100.section-lg-150
+    .shell.team-member
+      .range.range-sm-center
+        .cell-md-8.cell-lg-12.cell-sm-10
+          .range
+            .cell-lg-5
+              +jpg_responsive('team-member-01-610x741')
+            .cell-lg-preffix-1.cell-lg-6.cell-xl-5
+              h1 Jane Johnson
+              h6 Web Design
+              p Curabitur convallis ante nisi, et lacinia dui auctor at. Sed laoreet suscipit hendrerit. Etiam quis elit erat. Cras placerat imperdiet ante, malesuada mollis turpis lobortis quis. In lacus mi, luctus nec odio non, commodo accumsan justo. Integer gravida at massa eget facilisis. Vestibulum urna est, mollis nec tincidunt sed, ultricies vel magna.
+              h5.team-member-quote “ I’m glad to be a part of Alma University, which delivers the best education services to English-speaking students in the US and all over the world. ”
+              p Praesent a erat non libero ornare sollicitudin eu non mauris. Aliquam vitae nunc et libero mollis.
+              .unit.unit-sm-horizontal.unit-middle.unit-spacing-lg.unit-align-center.unit-md-align-left
+                .unit-left
+                  a.btn.btn-default.btn-form(href='#') Contact Jane
+                .unit-body
+                  ul.list-inline-lg
+                    li: a.icon.icon-sm.text-primary.fa-facebook(href='#')
+                    li: a.icon.icon-sm.text-primary.fa-twitter(href='#')
+                    li: a.icon.icon-sm.text-primary.fa-instagram(href='#')
+
+
+  section.section-75.section-md-120.section-lg-120.section-xl-150.bg-table
+    .shell
+      h2
+        span.small Latest news
+        | Popular Courses
+      .range.range-sm-center.text-md-left.spacing-55
+        .cell-md-6.cell-lg-4.cell-sm-8
+          article.blog-grid.blog-grid-custom
+            a.blog-grid-image(href='blog-post.html')
+              +jpg_responsive('home-3-06-485x250')
+              .blog-grid-title $340
+            .blog-grid-content
+              h5: a.text-darker(href='blog-post.html') Preparatory Course
+              p Are you looking for proper education but don’t know where to begin? Then our Preparatory Course will be a great choice for you. They include everything you need to...
+              p.text-darker First-year students
+
+        .cell-md-6.cell-lg-4.cell-sm-8
+          article.blog-grid.blog-grid-custom
+            a.blog-grid-image(href='blog-post.html')
+              +jpg_responsive('home-3-07-485x250')
+              .blog-grid-title.blog-grid-title-discount free
+            .blog-grid-content
+              h5: a.text-darker(href='blog-post.html') Personal Branding
+              p We offer this free course to students who are looking for a better understanding of personal branding techniques and methods. Developed by our teachers, this course is...
+              p.text-darker Business
+
+        .cell-md-6.cell-lg-4.cell-sm-8
+          article.blog-grid.blog-grid-custom
+            a.blog-grid-image(href='blog-post.html')
+              +jpg_responsive('home-3-08-485x250')
+              .blog-grid-title $620
+            .blog-grid-content
+              h5: a.text-darker(href='blog-post.html') Basics of HTML & CSS
+              p Take this course to learn more about the modern web development in all its variety. The course includes the basics of HTML, CSS, JS, and other important web...
+              p.text-darker Development
+
+
+
+  ="\n"
+
+  section.section-75.section-sm-80.section-md-120.section-xl-130
+    .shell
+      h2 Certifications
+      .range(data-lightgallery="group")
+        .cell-sm-3
+          +thumbnail-default({
+            'name_orginal': 'team-member-04-original-996x749',
+            'name': 'team-member-04-290x218'
+          })
+        .cell-sm-3
+          +thumbnail-default({
+            'name_orginal': 'team-member-04-original-996x749',
+            'name': 'team-member-04-290x218'
+          })
+        .cell-sm-3
+          +thumbnail-default({
+            'name_orginal': 'team-member-04-original-996x749',
+            'name': 'team-member-04-290x218'
+          })
+        .cell-sm-3
+          +thumbnail-default({
+            'name_orginal': 'team-member-04-original-996x749',
+            'name': 'team-member-04-290x218'
+          })
+
+
+  // Page Footer
+  include ../sections/_footer-classic

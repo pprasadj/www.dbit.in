@@ -1,0 +1,119 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+	- var activeIndex = 2
+	- var title = 'Courses'
+
+block title
+	title Courses
+
+block page
+	// Page Header
+	include ../sections/_header-secondary
+
+	// Page Content
+	+breadcrumb-classic(
+	title,
+	{
+		0: {
+			"title": 'home',
+			"href": 'index.html'
+		},
+		1: {
+			"title": 'courses',
+			"href": ''
+		}
+	},
+	'breadcrumbs-parallax-02'
+	)
+
+
+
+	="\n"
+
+	section.section-75.section-md-120.section-lg-120.section-xl-150.bg-table
+		.shell
+			h2
+				span.small Latest news
+				| Popular Courses
+			.range.range-sm-center.text-md-left.spacing-55
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-06-485x250')
+							.blog-grid-title $340
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Preparatory Course
+							p Are you looking for proper education but don’t know where to begin? Then our Preparatory Course will be a great choice for you. They include everything you need to...
+							p.text-darker First-year students
+
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-07-485x250')
+							.blog-grid-title.blog-grid-title-discount free
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Personal Branding
+							p We offer this free course to students who are looking for a better understanding of personal branding techniques and methods. Developed by our teachers, this course is...
+							p.text-darker Business
+
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-08-485x250')
+							.blog-grid-title $620
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Basics of HTML & CSS
+							p Take this course to learn more about the modern web development in all its variety. The course includes the basics of HTML, CSS, JS, and other important web...
+							p.text-darker Web Development
+
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-09-485x250')
+							.blog-grid-title.blog-grid-title-new new
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Android Apps Development
+							p This course blends theory and practice to help you build great apps the right way. In this course, you'll work with instructors step-by-step to build a cloud-connected...
+							p.text-darker Programming
+
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-10-485x250')
+							.blog-grid-title $340
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Online Marketing
+							p Online marketing course explores several aspects of the new digital marketing environment, including topics such as digital marketing analytics, search engine optimization...
+							p.text-darker Marketing
+
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-11-485x250')
+							.blog-grid-title $620
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Business Data Analysis
+							p Our new course brings together academic professionals and experienced practitioners to share real-world data analytics skills you can use to grow your business...
+							p.text-darker Business
+
+
+
+			.range.range-md-left.range-sm-center
+				.cell-md-12
+					.pagination-block
+						.prev: span.disabled Prev
+						ul
+							li: span.disabled 1
+							li: a(href='#') 2
+							li: a(href='#') 3
+							li: a(href='#') 4
+							li: a(href='#') 5
+							li: a(href='#') 6
+						.next: a(href='#')  Next
+	="\n"
+
+	// Page Footer
+	include ../sections/_footer-classic

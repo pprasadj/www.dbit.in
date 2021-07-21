@@ -1,0 +1,125 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 6
+  - var title = 'Tabs'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'Pages',
+      "href": '#'
+    },
+    2: {
+      "title": 'Tabs & Accordions',
+      "href": ''
+    }
+  },
+  'breadcrumbs-parallax-02'
+  )
+  section.section-50.section-md-75.section-md-100.section-lg-120.section-xl-150
+    .shell
+      h1 Tabs & Accordions
+      .range.offset-lg-top-40
+        .cell-lg-8.cell-xl-6
+          h2 Classic Horizontal Tabs
+          .responsive-tabs.responsive-tabs-default.responsive-tabs-default-classic.offset-top-40
+            ul.resp-tabs-list
+              li Tab 1
+              li Tab 2
+              li Tab 3
+              li Tab 4
+              li Tab 5
+            .resp-tabs-container.text-sm-left
+              div Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.  Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+              div The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.   Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.  With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+              div We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.  Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.  Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us.
+              div Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.  You will always know where you are now and will be able to skip from one page to another with a single mouse click.  With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+              div  Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+
+
+          h2.offset-top-60.offset-md-top-70 Classic Vertical Tabs
+          .responsive-tabs.responsive-tabs-default.responsive-tabs-default-classic.responsive-tabs-default-classic-vertical.offset-top-40
+            ul.resp-tabs-list
+              li Tab 1
+              li Tab 2
+              li Tab 3
+              li Tab 4
+              li Tab 5
+            .resp-tabs-container.text-sm-left
+              div Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+              div The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+              div We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+              div Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.  You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+              div  Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+          h2.offset-top-60.offset-md-top-70 Horizontal Button Tabs
+          .responsive-tabs.responsive-tabs-default.offset-top-40
+            ul.resp-tabs-list
+              li Tab 1
+              li Tab 2
+              li Tab 3
+              li Tab 4
+            .resp-tabs-container.text-sm-left
+              div Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.  Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+              div The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.   Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.  With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+              div We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.  Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.  Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us.
+              div Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.  You will always know where you are now and will be able to skip from one page to another with a single mouse click.  With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+
+          h2.offset-top-60.offset-md-top-70 Vertical Button Tabs
+          .responsive-tabs.responsive-tabs-default.responsive-tabs-default-vertical.offset-top-40
+            ul.resp-tabs-list
+              li Tab 1
+              li Tab 2
+              li Tab 3
+              li Tab 4
+            .resp-tabs-container.text-sm-left
+              div Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.  Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+              div The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.   Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.  With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+              div We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.  Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click.  Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us.
+              div Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.  You will always know where you are now and will be able to skip from one page to another with a single mouse click.  With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. You will always know where you are now and will be able to skip from one page to another with a single mouse click.
+
+          h2.offset-top-60.offset-md-top-70 Classic Accordion
+          .responsive-tabs.resp-easy-accordion.offset-top-40.responsive-tabs-accordion(data-type='accordion')
+            ul.resp-tabs-list
+              li Can I track my order?
+              li How can I change something in my order?
+              li How can I pay for my order?
+              li How long will my order take to be delivered?
+            .resp-tabs-container
+              div Yes, you can! After placing your order you will receive an order confirmation via email. Each order starts production 15 minutes after your order is placed. Within a few hours of you placing your order, you will receive an expected delivery time. When the order will be ready for delivery, you will receive another email with the tracking number and a link to trace the order online with the courier.
+              div If you need to change something in your order, please contact us immediately. We usually process orders within 30 minutes, and once we have processed your order, we will be unable to make any changes.
+              div We accept Visa, MasterCard, and American Express credit and debit cards for your convenience.
+              div Delivery times will depend on your location. Once payment is confirmed your order will be packaged. Delivery can be expected within a day.
+
+          h2.offset-top-60.offset-md-top-70 Alternative Accordion
+          .responsive-tabs.resp-easy-accordion.offset-top-40.responsive-tabs-accordion.responsive-tabs-accordion-alternative(data-type='accordion')
+            ul.resp-tabs-list
+              li Can I track my order?
+              li How can I change something in my order?
+              li How can I pay for my order?
+              li Can I return an item?
+              li Can I return an item?
+            .resp-tabs-container
+              div Yes, you can! After placing your order you will receive an order confirmation via email. Each order starts production 15 minutes after your order is placed. Within a few hours of you placing your order, you will receive an expected delivery time. When the order will be ready for delivery, you will receive another email with the tracking number and a link to trace the order online with the courier.
+              div If you need to change something in your order, please contact us immediately. We usually process orders within 30 minutes, and once we have processed your order, we will be unable to make any changes.
+              div We accept Visa, MasterCard, and American Express credit and debit cards for your convenience.
+              div Delivery times will depend on your location. Once payment is confirmed your order will be packaged. Delivery can be expected within a day.
+              div Please contact our administrators for more information on returning products purchased on our website.
+  // Page Footer
+  include ../sections/_footer-classic

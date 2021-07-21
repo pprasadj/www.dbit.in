@@ -1,0 +1,127 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+	- var activeIndex = 2
+	- var title = 'Single Service'
+
+block title
+	title= title
+
+block page
+	// Page Header
+	include ../sections/_header-secondary
+
+	// Page Content
+	+breadcrumb-classic(
+	title,
+	{
+		0: {
+			"title": 'home',
+			"href": 'index.html'
+		},
+		1: {
+			"title": 'Courses',
+			"href": 'courses.html'
+		},
+		2: {
+			"title": 'Single Course',
+			"href": ''
+		}
+	},
+	'breadcrumbs-parallax-02'
+	)
+
+	section.section-75.section-md-100.section-lg-150
+		.shell
+			.range.range-md-justify
+				.cell-md-8.cell-lg-7.cell-xl-6
+					.inset-md-right-30.inset-lg-right-0
+						h1.heading-reduced Online Marketing
+						.box-modern
+							.box-modern-item
+								.unit.unit-vertical.unit-sm-horizontal.unit-spacing-xs.align-items-center
+									.unit-left
+										img.img-circle(src="images/single-course-01-66x66.jpg" width="66" height="66" alt="")
+									.unit-body
+										.box-modern-info
+											span Instructor:
+											span.box-modern-info-bottom John Doe
+							.box-modern-item
+								.box-modern-info
+									span Categories:
+									span.box-modern-info-bottom Marketing
+							.box-modern-item
+								.box-modern-info
+									span Price:
+									span.box-modern-info-bottom.text-primary $340
+
+							.box-modern-item
+								a.btn.btn-sunglow.btn-custom(href="#") buy
+
+
+						p Suspendisse potenti. Etiam dictum erat eros, ac rhoncus risus faucibus vel. Vivamus lacus ligula in, convallis in ex. Maecenas vehicula vehicula enim in commodo. Praesent neque tellus, iaculis ac sagittis quis, lacinia vitae leo. Suspendisse potenti. Integer et sem facilisis, consequat neque ac, eleifend ex. Duis eu enim eu enim pellentesque varius. Phasellus lacus metus, iaculis vel faucibus in, bibendum sit amet tortor.
+						.well-custom
+							h5 This course will allow you to better understand various techniques of digital marketing.
+						p Suspendisse potenti. Etiam dictum erat eros, ac rhoncus risus faucibus vel. Fusce eu mollis purus, id convallis mi. Vivamus lacus ligula, accumsan et egestas in, convallis in ex. Maecenas vehicula vehicula enim in commodo. Praesent neque tellus, iaculis ac sagittis quis, lacinia vitae leo. Suspendisse potenti. Integer et sem facilisis, consequat neque ac, eleifend ex. Duis eu enim eu enim pellentesque varius. Phasellus lacus metus, iaculis vel faucibus in, bibendum sit amet tortor. Quisque volutpat vehicula massa et imperdiet. Nulla lacinia felis enim, eu euismod ante placerat eget.
+				.cell-md-4.cell-lg-4.cell-xl-3
+					.well-custom-1
+						h4.text-regular Course features
+						ul.list-xs.offset-top-40.text-darker
+							li
+								| Duration:&nbsp;
+								span.text-primary 2 weeks
+							li
+								| Lectures:&nbsp;
+								span.text-primary 7
+							li
+								| Pass Percentage:&nbsp;
+								span.text-primary 90
+							li
+								| Max Retakes:&nbsp;
+								span.text-primary 3
+
+
+	section.section-30
+		.shell
+			h2 Related Events
+			.range
+				.cell-md-4.cell-sm-6
+					+jpg_responsive('team-member-02-485x555')
+					h6: a(href='#') New Beginnings Orientation Event
+					p
+						a.text-content(href='#') First-year
+						span ,
+						="\t"
+						a.text-content(href='#') Orientation
+
+				.cell-md-4.cell-sm-6.offset-top-40.offset-sm-top-0
+					+jpg_responsive('team-member-03-485x555')
+					h6: a(href='#') Student Election Basics
+					p
+						a.text-content(href='#') Event
+						span ,
+						="\t"
+						a.text-content(href='#') Conference
+				.cell-md-4.cell-sm-6.offset-top-40.offset-md-top-0
+					+jpg_responsive('team-member-04-485x555')
+					h6: a(href='#') Tips for Your Next Exam
+					p
+						a.text-content(href='#') Conference
+						span ,
+						="\t"
+						a.text-content(href='#') Undergraduates
+
+	include ../sections/_section-testimonails
+
+	include ../sections/_section-form
+
+
+	section.section-30.section-sm-75
+		.shell
+			.range
+
+
+	// Page Footer
+	include ../sections/_footer-classic

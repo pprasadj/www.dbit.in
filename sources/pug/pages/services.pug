@@ -1,0 +1,62 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+	- var activeIndex = 6
+	- var title = 'Services'
+
+block title
+	title= title
+
+block page
+	// Page Header
+	include ../sections/_header-secondary
+
+	// Page Content
+	+breadcrumb-classic(
+	title,
+	{
+		0: {
+			"title": 'home',
+			"href": 'index.html'
+		},
+		1: {
+			"title": 'Pages',
+			"href": '#'
+		},
+		2: {
+			"title": 'Services',
+			"href": '#'
+		}
+	},
+	'breadcrumbs-parallax-02'
+	)
+
+	section.section-75.section-md-100.section-lg-150
+		.shell
+			.range.range-sm-center
+				.cell-md-8.cell-lg-12.cell-sm-9
+					.range
+						.cell-lg-7.cell-xl-6.cell-md-8
+							h1 Services
+							p Donec ac orci ultricies, vestibulum odio eget, fringilla est. Cras mollis auctor tellus, quis imperdiet velit pretium et. Mauris pharetra nibh sed pulvinar porta. Praesent sed sodales metus.
+					.range.range-lg-middle
+						.cell-lg-7.cell-xl-6
+							.inset-lg-right-30.inset-xl-right-0
+								h3
+									span.small What we offer our students
+									| At Alma University, we aim to give our students what they need to become true specialsts in their profession, including educational services and resources.
+								p Learn more about what we can offer you.
+						.cell-lg-5.cell-xl-preffix-1
+							+jpg_responsive('services-01-610x390')
+
+
+	include ../sections/_section-services-transparent
+	include ../sections/_section-testimonails
+	include ../sections/_section-form
+	include ../sections/_section_brands
+
+
+	// Page Footer
+	include ../sections/_footer-classic

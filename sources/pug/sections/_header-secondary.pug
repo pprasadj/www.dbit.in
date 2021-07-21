@@ -1,0 +1,112 @@
+header.page-head
+  .rd-navbar-wrap
+    nav.rd-navbar.rd-navbar-secondary(data-stick-up-clone='true' , data-layout='rd-navbar-fixed', data-md-layout='rd-navbar-static', data-md-device-layout='rd-navbar-fixed', data-lg-layout='rd-navbar-static', data-lg-device-layout="rd-navbar-static",  data-lg-stick-up-offset="252px")
+      .rd-navbar-inner
+        span.small Your #1 Place for Higher Education
+        ul.list-inline.list-inline-lg.offset-top-0
+          li: a.ioon.icon-sm.icon-silver-chalice.fa-facebook(href='#')
+          li: a.ioon.icon-sm.icon-silver-chalice.fa-twitter(href='#')
+          li: a.ioon.icon-sm.icon-silver-chalice.fa-instagram(href='#')
+          li: a.ioon.icon-sm.icon-silver-chalice.fa-google-plus(href='#')
+          li: a.ioon.icon-sm.icon-silver-chalice.fa-pinterest-p(href='#')
+      .rd-navbar-inner
+        // RD Navbar Panel
+        .rd-navbar-panel
+          // RD Navbar Toggle
+          button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+            span
+          button.rd-navbar-collapse-toggle(data-rd-navbar-toggle='.rd-navbar-collapse')
+            span
+          .rd-navbar-brand
+            a.brand-name(href='index.html')
+              span.brand-logo.veil ALMA UNIVERSITY
+              img(src="images/brand-default-178x58.png", width="178", height="58", alt="ALMA")
+
+        .rd-navbar-collapse.animated
+          .rd-navbar-collapse-items
+            ul.list-inline.text-center.text-lg-left
+              li
+                .unit.unit-horizontal.unit-spacing-xs
+                  .unit-left
+                    span.icon.icon-primary.fa-phone
+                  .unit-body
+                    .title
+                      span.small student SUPPORT
+                    h6
+                      a(href='tel:#') 1-646-325-0357
+              li
+                .unit.unit-horizontal.unit-spacing-xs
+                  .unit-left
+                    span.icon.icon-primary.fa-map-marker
+                  .unit-body
+                    .title
+                      span.small Address
+                    h6
+                      a(href='#') 1919  Middleville Rd, Los Angeles, CA
+
+              li
+                .unit.unit-horizontal.unit-spacing-xs
+                  .unit-left
+                    span.icon.icon-primary.fa-envelope
+                  .unit-body
+                    .title
+                      span.small Email
+                    h6
+                      a(href='mailto:#') info@demolink.org
+          .rd-navbar-collapse-items
+            ul.list-inline.list-inline-lg.offset-top-0
+              li: a.ioon.icon-sm.icon-silver-chalice.fa-facebook(href='#')
+              li: a.ioon.icon-sm.icon-silver-chalice.fa-twitter(href='#')
+              li: a.ioon.icon-sm.icon-silver-chalice.fa-instagram(href='#')
+              li: a.ioon.icon-sm.icon-silver-chalice.fa-google-plus(href='#')
+              li: a.ioon.icon-sm.icon-silver-chalice.fa-pinterest-p(href='#')
+      .rd-navbar-inner
+        .rd-navbar-nav-wrap
+          // RD Navbar Nav
+          ul.rd-navbar-nav
+            li(class=(activeIndex == 0 ? 'active' : ''))
+              a(href='index.html') Home
+            li(class=(activeIndex == 1 ? 'active' : ''))
+              a(href='about.html') About Us
+              ul.rd-navbar-dropdown
+                li: a(href='history.html') History
+                li: a(href='our-team.html') Our team
+                li: a(href='team-member.html') Team Member
+                li: a(href='careers.html') Careers
+            li(class=(activeIndex == 2 ? 'active' : ''))
+              a(href='courses.html') Courses
+              // RD Navbar Dropdown
+              ul.rd-navbar-dropdown
+                li: a(href='single-course.html') Single Course
+
+            li(class=(activeIndex == 3 ? 'active' : ''))
+              a(href='news.html') News
+              ul.rd-navbar-dropdown
+                li: a(href='blog-post.html') Post Page
+
+            li(class=(activeIndex == 4 ? 'active' : ''))
+              a(href='#') Gallery
+              ul.rd-navbar-dropdown
+                li: a(href='cobbles-gallery.html') Cobbles Gallery
+                li: a(href='padding-gallery.html') Padding Gallery
+
+            li(class=(activeIndex == 5 ? 'active' : ''))
+              a(href='contacts.html') Contact us
+            li(class=(activeIndex == 6 ? 'active' : ''))
+              a(href='#') Pages
+              ul.rd-navbar-dropdown
+                li: a(href='in-the-news.html') In the News
+                li: a(href='events.html') Events
+                li: a(href='services.html') Services
+                li: a(href='single-event.html') Single Event
+                li: a(href='typography.html') Typography
+                li: a(href='tabs.html') Tabs
+                li: a(href='buttons.html') Buttons
+                li: a(href='table.html') Tables
+                li: a(href='search-results.html') Search Results
+                li: a(href='forms.html') Forms
+                li: a(href='page-404.html') Page 404
+                li: a(href='page-503.html') Page 503
+                li: a(href='coming-soon.html') Coming Soon
+            li
+              a(href='#') Support alma

@@ -1,0 +1,112 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+	- var activeIndex = 6
+	- var title = 'Events'
+
+block title
+	title= title
+
+block page
+	// Page Header
+	include ../sections/_header-secondary
+
+	// Page Content
+	+breadcrumb-classic(
+	title,
+	{
+		0: {
+			"title": 'home',
+			"href": 'index.html'
+		},
+		1: {
+			"title": 'Pages',
+			"href": '#'
+		},
+		2: {
+			"title": 'Events',
+			"href": '#'
+		}
+	},
+	'breadcrumbs-parallax-01'
+	)
+
+	section.section-75.section-md-100.section-lg-150
+		.shell.text-sm-left
+			.range
+				.cell-lg-6.cell-md-8
+					h1 Events
+					p On this page you can read the latest news from our company and our partners as well as recent updates from the world of construction business.
+			.range.blog
+				.cell-md-2.cell-sm-3
+					p.text-darker: time(datetime='2018') April 7, 2018
+				.cell-md-6.cell-lg-6.cell-xl-5.cell-sm-7.offset-top-10.offset-sm-top-0
+					a(href='single-event.html')
+						+jpg_responsive('blog-line-01-610x393')
+					h5
+						a.text-primary(href='single-event.html') New Beginnings Orientation Event: All First-Year
+							br.veil.reveal-xl-block
+							="\t"
+							| Students are Invited!
+					p.postfix-xl-right--10 Curabitur convallis ante nisi, et lacinia dui auctor at. Sed laoreet suscipit hendrerit. Etiam quis elit erat. Cras placerat imperdiet ante, malesuada mollis turpis lobortis quis. In lacus mi, luctus nec odio non, commodo accumsan justo. Integer gravida at massa eget facilisis.
+
+			.range.blog
+				.cell-md-2.cell-sm-3
+					p.text-darker: time(datetime='2018') June 16, 2018
+				.cell-md-6.cell-lg-6.cell-xl-5.cell-sm-7.offset-top-10.offset-sm-top-0
+					a(href='single-event.html')
+						+jpg_responsive('blog-line-02-610x393')
+					h5
+						a.text-primary(href='single-event.html') Student Election Basics: Learn How Your Choice May Influence the Further Study
+					p.postfix-xl-right--10 Nunc fermentum rutrum justo ut varius. Quisque quis pretium sapien, at dictum metus. Vestibulum augue erat, posuere non elementum sed, volutpat vitae lacus. Cras a turpis neque. Ut sed purus hendrerit, imperdiet justo ut, imperdiet arcu. Cras sem est, egestas at consequat nec, commodo in mauris.
+
+			.range.blog
+				.cell-md-2.cell-sm-3
+					p.text-darker: time(datetime='2018') August 14, 2018
+				.cell-md-6.cell-lg-6.cell-xl-5.cell-sm-7.offset-top-10.offset-sm-top-0
+					a(href='single-event.html')
+						+jpg_responsive('blog-line-03-610x393')
+					h5
+						a.text-primary(href='single-event.html') Tips for Your Next Exam: an Annual Conference Organized by Alma Graduates
+					p.postfix-xl-right--10 Praesent suscipit bibendum ex, eu rhoncus diam placerat sit amet. Proin ante lacus, rutrum non posuere sit amet, rhoncus blandit ligula. Nullam arcu arcu, viverra vitae sollicitudin a, consectetur ut nulla. Curabitur erat enim, tincidunt eget leo et, ullamcorper posuere lorem. Duis id sem at est.
+
+
+			.range.blog
+				.cell-md-2.cell-sm-3
+					p.text-darker: time(datetime='2018') September 17, 2018
+				.cell-md-6.cell-lg-6.cell-xl-5.cell-sm-7.offset-top-10.offset-sm-top-0
+					a(href='single-event.html')
+						+jpg_responsive('blog-line-04-610x393')
+					h5
+						a.text-primary(href='single-event.html') The 32nd University Community Meeting: Solving Various Organizational Issues
+					p.postfix-xl-right--10 Duis maximus eros a neque tempus auctor. In varius leo quis diam laoreet rhoncus. Mauris viverra faucibus justo, nec interdum magna fringilla a. Nulla facilisi. Mauris ac massa ut leo vehicula malesuada. Vivamus magna massa, placerat ut nisi a, faucibus rhoncus sapien. Proin tempus libero eu tellus gravida.
+
+
+			.range.blog
+				.cell-md-2.cell-sm-3
+					p.text-darker: time(datetime='2018') October 10, 2018
+				.cell-md-6.cell-lg-6.cell-xl-5.cell-sm-7.offset-top-10.offset-sm-top-0
+					a(href='single-event.html')
+						+jpg_responsive('blog-line-05-610x393')
+					h5
+						a.text-primary(href='single-event.html') Safety Awareness Conference for Our Students
+					p.postfix-xl-right--10 Maecenas fermentum justo ac libero dapibus, non scelerisque orci consequat. Nulla pharetra sollicitudin orci non dignissim. Praesent a erat non libero ornare sollicitudin eu non mauris. Aliquam vitae nunc et libero mollis ullamcorper id sit amet arcu. In convallis libero nec mauris volutpat sagittis.
+
+			.range
+				.cell-xl-7.cell-md-8.cell-sm-10
+					.pagination-block
+						.prev: span.disabled Prev
+						ul
+							li: span.disabled 1
+							li: a(href='#') 2
+							li: a(href='#') 3
+							li: a(href='#') 4
+							li: a(href='#') 5
+							li: a(href='#') 6
+						.next: a(href='#')  Next
+
+
+	// Page Footer
+	include ../sections/_footer-classic

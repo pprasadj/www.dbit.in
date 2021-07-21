@@ -1,0 +1,102 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+	- var activeIndex = 1
+	- var title = 'Careers'
+
+block title
+	title= title
+
+block page
+	// Page Header
+	include ../sections/_header-secondary
+
+	// Page Content
+	+breadcrumb-classic(
+	title,
+	{
+		0: {
+			"title": 'home',
+			"href": 'index.html'
+		},
+		1: {
+			"title": 'About',
+			"href": 'about.html'
+		},
+		2: {
+			"title": 'Careers',
+			"href": '#'
+		}
+	},
+	'breadcrumbs-parallax-01'
+	)
+
+	section.section-75.section-md-100.section-lg-150
+		.shell.text-sm-left
+			h1 Careers
+			.range.offset-top-40
+				.cell-sm-7.cell-md-6
+					h6 Aenean mollis, lectus ut faucibus cursus, odio libero rutrum risus. Sed in ante quis orci lacinia malesuada. Proin turpis magna, elementum vitae nulla et, luctus varius leo. Suspendisse ac enim quis velit vulputate faucibus.
+					p Sed pretium ex sit amet nulla sollicitudin elementum ac a dolor. Quisque hendrerit arcu mauris, et tempus diam laoreet sagittis. Curabitur sed convallis justo, eu posuere velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices aliquam neque quis vulputate.
+				.cell-sm-5.cell-md-preffix-1.cell-md-4.cell-lg-preffix-2.cell-lg-3
+					a.btn.btn-sunglow(href='#') join Our Team now
+			.bg-table.bg-table-well
+				.range.range-sm-center
+					.col-xl-10
+						h2 Working at Alma University
+						.range.offset-top-20
+							.cell-sm-6
+								p.inset-lg-right-30 Aliquam erat volutpat. Cras ornare eget velit in vehicula. Nullam vel tellus orci. Phasellus ac convallis nibh. Praesent non arcu eu urna iaculis finibus. Fusce imperdiet elit at urna fermentum, eget congue leo blandit. Duis lobortis risus nunc, nec maximus ante efficitur sodales. Vestibulum posuere mi tellus, vel tincidunt tellus tincidunt iaculis. Vestibulum at elit lectus.
+							.cell-sm-6
+								p.inset-lg-right-30 Quisque ultricies eleifend ex, a mollis elit molestie a. Etiam sed purus eget dui mattis condimentum vitae sed lectus. Aenean euismod sagittis augue ut ultricies. Fusce pretium non velit blandit consequat. Nunc semper nisi odio, vitae aliquam turpis semper sit amet. Etiam egestas egestas justo, eu interdum nulla fringilla a.
+			.range
+				.cell-md-8.cell-lg-6
+					h2 Current opportunities
+					p Ut tincidunt pharetra ex, vel pharetra est pretium eget. Cras iaculis ipsum ac dignissim rutrum. Nunc sagittis sit amet elit gravida egestas. Cras aliquet fermentum malesuada. Quisque ultricies eleifend ex, a mollis elit molestie a. Etiam sed purus eget dui mattis condimentum vitae sed lectus. Aenean euismod sagittis augue ut ultricies. Fusce pretium non velit blandit consequat.
+					p Nullam sit amet porttitor ligula. Donec nulla felis, congue vitae semper sit amet, finibus eu velit. Cras iaculis ipsum ac dignissim rutrum
+			.range
+				.cell-xs-12
+					h2 Rewards and benefits
+				.cell-sm-6.offset-top-40
+					ul.list.list-xl
+						li
+							h5 Health and Wellness
+							p.inset-sm-right-70 Ut tincidunt pharetra ex, vel pharetra est pretium eget. Cras iaculis ipsum ac dignissim rutrum.
+						li
+							h5 Time Off / Paid Leave
+							p.inset-sm-right-70 Nunc sagittis sit amet elit gravida egestas. Cras aliquet fermentum malesuada. Quisque ultricies eleifend ex, a mollis elit molestie a. Etiam sed purus eget dui mattis condimentum vitae sed lectus.
+				.cell-sm-6.offset-top-40
+					ul.list.list-xl
+						li
+							h5 Retirement and Financial Protection
+							p.inset-sm-right-70 Aenean euismod sagittis augue ut ultricies. Fusce pretium non velit blandit consequat. Duis est lectus, venenatis sit amet elit.
+						li
+							h5 Employee Development
+							p.inset-sm-right-70 Nullam sit amet porttitor ligula. Donec nulla felis, congue vitae semper sit amet, finibus eu velit. Suspendisse a egestas nibh.
+			.range
+				.cell-md-8.cell-lg-6
+					h2 Hiring process
+					ol.list.list-index.list-xl
+						li Ut tincidunt pharetra ex, vel pharetra est pretium eget. Cras iaculis ipsum ac dignissim rutrum. Nunc sagittis sit amet elit gravida egestas. Cras aliquet fermentum malesuada. Quisque ultricies eleifend ex, a mollis elit molestie a.
+						li Fusce pretium non velit blandit consequat. Duis est lectus, venenatis non euismod ut, maximus sit amet elit. Sed semper risus id orci malesuada, placerat laoreet.
+						li Aenean mollis, lectus ut faucibus cursus, odio libero rutrum risus, vitae congue tellus purus at dui. Sed in ante quis orci lacinia malesuada. Proin turpis magna, varius leo.
+			.bg-table.bg-table-well
+				.range.range-sm-center
+					.col-xl-10
+						h2 Recruitment FAQ
+						.range.offset-top-30
+							.cell-sm-6
+								.inset-lg-right-30.inset-xl-right-40
+									h5.text-regular.font-default.text-spacing-0 Where can I find Alma’s current list of open positions?
+									p A list of open positions will be available in our new online job application facility which will be launched soon. In the meantime, if you are interested in working for us, please submit your CV to info@demolink.org and we will contact you.
+							.cell-sm-6
+								.inset-lg-right-30
+									h5.text-regular.font-default.text-spacing-0 How long will it take to receive an update after an interview?
+									p Our HR Department will call you within a week of attending the interview regarding the status of your application. Unsuccessful candidates will receive a regret letter through email. You can read more info about it on our website.
+							.cell-xs-12.offset-top-40
+								a.link-custom(href='#') Read more questions
+
+	// Page Footer
+	include ../sections/_footer-classic

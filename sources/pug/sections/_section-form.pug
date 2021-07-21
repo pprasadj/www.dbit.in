@@ -1,0 +1,27 @@
+section.section-50.section-md-75.section-md-100.section-lg-120.section-xl-150.bg-wild-sand
+  .shell.text-left
+    h2
+      span.small contact us
+      | Just fill in the contact form, and we will answer you shortly.
+
+    form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+      .range.offset-top-40.offset-md-top-60
+        .cell-lg-4.cell-md-6
+          .form-group.postfix-xl-right-40
+            label.form-label(for="contact-name") Name *
+            input#contact-name.form-control(type="text" name="name" data-constraints="@Required")
+          .form-group.postfix-xl-right-40
+            label.form-label(for="contact-email") E-mail *
+            input#contact-email.form-control(type="email" name="email" data-constraints="@Email @Required")
+        .cell-lg-4.cell-md-6.offset-top-20.offset-md-top-0
+          .form-group.postfix-xl-right-40
+            label.form-label(for="contact-company") Company
+            input#contact-company.form-control(type="text" name="company" data-constraints="@Required")
+          .form-group.postfix-xl-right-40
+            label.form-label(for="contact-subject") Subject
+            input#contact-subject.form-control(type="text" name="subject" data-constraints="@Required")
+        .cell-lg-4.offset-top-20.offset-lg-top-0
+          .form-group.postfix-xl-right-40
+            label.form-label(for="contact-message") Message
+            textarea#contact-message.form-control(name="message" data-constraints="@Required")
+      button(type="submit").btn.btn-form.btn-sunglow Send message

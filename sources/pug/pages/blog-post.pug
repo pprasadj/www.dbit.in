@@ -1,0 +1,197 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 3
+  - var title = 'Blog Post'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'News',
+      "href": 'news.html'
+    },
+    2: {
+      "title": 'Post Page',
+      "href": '#'
+    }
+  },
+  'breadcrumbs-parallax-01'
+  )
+
+  section.section-75.section-md-100.section-lg-150
+    .shell.text-sm-left
+      .blog-post
+        .range
+          .cell-md-preffix-2.cell-lg-9.cell-md-10.cell-xl-8
+            h1 Consider MBA Programs That Offer Summer Prep
+            p.blog-post-time() October 14, 2018
+            h6 Cras quis varius dolor, in congue libero. In eget diam sed dui imperdiet tempus at eget risus. Aliquam egestas ultrices consectetur. Integer vel sapien non libero tempor mattis id in nibh.
+            p Mauris volutpat pellentesque varius. Nulla lobortis, justo ac aliquam vestibulum, augue mauris sollicitudin urna, dictum fringilla sem odio in justo.
+            p Proin volutpat lacinia eros, eu dapibus lectus volutpat at. Suspendisse id sem eu arcu placerat ultricies vitae id sem. Sed mollis diam eu lacus auctor, a blandit elit posuere. Mauris vestibulum sapien vitae sem porttitor. Pellentesque sollicitudin consequat sapien, et dapibus elit efficitur in.
+          .cell-md-preffix-1.cell-md-11.col-lg-10.cell-xl-9.offset-top-0
+            .well-custom.well-custom-classic
+              h5 New MBA students can brush up on finance and accounting before classes begin.
+          .cell-md-preffix-2.cell-lg-9.cell-md-10.cell-xl-8.offset-top-0
+            p Suspendisse potenti. Donec in pellentesque leo. Morbi ac quam sed ante consectetur pharetra. Aliquam viverra nec nunc et sollicitudin. Nam dignissim massa leo, non aliquam enim feugiat ut. Nullam laoreet ante vel nibh maximus, eget condimentum enim suscipit. Nulla quis lectus justo. Duis feugiat metus justo,  amet.
+            p Etiam sed scelerisque nulla. Vivamus nibh lectus, laoreet non est imperdiet, varius fermentum lectus. Etiam nisl augue, scelerisque eget imperdiet in, sodales sit amet elit.
+          .cell-md-preffix-1.cell-md-10.offset-top-40.offset-md-top-50.cell-lg-8.cell-xl-5
+            +jpg_responsive('blog-post-01-610x408')
+          .cell-md-10.offset-top-40.offset-md-top-50.cell-lg-8.cell-md-preffix-2.cell-xl-preffix-0.cell-xl-4
+            p.inset-xl-left-40.inset-md-left-25 Aenean ut odio ante. Ut fermentum, erat non interdum facilisis, ante metus iaculis leo, et volutpat tellus tortor id mauris. Sed varius lectus tortor, ut elementum urna ultrices tempor. Nulla pulvinar ex eu lectus porta feugiat. Integer ut turpis at nulla accumsan interdum.
+            p.inset-xl-left-40.inset-md-left-25 Quisque tristique iaculis mauris, in commodo purus commodo ac. Duis scelerisque porttitor mi id semper. Vestibulum lacinia turpis odio, non consectetur lacus sodales et. Donec vel nibh ligula. Aenean dictum, ex id rhoncus rhoncus, ante lorem vestibulum felis, sit amet tristique mauris dui at sapien. Ut suscipit libero at odio tempus, vitae hendrerit nunc imperdiet. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .cell-md-preffix-2.cell-lg-9.cell-md-10.cell-xl-8.offset-top-40
+            p Integer ex arcu, ornare et pulvinar ut, lobortis ut eros. Etiam faucibus, justo eget sollicitudin lacinia, libero tellus viverra odio, ut aliquet tortor elit vel nisl. Integer consectetur justo arcu, a eleifend nisi aliquet sit amet. Duis scelerisque accumsan justo, sed dictum nisi vehicula vel. Quisque laoreet accumsan gravida. Aliquam id nulla sed odio pellentesque condimentum sed in est.
+            p Proin placerat varius magna, gravida gravida nisi tincidunt quis. Mauris semper, augue sed fringilla pellentesque.
+          .cell-xs-12
+            .left-aside
+              span.small.text-darker.text-uppercase.text-bold.text-spacing-340 Share this post
+              .divider-custom.veil.reveal-md-block
+              ul.list.text-md-center
+                li: a.ioon.icon-sm.icon-darker.fa-facebook(href='#')
+                li: a.ioon.icon-sm.icon-darker.fa-twitter(href='#')
+                li: a.ioon.icon-sm.icon-darker.fa-google-plus(href='#')
+
+      .blog-post-navigation
+        .range
+          .cell-md-preffix-2.cell-md-5.cell-sm-6.text-sm-left.cell-lg-4
+            h6
+              a(href='#')
+                span.prev PREV
+                br
+                span.preffix-sm-left-30.reveal-inline-block.preffix-xl-left-40
+                  | New Alma University Housing Master
+                  br.veil.reveal-xl-block
+                  ="\t"
+                  | Plan for Fall 2018
+          .cell-md-5.cell-sm-6.text-sm-right.cell-lg-4.offset-top-20.offset-sm-top-0
+            h6
+              a(href='#')
+                span.next NEXT
+                br
+                span.reveal-inline-block
+                  | 5 Ways to Pay for Community College
+                  br.veil.reveal-xl-block
+                  ="\t"
+                  | in the USA
+
+      .blog-post-comments
+        .range
+          .cell-md-preffix-2.cell-md-10.cell-lg-8
+            h2 3 Comments
+
+            .unit.unit-sm-horizontal.unit-spacing-lg
+              .unit-left
+                +jpg_responsive('blog-post-02-110x110')
+              .unit-body
+                ul.list-inline
+                  li
+                    h6 Sam Perkins
+                  li
+                    p.text-silver-chalice: time(datetime='2016') Feb 16, 7:42 PM
+                p Nullam placerat lorem risus, luctus feugiat elit porttitor et. Nullam viverra metus sit amet accumsan dapibus. In in diam id nulla convallis laoreet. Fusce at nulla pellentesque, vulputate sem vel, finibus arcu.
+                ul.list-inline.list-inline-xl
+                  li
+                    a.text-darker(href='#')
+                      .unit.unit-spacing-xxs.unit-horizontal
+                        .unit-left
+                          span.icon.text-primary.fa-heart-o.icon-xs
+                        .unit-body
+                          span.small-xxs Like
+                  li
+                    a.text-darker(href='#')
+                      .unit.unit-spacing-xxs.unit-horizontal
+                        .unit-left
+                          span.icon.text-primary.fa-mail-reply.icon-xs
+                        .unit-body
+                          span.small-xxs reply
+
+            .unit.unit-sm-horizontal.unit-spacing-lg
+              .blog-post-divider
+              .unit-left
+                +jpg_responsive('blog-post-03-110x110')
+              .unit-body
+                ul.list-inline
+                  li
+                    h6 William Cunningham
+                  li
+                    p.text-silver-chalice: time(datetime='2016') Feb 16, 7:42 PM
+                p Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vestibulum eget neque sed enim elementum condimentum ut sit amet velit. Mauris nunc neque, ultrices at nisi at, gravida egestas nunc.
+                ul.list-inline.list-inline-xl
+                  li
+                    a.text-darker(href='#')
+                      .unit.unit-spacing-xxs.unit-horizontal
+                        .unit-left
+                          span.icon.text-primary.fa-heart-o.icon-xs
+                        .unit-body
+                          span.small-xxs Like
+                  li
+                    a.text-darker(href='#')
+                      .unit.unit-spacing-xxs.unit-horizontal
+                        .unit-left
+                          span.icon.text-primary.fa-mail-reply.icon-xs
+                        .unit-body
+                          span.small-xxs reply
+
+            .unit.unit-sm-horizontal.unit-spacing-lg
+              .unit-left
+                +jpg_responsive('blog-post-04-110x110')
+              .unit-body
+                ul.list-inline
+                  li
+                    h6 Jane Newman
+                  li
+                    p.text-silver-chalice: time(datetime='2016') Feb 16, 7:42 PM
+                p Ut tincidunt pharetra ex, vel pharetra est pretium eget. Cras iaculis ipsum ac dignissim rutrum. Nunc sagittis sit amet elit gravida egestas.
+                ul.list-inline.list-inline-xl
+                  li
+                    a.text-darker(href='#')
+                      .unit.unit-spacing-xxs.unit-horizontal
+                        .unit-left
+                          span.icon.text-primary.fa-heart-o.icon-xs
+                        .unit-body
+                          span.small-xxs Like
+                  li
+                    a.text-darker(href='#')
+                      .unit.unit-spacing-xxs.unit-horizontal
+                        .unit-left
+                          span.icon.text-primary.fa-mail-reply.icon-xs
+                        .unit-body
+                          span.small-xxs reply
+
+            .well-custom.well-custom-default
+              h2 Leave a comment
+              form.rd-mailform.text-sm-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+                .range
+                  .cell-sm-6
+                    .form-group
+                      label.form-label(for="contact-name-2") Name *
+                      input#contact-name-2.form-control(type="text" name="name" data-constraints="@Required")
+                  .cell-sm-6.offset-top-15.offset-sm-top-0
+                    .form-group
+                      label.form-label(for="contact-email-2") E-Mail *
+                      input#contact-email-2.form-control(type="email" name="email" data-constraints="@Email @Required")
+                  .cell-sm-12.offset-top-15
+                    .form-group
+                      label.form-label(for="contact-message-2") Message *
+                      textarea#contact-message-2.form-control.form-control-sm(name="message" data-constraints="@Required")
+                button(type="submit").btn.btn-default.btn-form Submit
+
+
+
+  // Page Footer
+  include ../sections/_footer-classic

@@ -1,0 +1,119 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 4
+  - var title = 'Padding Gallery'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'Gallery',
+      "href": '#'
+    },
+    2: {
+      "title": 'Padding Gallery',
+      "href": '#'
+    }
+  },
+  'breadcrumbs-parallax-01'
+  )
+
+  section.section-75.section-md-100.section-lg-150
+    .shell
+      .range.range-md-justify
+        .cell-md-8.cell-lg-7.cell-xl-6
+          .inset-md-right-30.inset-lg-right-0
+            h1 Our Gallery
+            p Fusce euismod libero at blandit dapibus. Etiam in erat vel turpis pharetra semper. Aenean a dignissim libero, et posuere est.
+    .container
+      .row
+        // Isotope Filters
+        .col-lg-12
+          .isotope-filters.isotope-filters-horizontal
+            ul.list-isotop
+              li
+                a.active(data-isotope-filter='*', data-isotope-group='gallery', href='#') All
+              li
+                a(data-isotope-filter='Housing', data-isotope-group='gallery', href='#') Housing
+              li
+                a(data-isotope-filter='Campus', data-isotope-group='gallery', href='#') Campus
+              li
+                a(data-isotope-filter='Studying', data-isotope-group='gallery', href='#') Studying
+              li
+                a(data-isotope-filter='Sports', data-isotope-group='gallery', href='#') Sports
+
+        // Isotope Content
+        .col-lg-12
+          .row.isotope.isotope-lg(data-isotope-layout='masonry', data-isotope-group='gallery')
+
+            .isotope-item.col-xs-12.col-sm-4(data-filter='Housing')
+              +jpg_responsive('projects-padding-01-485x555')
+              h6: a(href='single-event.html') Affordable Accommodation
+              p
+                a.text-content(href='#') Housing
+                span ,
+                ="\t"
+                a.text-content(href='#') Campus
+
+            .isotope-item.col-xs-12.col-sm-4(data-filter='Housing')
+              +jpg_responsive('projects-padding-02-485x555')
+              h6: a(href='single-event.html') Online Education
+              p
+                a.text-content(href='#') Distance
+                span ,
+                ="\t"
+                a.text-content(href='#') Learning
+
+            .isotope-item.col-xs-12.col-sm-4(data-filter='Studying')
+              +jpg_responsive('projects-padding-03-485x555')
+              h6: a(href='single-event.html') Educational Resources
+              p
+                a.text-content(href='#') Education
+                span ,
+                ="\t"
+                a.text-content(href='#') Study
+
+            .isotope-item.col-xs-12.col-sm-4(data-filter='Studying')
+              +jpg_responsive('projects-padding-04-485x555')
+              h6: a(href='single-event.html') Extensive Library
+              p
+                a.text-content(href='#') Education
+                span ,
+                ="\t"
+                a.text-content(href='#') Library
+
+            .isotope-item.col-xs-12.col-sm-4(data-filter='Sports')
+              +jpg_responsive('projects-padding-05-485x555')
+              h6: a(href='single-event.html') Sports Facilities
+              p
+                a.text-content(href='#') Amenities
+                span ,
+                ="\t"
+                a.text-content(href='#') Sports
+
+            .isotope-item.col-xs-12.col-sm-4(data-filter='Campus')
+              +jpg_responsive('projects-padding-06-485x555')
+              h6: a(href='single-event.html') University Park
+              p
+                a.text-content(href='#') Park
+                span ,
+                ="\t"
+                a.text-content(href='#') Locations
+
+  // Page Footer
+  include ../sections/_footer-classic

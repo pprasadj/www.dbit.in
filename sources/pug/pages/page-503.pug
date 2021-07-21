@@ -1,0 +1,32 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 7
+  - var title = 'Page 503'
+
+block title
+  title= title
+
+block page
+  section.section-50.section-sm-75.section-md-100
+    .shell.text-center
+      a(href='index.html')
+        img(src="images/brand-default-178x58.png", width="178", height="58", alt="ALMA")
+      .range.section-75.section-sm-100.section-md-120.bg-custom.text-sm-left.offset-top-0
+        .cell-sm-5.bg-custom-image.bg-custom-image-2
+          img.img-responsive(src="images/page-503.jpg", width="828", height="593", alt="")
+        .cell-sm-6.cell-sm-preffix-1.section-50.offset-top-0
+          h1: span.biggest 503
+          h2.offset-top-0  Service is temporary unavailable
+          p.offset-top-10 Sorry, we're offline right now to make our site even better.
+            br.veil.reveal-xl-block
+            ="\t"
+            | Please, come back later and check what we've been up to.
+          .group.offset-top-40
+            a.btn.btn-default.btn-form(href='index.html') Back to home page
+            a.btn.btn-default-outline(href='contacts.html') Contact us
+      p.small-xs Copyright  2018 All rights reserved by Alma University
+
+

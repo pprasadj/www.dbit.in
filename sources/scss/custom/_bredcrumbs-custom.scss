@@ -1,0 +1,44 @@
+//breadcrumb-classic custom
+.breadcrumb-classic {
+  position: relative;
+ .list-breadcrumb {
+   display: inline-block;
+   padding: 12px 15px 10px;
+   font-size: 12px;
+   background-color: $brand-primary;
+  a {
+    color: $white;
+    &:hover {
+      color: rgba($white, .65);
+    }
+  }
+   > li {
+     margin-left: 7px;
+     display: inline-block;
+     letter-spacing: .15em;
+     text-transform: uppercase;
+     color: $white;
+     & + li {
+       &:before {
+         content: '/';
+         margin-right: 9px;
+         color: rgba($white, .2);
+       }
+     }
+   }
+ }
+  @media (min-width: $screen-xs-min) {
+    .list-breadcrumb {
+      padding: 12px 22px 10px;
+      > li {
+        letter-spacing: .340em;
+        & + li {
+          margin-left: 12px;
+          &:before {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}

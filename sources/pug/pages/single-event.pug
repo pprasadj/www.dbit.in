@@ -1,0 +1,66 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+	- var activeIndex = 6
+	- var title = 'Single Event'
+
+block title
+	title= title
+
+block page
+	// Page Header
+	include ../sections/_header-secondary
+
+	// Page Content
+	+breadcrumb-classic(
+	title,
+	{
+		0: {
+			"title": 'home',
+			"href": 'index.html'
+		},
+		1: {
+			"title": 'Pages',
+			"href": '#'
+		},
+		2: {
+			"title": 'Single Event',
+			"href": '#'
+		}
+	},
+	'breadcrumbs-parallax-02'
+	)
+
+	section.section-75.section-md-100.section-lg-150
+		.shell
+			h1.text-center.text-lg-left New Beginnings Orientation Event
+			.range.range-lg.range-xs-center
+				.cell-lg-12.cell-md-8
+					.range.range-lg-middle
+						.cell-lg-5.cell-xl-4
+							.inset-lg-right-45
+								ul.list.list-xl
+									li
+										p
+											span.small Date and Time
+											span.text-darker September 3, 2018
+												br
+												| 3:00 PM
+									li
+										p
+											span.small Venue
+											span.text-darker Alma University Hall
+
+									li
+										p
+											span.small Speaker
+											span.text-darker Paul Eddington
+								p Proin varius sed quam sed dictum. Pellentesque imperdiet ex nec nulla accumsan volutpat. In a erat nec lacus vehicula ullamcorper mattis ut ligula. Phasellus tincidunt libero nec tellus tempus, vitae varius orci pellentesque. Cras at tempus dui. Sed efficitur gravida dui elementum euismod. Donec eget libero ac enim condimentum varius quis vel nibh. In cursus feugiat commodo. In egestas felis ut ex rhoncus, sed vestibulum odio faucibus. Sed pharetra vulputate massa. Aenean at massa sodales pulvinar.
+								p Curabitur mattis augue metus, accumsan vehicula augue vulputate ac. Duis nec turpis ut ipsum varius scelerisque. Vivamus cursus, velit et convallis auctor, nisi est cursus nisl, eu ullamcorper elit augue eget enim. Cras pretium consectetur odio. Pellentesque vehicula rhoncus libero id vehicula. In semper id ex vel tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+						.cell-lg-7.text-lg-right.cell-xl-8
+							+jpg_responsive('project-one-959x821')
+
+	// Page Footer
+	include ../sections/_footer-classic

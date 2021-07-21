@@ -1,0 +1,132 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 6
+  - var title = 'In the News'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'Pages',
+      "href": '#'
+    },
+    2: {
+      "title": 'In the News',
+      "href": '#'
+    }
+  },
+  'breadcrumbs-parallax-02'
+  )
+
+  section.section-75.section-md-100.section-lg-150
+    .shell.text-sm-left
+      .range.range-sm-center.range-md-left
+        .cell-lg-6.cell-md-8.cell-sm-10
+          h1 In the News
+          p Donec ac orci ultricies, vestibulum odio eget, fringilla est. Cras mollis auctor tellus, quis imperdiet velit pretium et. Mauris pharetra nibh sed pulvinar porta. Praesent sed sodales metus. Sed condimentum lectus et tortor euismod auctor. Vestibulum laoreet tempus elit eget vestibulum.
+    .container
+      .row
+        // Isotope Filters
+        .col-lg-12
+          .isotope-filters.isotope-filters-horizontal.isotope-filters-lg
+            ul.list-isotop
+              li
+                a.active(data-isotope-filter='2018', data-isotope-group='gallery', href='#') 2018
+              li
+                a(data-isotope-filter='2017', data-isotope-group='gallery', href='#') 2017
+              li
+                a(data-isotope-filter='2016', data-isotope-group='gallery', href='#') 2016
+              li
+                a(data-isotope-filter='2015', data-isotope-group='gallery', href='#') 2015
+              li
+                a(data-isotope-filter='2014', data-isotope-group='gallery', href='#') 2014
+              li
+                a(data-isotope-filter='Earlier', data-isotope-group='gallery', href='#') 2013 & Earlier
+
+        // Isotope Content
+        .col-lg-12
+          .row.isotope.isotope-xl(data-isotope-layout='masonry', data-isotope-group='gallery')
+            .isotope-item.col-xs-12.col-md-9.col-lg-8(data-filter='2018')
+              ul.list.list-lg.list-marked.list-marked-top.inset-xl-left-90.inset-lg-left-40.inset-md-left-25
+                li: a(href='blog-post.html')  Alma University Introduces International Grants for Scientific Research for its Students.
+                li: a(href='blog-post.html')  The Best Talents of Alma University: Interview with Post-Graduates
+                li: a(href='blog-post.html')  New Campus of Alma University is Now Officially Opened!
+                li: a(href='blog-post.html')  Top 20 Universities of the USA: Our Exclusive Rating
+                li: a(href='blog-post.html')  How Alma University Helps First-Year Students
+                li: a(href='blog-post.html')  Modern University Campuses: Comparing 5 Different Universities
+                li: a(href='blog-post.html')  Alma University Reached #5 in International Higher Education Rating
+                li: a(href='blog-post.html')  Alma Scientific Conference: Latest Student Discoveries
+            .isotope-item.col-xs-12.col-md-9.col-lg-8(data-filter='2017')
+              ul.list.list-lg.list-marked.list-marked-top.inset-xl-left-90.inset-lg-left-40.inset-md-left-25
+                li: a(href='blog-post.html')  The Best Talents of Alma University: Interview with Post-Graduates
+                li: a(href='blog-post.html')  Alma University Introduces International Grants for Scientific Research for its Students.
+                li: a(href='blog-post.html')  How Alma University Helps First-Year Students
+                li: a(href='blog-post.html')  New Campus of Alma University is Now Officially Opened!
+                li: a(href='blog-post.html')  Alma University Reached #5 in International Higher Education Rating
+                li: a(href='blog-post.html')  Top 20 Universities of the USA: Our Exclusive Rating
+                li: a(href='blog-post.html')  Modern University Campuses: Comparing 5 Different Universities
+                li: a(href='blog-post.html')  Alma Scientific Conference: Latest Student Discoveries
+            .isotope-item.col-xs-12.col-md-9.col-lg-8(data-filter='2016')
+              ul.list.list-lg.list-marked.list-marked-top.inset-xl-left-90.inset-lg-left-40.inset-md-left-25
+                li: a(href='blog-post.html')  Modern University Campuses: Comparing 5 Different Universities
+                li: a(href='blog-post.html')  New Campus of Alma University is Now Officially Opened!
+                li: a(href='blog-post.html')  Alma University Introduces International Grants for Scientific Research for its Students.
+                li: a(href='blog-post.html')  The Best Talents of Alma University: Interview with Post-Graduates
+                li: a(href='blog-post.html')  How Alma University Helps First-Year Students
+                li: a(href='blog-post.html')  Alma University Reached #5 in International Higher Education Rating
+                li: a(href='blog-post.html')  Top 20 Universities of the USA: Our Exclusive Rating
+                li: a(href='blog-post.html')  Alma Scientific Conference: Latest Student Discoveries
+
+            .isotope-item.col-xs-12.col-md-9.col-lg-8(data-filter='2015')
+              ul.list.list-lg.list-marked.list-marked-top.inset-xl-left-90.inset-lg-left-40.inset-md-left-25
+                li: a(href='blog-post.html')  Alma University Reached #5 in International Higher Education Rating
+                li: a(href='blog-post.html')  Modern University Campuses: Comparing 5 Different Universities
+                li: a(href='blog-post.html')  The Best Talents of Alma University: Interview with Post-Graduates
+                li: a(href='blog-post.html')  Alma Scientific Conference: Latest Student Discoveries
+                li: a(href='blog-post.html')  New Campus of Alma University is Now Officially Opened!
+                li: a(href='blog-post.html')  Alma University Introduces International Grants for Scientific Research for its Students.
+                li: a(href='blog-post.html')  How Alma University Helps First-Year Students
+                li: a(href='blog-post.html')  Top 20 Universities of the USA: Our Exclusive Rating
+
+
+            .isotope-item.col-xs-12.col-md-9.col-lg-8(data-filter='2014')
+              ul.list.list-lg.list-marked.list-marked-top.inset-xl-left-90.inset-lg-left-40.inset-md-left-25
+                li: a(href='blog-post.html')  The Best Talents of Alma University: Interview with Post-Graduates
+                li: a(href='blog-post.html')  Modern University Campuses: Comparing 5 Different Universities
+                li: a(href='blog-post.html')  Alma University Reached #5 in International Higher Education Rating
+                li: a(href='blog-post.html')  Alma Scientific Conference: Latest Student Discoveries
+                li: a(href='blog-post.html')  New Campus of Alma University is Now Officially Opened!
+                li: a(href='blog-post.html')  How Alma University Helps First-Year Students
+                li: a(href='blog-post.html')  Alma University Introduces International Grants for Scientific Research for its Students.
+                li: a(href='blog-post.html')  Top 20 Universities of the USA: Our Exclusive Rating
+
+
+            .isotope-item.col-xs-12.col-md-9.col-lg-8(data-filter='Earlier')
+              ul.list.list-lg.list-marked.list-marked-top.inset-xl-left-90.inset-lg-left-40.inset-md-left-25
+                li: a(href='blog-post.html')  Modern University Campuses: Comparing 5 Different Universities
+                li: a(href='blog-post.html')  The Best Talents of Alma University: Interview with Post-Graduates
+                li: a(href='blog-post.html')  New Campus of Alma University is Now Officially Opened!
+                li: a(href='blog-post.html')  Alma University Reached #5 in International Higher Education Rating
+                li: a(href='blog-post.html')  Alma Scientific Conference: Latest Student Discoveries
+                li: a(href='blog-post.html')  How Alma University Helps First-Year Students
+                li: a(href='blog-post.html')  Alma University Introduces International Grants for Scientific Research for its Students.
+                li: a(href='blog-post.html')  Top 20 Universities of the USA: Our Exclusive Rating
+
+
+  // Page Footer
+  include ../sections/_footer-classic

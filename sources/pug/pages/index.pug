@@ -1,0 +1,304 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 0
+
+block title
+	title Home
+
+block page
+	// Page Header
+	include ../sections/_header-secondary
+
+	// Page Content
+	include ../sections/_swiper-classic
+
+	="\n"
+
+	section.section-75.section-md-120.section-lg-120.section-xl-150.bg-table
+		.shell
+			h2
+				span.small What We Offer
+				| Popular Courses
+			.range.range-sm-center.text-md-left.spacing-55
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-06-485x250')
+							.blog-grid-title $340
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Preparatory Course
+							p Are you looking for proper education but don’t know where to begin? Then our Preparatory Course will be a great choice for you. They include everything you need to...
+							p.text-darker First-year students
+
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-07-485x250')
+							.blog-grid-title.blog-grid-title-discount free
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Personal Branding
+							p We offer this free course to students who are looking for a better understanding of personal branding techniques and methods. Developed by our teachers, this course is...
+							p.text-darker Business
+
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-08-485x250')
+							.blog-grid-title $620
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Basics of HTML & CSS
+							p Take this course to learn more about the modern web development in all its variety. The course includes the basics of HTML, CSS, JS, and other important web...
+							p.text-darker Web Development
+
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-09-485x250')
+							.blog-grid-title.blog-grid-title-new new
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Android Apps Development
+							p This course blends theory and practice to help you build great apps the right way. In this course, you'll work with instructors step-by-step to build a cloud-connected...
+							p.text-darker Programming
+
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-10-485x250')
+							.blog-grid-title $340
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Online Marketing
+							p Online marketing course explores several aspects of the new digital marketing environment, including topics such as digital marketing analytics, search engine optimization...
+							p.text-darker Marketing
+
+				.cell-md-6.cell-lg-4.cell-sm-8
+					article.blog-grid.blog-grid-custom
+						a.blog-grid-image(href='blog-post.html')
+							+jpg_responsive('home-3-11-485x250')
+							.blog-grid-title $620
+						.blog-grid-content
+							h5: a.text-darker(href='blog-post.html') Business Data Analysis
+							p Our new course brings together academic professionals and experienced practitioners to share real-world data analytics skills you can use to grow your business...
+							p.text-darker Business
+
+
+	="\n"
+
+	section.section-75.section-md-120.section-lg-120.section-xl-150#custom-way-point
+		.shell.text-left
+			.range.range-xs-center
+				.cell-lg-12.cell-sm-8.cell-md-9
+					.range.range-lg-middle.range-lg-justify
+						.cell-lg-6
+							+jpg_responsive('home-3-05-735x460')
+						.cell-lg-5
+							h2 We are one of the largest, most diverse universities
+							h6 Since our establishment in 1981, we've grown from a small university to an international study center with more than 2000 students.
+							p We are an innovative university providing quality on-site and distance education for students all over the world. To our foreign students, we offer undergraduate and graduate degree programs that are regionally accredited, and taught by the same faculty who teach on campus. We also offer certificates, badges, and specialized individual courses.
+
+
+		="\n"
+
+
+
+
+	section.section-75.section-md-120.section-lg-150.section-xl-200.parallax-container(data-parallax-img="images/home-3-parallax-01.jpg")
+		.parallax-content
+			.shell.bg-wrap-darker(data-lightgallery="group")
+				h2.text-white
+					span.small.text-white Who We Are
+					| Watch This Video Presentation
+					br.veil.reveal-md-block
+					="\t"
+					| to Find Out More About Us
+				a.btn.btn-default.btn-form.btn-default-white(href='https://www.youtube.com/embed/5yIHytQGMSs' data-lightgallery="item") Watch Now
+
+
+	="\n"
+
+	section.section-75.section-md-120.section-lg-120.section-xl-150.bg-table
+		.shell.text-left
+			.range.spacing-15.range-xs-center
+				.cell-sm-9.cell-md-6
+					.box-info-custom(style='background-image: url(images/home-3-01-735x394.jpg );')
+						.box-info-custom-inner
+							h5.box-info-custom-title: a(href='single-course.html')  Self-Development
+							p Our university offers its students a variety of useful activities for self-development allowing to improve their knowledge and skills.
+				.cell-sm-9.cell-md-6
+					.box-info-custom(style='background-image: url(images/home-3-02-735x394.jpg );')
+						.box-info-custom-inner
+							h5.box-info-custom-title: a(href='single-course.html')  Library
+							p Find the necessary materials for your next research at our library. It has a variety of printed and digital educational resources for you.
+				.cell-sm-9.cell-md-6
+					.box-info-custom(style='background-image: url(images/home-3-03-735x394.jpg );')
+						.box-info-custom-inner
+							h5.box-info-custom-title: a(href='single-course.html')  Entertainment
+							p Life at our university isn’t limited only to studying. Our student committee also offers 	a wide range of entertainment events.
+				.cell-sm-9.cell-md-6
+					.box-info-custom(style='background-image: url(images/home-3-04-735x394.jpg );')
+						.box-info-custom-inner
+							h5.box-info-custom-title: a(href='single-course.html')  Community
+							p Our campus is closely integrated with the local student community. Together, we organize lots of interesting events and conferences.
+
+
+
+	include ../sections/_section-out-team
+
+	include ../sections/_section-form
+
+	section.section-75.section-md-100.section-lg-150
+		.shell
+			.range.range-md-justify
+				.cell-md-8.cell-xl-8
+					.inset-md-right-30.inset-lg-right-0
+						h2
+							span.small Our Events
+							| Our university regularly organizes
+							| a variety of events for our students
+		.container
+			.row
+				// Isotope Filters
+				.col-lg-12
+					.isotope-filters.isotope-filters-horizontal
+						ul.list-isotop
+							li
+								a.active(data-isotope-filter='*', data-isotope-group='gallery', href='#') All
+							li
+								a.active(data-isotope-filter='Conferences', data-isotope-group='gallery', href='#') Conferences
+							li
+								a(data-isotope-filter='Seminars', data-isotope-group='gallery', href='#') Seminars
+
+				// Isotope Content
+				.col-lg-12
+					.row.isotope.isotope-lg(data-isotope-layout='masonry', data-isotope-group='gallery')
+
+						.isotope-item.col-xs-12.col-sm-4(data-filter='Conferences')
+							+jpg_responsive('projects-padding-01-485x555')
+							h6: a(href='single-event.html') New Beginnings Orientation Event
+							p
+								a.text-content(href='#') First-year
+								span ,
+								="\t"
+								a.text-content(href='#') Orientation
+						.isotope-item.col-xs-12.col-sm-4(data-filter='Seminars')
+							+jpg_responsive('projects-padding-02-485x555')
+							h6: a(href='single-event.html') Student Election Basics
+							p
+								a.text-content(href='#') Event
+								span ,
+								="\t"
+								a.text-content(href='#') Conference
+
+						.isotope-item.col-xs-12.col-sm-4(data-filter='Seminars')
+							+jpg_responsive('projects-padding-03-485x555')
+							h6: a(href='single-event.html') Tips for Your Next Exam
+							p
+								a.text-content(href='#') Conference
+								span ,
+								="\t"
+								a.text-content(href='#') Undergraduates
+
+
+						.isotope-item.col-xs-12.col-sm-4(data-filter='Conferences')
+							+jpg_responsive('projects-padding-04-485x555')
+							h6: a(href='single-event.html') Sam Smith’s New Book Presentation
+							p
+								a.text-content(href='#') Event
+								span ,
+								="\t"
+								a.text-content(href='#') Writer
+
+						.isotope-item.col-xs-12.col-sm-4(data-filter='Conferences')
+							+jpg_responsive('projects-padding-05-485x555')
+							h6: a(href='single-event.html') University Community Meeting
+							p
+								a.text-content(href='#') Conference
+								span ,
+								="\t"
+								a.text-content(href='#') Community
+
+						.isotope-item.col-xs-12.col-sm-4(data-filter='Seminars')
+							+jpg_responsive('projects-padding-06-485x555')
+							h6: a(href='single-event.html') Safety Awareness Conference
+							p
+								a.text-content(href='#') Seminar
+								span ,
+								="\t"
+								a.text-content(href='#') Safety
+
+
+	="\n"
+
+	// Latest News
+	section.section-75.section-sm-80.section-md-120.section-xl-150.bg-table
+		.shell
+			.range
+				.cell-12.cell-xl-preffix-1
+					h2
+						span.small University Blog
+						| Read our latest news
+			.range.range-sm-center.range-md-left.range-custom
+				.cell-lg-4.cell-xl-3.cell-xl-preffix-1.cell-sm-6
+					article.event.event-default
+						h5.text-primary: a(href='news.html') Consider MBA Programs That Offer Summer Prep
+						p New MBA students can brush up on finance and accounting before classes begin. Summer preparatory programs offered through schools allow students to get...
+						time.text-darker(datetime='2016') September 1, 2018
+				.cell-lg-4.cell-xl-3.cell-xl-preffix-1.cell-sm-6.offset-top-40.offset-sm-top-0
+					article.event.event-default
+						h5.text-primary: a(href='news.html') New Housing Master Plan for Fall 2018
+						p New residence halls of our campus, a revamp of the Unit 3 housing complex and the addition of more graduate housing in Southern Village — these changes are...
+						time.text-darker(datetime='2016') May 3, 2018
+				.cell-lg-4.cell-xl-3.cell-xl-preffix-1.cell-sm-6.offset-top-40.offset-lg-top-0
+					article.event.event-default
+						h5.text-primary: a(href='news.html') 5 Ways to Pay for Community College
+						p Most community college students qualify for need-based aid, experts say. Many community colleges offer promise programs, which offer tuition-free awards...
+						time.text-darker(datetime='2016') April 15, 2018
+				.cell-xs-12
+
+	="\n"
+
+	section.section-75.section-md-120.section-lg-120.section-xl-150
+		.shell.text-center
+			h2
+				span.small Testimonials
+				| What students say about us
+			.owl-carousel-wrap.owl-carousel-wrap-bullet.offset-xl-top-60
+				.owl-carousel(data-items='1', data-stage-padding='0', data-loop='true', data-margin='0', data-mouse-drag="false", data-autoplay='false', data-nav-custom=".owl-custom-navigation", data-animation-out='', data-animation-in='fadeIn', data-dots='true')
+					.owl-item
+						.range.range-sm-center
+							.cell-sm-9.cell-xl-8
+								blockquote.quote-classic.animated
+									h5: q “I found a very caring and homely environment at the university where the faculty staff and the people in the university are exceptionally supportive. I am grateful to all my teachers and Professors as well as the other university staff. ”
+									+jpg_responsive-circle('home-2-01-62x62')
+									h6
+										cite Peter Handerson
+										span.small.text-gray Bachelor of Economics
+					.owl-item
+						.range.range-sm-center
+							.cell-sm-9.cell-xl-8
+								blockquote.quote-classic.animated
+									h5: q “I applied to Alma University for the Web Design Course. I got the opportunity to complete my design project with the Alt Web Design Studio and eventually got a chance to work with bigger clients and employers this year. Thank you!”
+									+jpg_responsive-circle('home-2-02-62x62')
+									h6
+										cite Jennifer Rogers
+										span.small.text-gray Bachelor of Web Design
+					.owl-item
+						.range.range-sm-center
+							.cell-sm-9.cell-xl-8
+								blockquote.quote-classic.animated
+									h5: q “It was great to study at your university. I felt that I obtained enough assistance from the international office and lecturers. You have advanced education system and I found that the teaching style is modern, which I like.”
+									+jpg_responsive-circle('home-2-03-62x62')
+									h6
+										cite Jim Johnson
+										span.small.text-gray Master of Programming
+
+				.owl-custom-navigation.owl-custom-navigation-gray
+					.owl-nav
+						.owl-prev(data-owl-prev) Prev
+						.owl-next(data-owl-next) Next
+
+
+	="\n"
+
+	// Page Footer
+	include ../sections/_footer-classic

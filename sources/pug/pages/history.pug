@@ -1,0 +1,88 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 1
+  - var title = 'History'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'About',
+      "href": 'about.html'
+    },
+    2: {
+      "title": 'history',
+      "href": '#'
+    }
+  },
+  'breadcrumbs-parallax-01'
+  )
+
+  section.section-75.section-md-100.section-lg-150
+    .shell.range-offset
+      .range
+        .cell-lg-6
+          h1 History
+          h6 Hasellus molestie in mauris id posuere. Sed et nisi et odio pharetra consequat interdum sit amet arcu.
+      .range.range-sm-middle.text-sm-left
+        .cell-xl-2.cell-sm-3.cell-md-2.cell-lg-3
+          h1.text-primary: time 1981
+        .cell-xl-4.cell-sm-4
+          h5.inset-md-left-15.inset-lg-left-0 Alma University was founded
+            br.veil.reveal-lg-block
+            ="\t"
+            | by Sam Peterson
+        .cell-xl-5.cell-sm-5.cell-md-6.cell-lg-5.offset-top-20.offset-sm-top-0
+          p Nulla turpis arcu, maximus ut sapien ut, aliquam porttitor ligula. Maecenas faucibus massa vel aliquet viverra. Sed mattis placerat blandit.
+      .range.range-sm-middle.text-sm-left
+        .cell-xl-2.cell-sm-3.cell-md-2.cell-lg-3
+          h1.text-primary: time 1999
+        .cell-xl-4.cell-sm-4
+          h5.inset-md-left-15.inset-lg-left-0 We begin to offer innovative
+            br.veil.reveal-lg-block
+            ="\t"
+            | technology courses
+        .cell-xl-5.cell-sm-5.cell-md-6.cell-lg-5.offset-top-20.offset-sm-top-0
+          p Cras turpis elit, maximus id egestas sit amet, ultricies id dolor. Donec euismod odio libero, ac laoreet lorem finibus non.
+      .range.range-sm-middle.text-sm-left
+        .cell-xl-2.cell-sm-3.cell-md-2.cell-lg-3
+          h1.text-primary: time 2008
+        .cell-xl-4.cell-sm-4
+          h5.inset-md-left-15.inset-lg-left-0 Our university starts to offer online
+            br.veil.reveal-lg-block
+            ="\t"
+            | education with paid certificates.
+        .cell-xl-5.cell-sm-5.cell-md-6.cell-lg-5.offset-top-20.offset-sm-top-0
+          p Nullam sit amet tellus turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      .range.range-sm-middle.text-sm-left
+        .cell-xl-2.cell-sm-3.cell-md-2.cell-lg-3
+          h1.text-primary: time 2018
+        .cell-xl-4.cell-sm-4
+          h5.inset-md-left-15.inset-lg-left-0 We celebrate 37 years
+            br.veil.reveal-lg-block
+            ="\t"
+            | with our first graduates
+        .cell-xl-5.cell-sm-5.cell-md-6.cell-lg-5.offset-top-20.offset-sm-top-0
+          p Quisque fringilla turpis et magna posuere efficitur. Vivamus non magna massa. Duis sed auctor mi. Vivamus facilisis lectus ac vulputate porta.
+
+  include ../sections/_section-services
+
+  include ../sections/_section-out-team
+
+  // Page Footer
+  include ../sections/_footer-classic

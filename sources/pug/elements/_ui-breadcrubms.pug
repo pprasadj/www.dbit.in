@@ -1,0 +1,16 @@
+
+mixin breadcrumb-classic(title, breadcrumbs, images)
+  // Classic Breadcrumbs
+  section.breadcrumb-classic
+    .parallax-container(data-parallax-img="images/" + images + ".jpg")
+      .parallax-content.section-top-75.section-md-top-150.section-lg-top-260
+        .shell
+          ul.list-breadcrumb
+            each link, index in breadcrumbs
+              if breadcrumbs[parseInt(index) + 1]
+                li
+                  a(href=link.href)= link.title
+              else
+                li
+                  = link.title
+  

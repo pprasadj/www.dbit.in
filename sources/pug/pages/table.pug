@@ -1,0 +1,153 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 6
+  - var title = 'Table'
+
+block title
+  title= title
+
+block page
+  // Page Header
+  include ../sections/_header-secondary
+
+  // Page Content
+  +breadcrumb-classic(
+  title,
+  {
+    0: {
+      "title": 'home',
+      "href": 'index.html'
+    },
+    1: {
+      "title": 'Pages',
+      "href": '#'
+    },
+    2: {
+      "title": 'Tables',
+      "href": ''
+    }
+  },
+  'breadcrumbs-parallax-01'
+  )
+  section.section-50.section-md-75.section-md-100.section-lg-120.section-xl-150
+    .shell
+      h1 Tables
+      p(style='max-width: 735px') Tables have always been perfect for displaying facts and numbers. Now you can benefit from using them on your website.
+      .range.offset-top-40.offset-md-top-50
+        .cell-xl-12
+          h2 Hover Row Table
+          .table-responsive
+            table.table.table-hover
+              thead
+                tr
+                  td Column 1
+                  td Column 2
+                  td Column 3
+                  td Column 4
+              tbody
+                tr
+                  td Item #1
+                  td Description
+                  td Subtotal
+                  td $1.00
+                tr
+                  td Item #2
+                  td Description
+                  td Discount
+                  td $1.00
+                tr
+                  td Item #3
+                  td Description
+                  td Shipping
+                  td $1.00
+                tr
+                  td Item #4
+                  td Description
+                  td Tax
+                  td $1.00
+              tfoot
+                tr
+                  td All
+                  td Description
+                  td Your Total
+                  td $4.00
+
+          h2 Color Header
+          .table-responsive
+            table.table.table-header
+              thead
+                tr
+                  td Column 1
+                  td Column 2
+                  td Column 3
+                  td Column 4
+              tbody
+                tr
+                  td Item #1
+                  td Description
+                  td Subtotal
+                  td $1.00
+                tr
+                  td Item #2
+                  td Description
+                  td Discount
+                  td $1.00
+                tr
+                  td Item #3
+                  td Description
+                  td Shipping
+                  td $1.00
+                tr
+                  td Item #4
+                  td Description
+                  td Tax
+                  td $1.00
+              tfoot
+                tr
+                  td All
+                  td Description
+                  td Your Total
+                  td $4.00
+
+          h2 Bordered Table
+          .table-responsive
+            table.table.table-border
+              thead
+                tr
+                  td Column 1
+                  td Column 2
+                  td Column 3
+                  td Column 4
+              tbody
+                tr
+                  td Item #1
+                  td Description
+                  td Subtotal
+                  td $1.00
+                tr
+                  td Item #2
+                  td Description
+                  td Discount
+                  td $1.00
+                tr
+                  td Item #3
+                  td Description
+                  td Shipping
+                  td $1.00
+                tr
+                  td Item #4
+                  td Description
+                  td Tax
+                  td $1.00
+              tfoot
+                tr
+                  td All
+                  td Description
+                  td Your Total
+                  td $4.00
+
+  // Page Footer
+  include ../sections/_footer-classic

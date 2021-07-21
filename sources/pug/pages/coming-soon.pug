@@ -1,0 +1,32 @@
+extends  ../_skeleton
+
+include ../elements/_ui-breadcrubms
+
+block variables
+  - var activeIndex = 7
+  - var title = 'Coming Soon'
+
+block title
+  title= title
+
+block page
+  section
+    .shell
+      .range.range-sm-right.range-sm-middle.cell-100-vh
+        .cell-md-8.section-75.section-md-100.cell-lg-7.cell-xl-6.bg-custom-left.cell-sm-middle.bg-custom-left-1
+          a(href='index.html')
+            img(src="images/brand-default-178x58.png", width="178", height="58", alt="ALMA")
+          .section-75.section-md-100.section-lg-150.section-xl-200
+            h2 We're getting ready to launch in
+            .countdown(data-type='until', data-time='31 Dec 2019 16:00', data-format='dhms')
+            p.offset-top-40 Our website is under construction, we are working very hard to give you the best experience on our new web site.
+            h2 Stay ready, we`re launching soon
+            form.rd-mailform.text-left.rd-mailform-subscribe(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+              .form-group
+                label.form-label(for="footer-subscribel-email") Enter your e-mail
+                input#footer-subscribel-email.form-control(type="email" name="email" data-constraints="@Email @Required")
+              button(type="submit").btn.btn-sunglow subscribe
+          p.small-xs Copyright  2018 All rights reserved by Alma University
+
+
+
