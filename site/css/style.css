@@ -47188,8 +47188,8 @@ html:not(.ie-11):not(.ios) .parallax-disabled {
 
 .responsive-tabs-accordion .resp-tab-content {
 	padding: 0 15px 50px;
-	color: #686868;
-	background-color: #212121;
+	color: #212121;
+	background-color: #fff;
 }
 
 @media (min-width: 480px) {
