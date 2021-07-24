@@ -46,10 +46,103 @@
               <!-- RD Navbar Panel-->
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
-                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <button id="ham" class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                 <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></button>
                 <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><span class="brand-logo veil">DBIT</span><img src="images/dbit logo.png" width="250" height="80" alt="ALMA"></a></div>
               </div>
+ <!-- Mobile nav custom code -->
+ <div id="mobile-nav-cust">
+  <div class="mobile-nav-container">
+    <div class="mobile-link home">
+      <p><a href="">Home</a></p>
+    </div>
+    <div class="about-us">
+      <p class="text-capitalize">About Us</p>
+      <div class="text-right">
+        <i id="about-click" class="fa fa-angle-down text-right"></i>
+      </div>
+    </div>
+    <div id="about-content" class="inactive">
+      <p><a href=""> Management</a></p>
+      <p><a href=""> The Institute</a></p>
+      <p><a href=""> Vison &amp; Mission</a></p>
+    </div>
+
+    <div class="admission">
+      <p class="text-capitalize">Admission</p>
+      <div class="">
+        <i id="admission-click" class="fa fa-angle-down"></i>
+      </div>
+    </div>
+    <div id="admission-content" class="inactive">
+      <p><a href=""> Management</a></p>
+      <p><a href=""> The Institute</a></p>
+      <p><a href=""> Vison &amp; Mission</a></p>
+    </div>
+
+    <div class="department">
+      <p class="text-capitalize">Department</p>
+      <div class="text-right">
+        <i id="department-click" class="fa fa-angle-down text-right"></i>
+      </div>
+    </div>
+    <div id="department-content" class="inactive">
+      <p><a href=""> Management</a></p>
+      <p><a href=""> The Institute</a></p>
+      <p><a href=""> Vison &amp; Mission</a></p>
+    </div>
+
+    <div class="examination">
+      <p class="text-capitalize">Examination</p>
+      <div class="text-right">
+        <i id="examination-click" class="fa fa-angle-down text-right"></i>
+      </div>
+    </div>
+    <div id="examination-content" class="inactive">
+      <p><a href=""> Management</a></p>
+      <p><a href=""> The Institute</a></p>
+      <p><a href=""> Vison &amp; Mission</a></p>
+    </div>
+
+    <div class="student">
+      <p class="text-capitalize">Student Life</p>
+      <div class="text-right">
+        <i id="student-click" class="fa fa-angle-down text-right"></i>
+      </div>
+    </div>
+    <div id="student-content" class="inactive">
+      <p><a href=""> Management</a></p>
+      <p><a href=""> The Institute</a></p>
+      <p><a href=""> Vison &amp; Mission</a></p>
+    </div>
+
+    <div class="faculty">
+      <p class="text-capitalize">Faculty</p>
+      <div class="text-right">
+        <i id="faculty-click" class="fa fa-angle-down text-right"></i>
+      </div>
+    </div>
+    <div id="faculty-content" class="inactive">
+      <p><a href=""> Management</a></p>
+      <p><a href=""> The Institute</a></p>
+      <p><a href=""> Vison &amp; Mission</a></p>
+    </div>
+
+    <div class="placement">
+      <p class="text-capitalize">Placement</p>
+      <div class="text-right">
+        <i id="placement-click" class="fa fa-angle-down text-right"></i>
+      </div>
+    </div>
+    <div id="placement-content" class="inactive">
+      <p><a href=""> Management</a></p>
+      <p><a href=""> The Institute</a></p>
+      <p><a href=""> Vison &amp; Mission</a></p>
+    </div>
+  </div>
+</div>
+<!--/ Mobile nav custom code -->
+
               <div class="rd-navbar-collapse animated">
                 <div class="rd-navbar-collapse-items">
                   <ul class="list-inline text-center text-lg-left">
@@ -92,58 +185,261 @@
                 </div>
               </div>
             </div>
-            <div class="rd-navbar-inner">
-              <div class="rd-navbar-nav-wrap">
-                <!-- RD Navbar Nav-->
-                <ul class="rd-navbar-nav">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About Us</a>
-                    <ul class="rd-navbar-dropdown">
-                      <li><a href="history.html">History</a></li>
-                      <li><a href="our-team.html">Our team</a></li>
-                      <li><a href="team-member.html">Team Member</a></li>
-                      <li><a href="careers.html">Careers</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="courses.html">Courses</a>
-                    <!-- RD Navbar Dropdown-->
-                    <ul class="rd-navbar-dropdown">
-                      <li><a href="single-course.html">Single Course</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="news.html">News</a>
-                    <ul class="rd-navbar-dropdown">
-                      <li><a href="blog-post.html">Post Page</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Gallery</a>
-                    <ul class="rd-navbar-dropdown">
-                      <li><a href="cobbles-gallery.html">Cobbles Gallery</a></li>
-                      <li><a href="padding-gallery.html">Padding Gallery</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="contacts.html">Contact us</a></li>
-                  <li><a href="#">Pages</a>
-                    <ul class="rd-navbar-dropdown">
-                      <li><a href="in-the-news.html">In the News</a></li>
-                      <li><a href="events.html">Events</a></li>
-                      <li><a href="services.html">Services</a></li>
-                      <li><a href="single-event.html">Single Event</a></li>
-                      <li><a href="typography.html">Typography</a></li>
-                      <li><a href="tabs.html">Tabs</a></li>
-                      <li><a href="buttons.html">Buttons</a></li>
-                      <li><a href="table.html">Tables</a></li>
-                      <li><a href="search-results.html">Search Results</a></li>
-                      <li><a href="forms.html">Forms</a></li>
-                      <li><a href="page-404.html">Page 404</a></li>
-                      <li><a href="page-503.html">Page 503</a></li>
-                      <li><a href="coming-soon.html">Coming Soon</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Support alma</a></li>
-                </ul>
-              </div>
+            <!-- Custom navbar -->
+            <div class="custom-navbar">
+              <ul class="nav-list">
+                <li class="nav-list-element">
+                  <a href="">Home</a>
+                </li>
+  
+                <li class="nav-list-element about-ele" id="abt-e">
+                  <a href="">About Us</a>
+                  <div class="about-mega-menu mega-menu" id="abt-m">
+                    <div class="d-flex">
+                      <div class="left">
+                        <div class="img-container">
+                          <img src="./images/navbar/cover-photo-dbit.jpg" alt="" height="150px" width="325px">
+                        </div>
+                        <div class="contents">
+                          <h3 class="clg-name">Don Bosco Institute of Technology</h3>
+                          <p class="description">
+                            Don Bosco Institute of Technology is a private engineering college situated at Kurla, Mumbai
+                            affiliated with the University of Mumbai. It has been granted a "Religious Minority" status.
+                            The institute was awarded 'B++'grade in 2019 by NAAC.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="center">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>College Links</h3>
+                            <p><a href=""> The Salesian of Don Bosco</a></p>
+                            <p><a href=""> Management</a></p>
+                            <p><a href=""> The Institute</a></p>
+                            <p><a href=""> Vison &amp; Mission</a></p>
+                            <p><a href=""> Policies</a></p>
+                            <p><a href=""> Mandatory Disclosure</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Accreditation</h3>
+                            <p><a href=""> AICTE</a></p>
+                            <p><a href=""> NIRF</a></p>
+                            <p><a href=""> NAAC - SSR</a></p>
+                            <p><a href=""> AQAR</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+  
+                <li class="nav-list-element admission-ele">
+                  <a href="">Admission</a>
+                  <div class="admission-mega-menu mega-menu">
+                    <div class="d-flex">
+                      <div class="left">
+                        <div class="img-container">
+                          <img src="./images/navbar/admission-grp.jpeg" alt="" height="170px" width="300px">
+                        </div>
+                      </div>
+                      <div class="center">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Admission Links</h3>
+                            <p><a href=""> Admission Enquiry Form</a></p>
+                            <p><a href=""> Procedure &amp; Eligibility </a></p>
+                            <p><a href=""> Fees Details</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Scholarships</h3>
+                            <p><a href=""> Eligibility</a></p>
+                            <p><a href=""> Minority Scholarships</a></p>
+                            <p><a href=""> EBC Scholarships</a></p>
+                            <p><a href=""> Reserved Student Category</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+  
+                <li class="nav-list-element department-ele">
+                  <a href="">Department</a>
+                  <div class="department-mega-menu mega-menu">
+                    <div class="d-flex">
+                      <div class="left">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Departments</h3>
+                            <p><a href=""> Mechanical Engineering</a></p>
+                            <p><a href=""> Electronics &amp TeleCommunication</a></p>
+                            <p><a href=""> Information Technology</a></p>
+                            <p><a href=""> Computer Engineering</a></p>
+                            <p><a href=""> Basic Science &amp; Humanities</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Research</h3>
+                            <p><a href=""> Ongoing/Current Research</a></p>
+                            <p><a href=""> Sponsored Projects</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+  
+                <li class="nav-list-element exam-ele">
+                  <a href="">Examination</a>
+                  <div class="exam-mega-menu mega-menu">
+                    <div class="d-flex">
+                      <div class="left">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Exam Links</h3>
+                            <p><a href=""> Notices</a></p>
+                            <p><a href=""> Exam Results</a></p>
+                            <p><a href=""> Exam Hall Ticket</a></p>
+                            <p><a href=""> Time Table</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="center">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Important Links</h3>
+                            <p><a href=""> KT Form</a></p>
+                            <p><a href=""> University Circulars</a></p>
+                            <p><a href=""> Student Verification</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Services</h3>
+                            <p><a href=""> Transcript</a></p>
+                            <p><a href=""> Leaving Certificate</a></p>
+                            <p><a href=""> Bonafied</a></p>
+                            <p><a href=""> Moduescurts</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+  
+                <li class="nav-list-element student-ele">
+                  <a href="">Student Life</a>
+                  <div class="student-mega-menu mega-menu">
+                    <div class="d-flex">
+                      <div class="left">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>College Events</h3>
+                            <p><a href=""> Department Days</a></p>
+                            <p><a href=""> Workshop &amp; Webinars</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="center">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Events</h3>
+                            <p><a href=""> Hyteria</a></p>
+                            <p><a href=""> Colosseum</a></p>
+                            <p><a href=""> Sports</a></p>
+                            <p><a href=""> Innovex</a></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Other Links</h3>
+                            <p><a href=""> Student Council</a></p>
+                            <p><a href=""> Student Club</a></p>
+                            <p><a href=""> Student Chapter</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+  
+                <li class="nav-list-element faculty-ele">
+                  <a href="">Faculty</a>
+                  <div class="faculty-mega-menu mega-menu">
+                    <div class="d-flex">
+                      <div class="left">
+                        <div class="img-container">
+                          <img src="./images/navbar/admission-grp.jpeg" alt="" height="170px" width="300px">
+                        </div>
+                      </div>
+                      <div class="right">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Faculty Links</h3>
+                            <p><a href=""> Faculty Profile</a></p>
+                            <p><a href=""> Faculty Committee</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+  
+                <li class="nav-list-element placement-ele">
+                  <a href="">Placements</a>
+                  <div class="placement-mega-menu mega-menu">
+                    <div class="d-flex">
+                      <div class="left">
+                        <div class="img-container">
+                          <img src="./images/navbar/photo-17.webp" alt="" height="210px" width="330px">
+                        </div>
+                      </div>
+                      <div class="center">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Placement at DBIT</h3>
+                            <p class="description">DBIT Training And Placement Cell strongly assimilates the St Don Bosco message to the world i.e. "Help Each Other". We have a student centric approach and we make certain that we connect with as many companies as possible for the placement of our students. Our institute has been blessed with abundance of talent and our Alumni, placed in the industries, have fared very well and are successful in their corporate journeys.​
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <div class="contents">
+                          <div class="rest-links">
+                            <h3>Placement Links</h3>
+                            <p><a href=""> Training &amp; Placement Cell</a></p>
+                            <p><a href="" class="btn custom-btn"> Placement Website</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+  
+              <ul>
+                <li>
+                  <a href="" class="btn">Reach Us</a>
+                </li>
+              </ul>
             </div>
+            <!-- /Custom Navbar -->
+
           </nav>
         </div>
       </header>

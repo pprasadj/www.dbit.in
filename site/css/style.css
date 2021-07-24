@@ -105,6 +105,313 @@
 *     3.29 Select 2
 *     3.30 Magnificent
 */
+/***********************************************
+			CUSTOM NAVBAR CSS
+***********************************************/
+.custom-navbar{
+	background-color: #212121;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+@media screen and (max-width:992px) {
+	.custom-navbar{
+		display: none;
+	}
+}
+.btn{
+	background-color: #3B82F6;
+	color: #fff;
+}
+@media screen and (max-width:1200px) {
+	.custom-navbar .btn{
+		padding: 23.2px 24px;
+	}
+}
+.btn:hover{
+	background: #2465ce;
+}
+.nav-list{
+	display: flex;
+	height: 100%;
+	padding: 0 40px;
+	align-items: center;
+}
+@media screen and (max-width:1200px) {
+	.nav-list{
+		display: flex;
+		height: 100%;
+		padding: 0 5px;
+		align-items: center;
+	}
+}
+.nav-list h3{
+	color: #3B82F6;
+}
+.nav-list-element a{
+	padding: 20px 15px;
+	color: #fff;
+}
+@media screen and (max-width:1200px) {
+	.nav-list-element a{
+		padding: 20px 15px;
+		color: #fff;
+	}
+}
+.nav-list-element a:hover{
+	color: #3B82F6;
+}
+.rest-links h3{
+	font-weight: 400;
+	font-size: 24px;
+}
+.d-flex{
+	display: flex !important;
+	justify-content: space-around;
+}
+.contents{
+	word-wrap: break-word;
+}
+.contents a{
+	padding: 10px 0 5px 0;
+	color: rgb(57, 57, 57);
+	border-bottom: solid 0.5px transparent;
+	transition: all .3s ease-in-out;
+}
+.contents a:hover{
+	border-bottom: solid 0.5px #3b82f6;
+}
+.border-bottom{
+	border-bottom: solid 1px #212121;
+}
+.clg-name{
+	padding-top: 10px;
+	font-size: 24px;
+}
+.mega-menu{
+	background: #fefefe;
+	position: absolute;
+	/* top: 263px; */
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 18px;
+	width: 1200px;
+	padding: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about-ele .left,
+.about-ele .center,
+.about-ele .right{
+	width: 33.23%;
+	margin: 0 25px;
+}
+.department-ele .mega-menu{
+	background: #fefefe;
+	position: absolute;
+	/* top: 263px; */
+	/* width: 700px; */
+	padding: 50px;
+}
+.department-ele .left,
+.department-ele .right{
+	width: 50%;
+	margin: 0 10px;
+}
+.left,.center,.right{
+	width: 33.23%;
+	margin: 0 10px;
+}
+.description{
+	font-size: 14px;
+	font-weight: 300;
+	text-align: justify;
+}
+
+.about-mega-menu{
+	display: none;
+	transition: all .3s ease-in-out;
+}
+.about-ele:hover .about-mega-menu{
+	display: block;
+}
+
+.admission-mega-menu{
+	display: none;
+	transition: all .3s ease-in-out;
+}
+.admission-ele:hover .admission-mega-menu{
+	display: block;
+}
+
+.department-mega-menu{
+	display: none;
+	transition: all .3s ease-in-out;
+}
+.department-ele:hover .department-mega-menu{
+	display: block;
+}
+
+.exam-mega-menu{
+	padding: 50px;
+	display: none;
+	transition: all .3s ease-in-out;
+}
+.exam-ele:hover .exam-mega-menu{
+	display: block;
+}
+
+.student-mega-menu{
+	display: none;
+	transition: all .3s ease-in-out;
+}
+.student-ele:hover .student-mega-menu{
+	display: block;
+}
+
+.faculty-mega-menu{
+	display: none;
+	transition: all .3s ease-in-out;
+}
+.faculty-ele:hover .faculty-mega-menu{
+	display: block;
+}
+
+.placement-mega-menu{
+	display: none;
+	transition: all .3s ease-in-out;
+}
+.placement-ele:hover .placement-mega-menu{
+	display: block;
+}
+#mobile-nav-cust{
+	background: rgba(14,14,14,0.98);
+	color: #fff;
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: 0vh;
+	overflow: hidden;
+	transition: all .4s ease-in-out;
+}
+@media screen and (max-width:1536px) {
+	#mobile-nav-cust{
+		display: none;
+	}
+}	
+@media screen and (max-width:1200px){
+	.rd-navbar--is-clone .custom-navbar{
+		display: none;
+	}
+}
+
+@media screen and (max-width:992px) {
+	#mobile-nav-cust{
+		display: block;
+	}
+	.rd-navbar--is-clone .custom-navbar{
+		display: none;
+	}
+}
+.mobile-nav-container a{
+	color: #fff !important;
+}
+.mobile-nav-container a:hover{
+	color: #3b82f6 !important;
+}
+
+.about-us,
+.admission, 
+.department,
+.examination,
+.student,
+.faculty,
+.placement {
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+	border-bottom: solid 0.5px rgba(255,255,255,0.4);
+	border-top: solid 0.5px rgba(255,255,255,0.4);;
+	padding: 45px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.mobile-link{
+	cursor: default;
+	border-bottom: solid 0.5px rgba(255,255,255,0.4);
+	border-top: solid 0.5px rgba(255,255,255,0.4);;
+	padding: 45px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.about-us span,
+.admission span,
+.department span,
+.examination span,
+.student span,
+.faculty span,
+.placement span {
+    font-weight: 600;
+}
+
+#about-content,
+#admission-content,
+#department-content,
+#examination-content,
+#student-content,
+#faculty-content,
+#placement-content{
+    padding: 10px;
+}
+#about-content p,
+#admission-content p,
+#department-content p,
+#examination-content p,
+#student-content p,
+#faculty-content p,
+#placement-content p {
+    padding-left: 50px;
+}
+.mobile-nav-container{
+	text-align: left;
+}
+@keyframes active-inactive {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes inactive-active {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.active {
+    display: block;
+    animation: inactive-active .5s;
+}
+
+.inactive {
+    animation: active-inactive .5s;
+    display: none;
+}
+.custom-btn{
+	padding: 10px 15px!important;
+	color: #fff !important;
+}
+.placement-ele .description{
+	padding-right: 20px;
+}
+
 /*
  * Bootstrap Framework
  */
