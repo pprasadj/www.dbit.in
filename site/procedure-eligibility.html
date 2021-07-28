@@ -2,7 +2,7 @@
 <html class="wide wow-animation" lang="en">
   <head>
     <!-- Site Title-->
-    <title>AQAR</title>
+    <title>Procedure & Eligibility</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +11,13 @@
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:400,500,700%7CQuattrocento+Sans:400,700">
     <link rel="stylesheet" href="css/style.css">
-		<!--[if lt IE 10]>
-    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <script src="js/html5shiv.min.js"></script>
-		<![endif]-->
+    <style type="text/css">
+      .my-ol li{ padding-bottom: 2rem;}
+      .border-row{ border-top: 1px solid #e1e1e1; }
+      .mp-5{ padding-top: 5rem;}
+
+      .mp-4{ padding-top: 3rem;}
+    </style>
   </head>
   <body>
     <!-- Page-->
@@ -46,7 +49,7 @@
               <!-- RD Navbar Panel-->
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
-                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <button id="ham" class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                 <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></button>
                 <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><span class="brand-logo veil">DBIT</span><img src="images/dbit logo.png" width="250" height="80" alt="ALMA"></a></div>
               </div>
@@ -98,7 +101,7 @@
                 <li class="nav-list-element">
                   <a href="index.html">Home</a>
                 </li>
-
+  
                 <li class="nav-list-element about-ele" id="abt-e">
                   <a href="">About Us</a>
                   <div class="about-mega-menu mega-menu" id="abt-m">
@@ -136,14 +139,14 @@
                             <p><a href="aicte.html"> AICTE</a></p>
                             <p><a href="nirf.html"> NIRF</a></p>
                             <p><a href="images/pdf/NAAC_SSR_MHCOGN101498.pdf"> NAAC - SSR</a></p>
-                            <p><a href="#"> AQAR</a></p>
+                            <p><a href="aqar.html"> AQAR</a></p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </li>
-
+  
                 <li class="nav-list-element admission-ele">
                   <a href="">Admission</a>
                   <div class="admission-mega-menu mega-menu">
@@ -158,7 +161,7 @@
                           <div class="rest-links">
                             <h3>Admission Links</h3>
                             <p><a href=""> Admission Enquiry Form</a></p>
-                            <p><a href="./procedure-eligibility.html"> Procedure &amp; Eligibility </a></p>
+                            <p><a href="#"> Procedure &amp; Eligibility </a></p>
                             <p><a href=""> Fees Details</a></p>
                           </div>
                         </div>
@@ -167,17 +170,17 @@
                         <div class="contents">
                           <div class="rest-links">
                             <h3>Scholarships</h3>
-                            <p><a href="./eligibility.html"> Eligibility</a></p>
-                            <p><a href="./minority-scholarship.html"> Minority Scholarships</a></p>
-                            <p><a href="./ebc-scholarship.html"> EBC Scholarships</a></p>
-                            <p><a href="./reserved-student-category.html"> Reserved Student Category</a></p>
+                            <p><a href="eligibility.html"> Eligibility</a></p>
+                            <p><a href="minority-scholarship.html"> Minority Scholarships</a></p>
+                            <p><a href="ebc-scholarship.html"> EBC Scholarships</a></p>
+                            <p><a href="reserved-student-category.html"> Reserved Student Category</a></p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </li>
-
+  
                 <li class="nav-list-element department-ele">
                   <a href="">Department</a>
                   <div class="department-mega-menu mega-menu">
@@ -206,7 +209,7 @@
                     </div>
                   </div>
                 </li>
-
+  
                 <li class="nav-list-element exam-ele">
                   <a href="">Examination</a>
                   <div class="exam-mega-menu mega-menu">
@@ -215,7 +218,7 @@
                         <div class="contents">
                           <div class="rest-links">
                             <h3>Exam Links</h3>
-                            <p><a href=""> Notices</a></p>
+                            <p><a href="/site/exam-notice.html"> Notices</a></p>
                             <p><a href=""> Exam Results</a></p>
                             <p><a href=""> Exam Hall Ticket</a></p>
                             <p><a href=""> Time Table</a></p>
@@ -246,7 +249,7 @@
                     </div>
                   </div>
                 </li>
-
+  
                 <li class="nav-list-element student-ele">
                   <a href="">Student Life</a>
                   <div class="student-mega-menu mega-menu">
@@ -284,7 +287,7 @@
                     </div>
                   </div>
                 </li>
-
+  
                 <li class="nav-list-element faculty-ele">
                   <a href="">Faculty</a>
                   <div class="faculty-mega-menu mega-menu">
@@ -298,15 +301,15 @@
                         <div class="contents">
                           <div class="rest-links">
                             <h3>Faculty Links</h3>
-                            <p><a href="dbit-faculty.html"> Faculty Profile</a></p>
-                            <p><a href="dbit-faculty-committee.html"> Faculty Committee</a></p>
+                            <p><a href=""> Faculty Profile</a></p>
+                            <p><a href=""> Faculty Committee</a></p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </li>
-
+  
                 <li class="nav-list-element placement-ele">
                   <a href="">Placements</a>
                   <div class="placement-mega-menu mega-menu">
@@ -330,7 +333,7 @@
                           <div class="rest-links">
                             <h3>Placement Links</h3>
                             <p><a href=""> Training &amp; Placement Cell</a></p>
-                            <p><a href="https://placement.dbit.in/" target="_blank" rel="noopener noreferrer" class="btn custom-btn" > Placement Website</a></p>
+                            <p><a href="" class="btn custom-btn"> Placement Website</a></p>
                           </div>
                         </div>
                       </div>
@@ -338,7 +341,7 @@
                   </div>
                 </li>
               </ul>
-
+  
               <ul>
                 <li>
                   <a href="" class="btn">Reach Us</a>
@@ -359,59 +362,113 @@
               <ul class="list-breadcrumb">
                 <li><a href="index.html">home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li>AQAR
+                <li>institute
                 </li>
               </ul>
-            <!-- </div>
-          </div> -->
-        </div>
+            </div>
+          <!-- </div>
+        </div> -->
       </section>
-
       <section class="section-75 section-md-100 section-lg-150">
         <div class="shell range-offset-10">
           <div class="range">
             <div class="cell-lg-12">
-              <h2>AQAR</h2>
-              <p>
-                AQAR is a useful document which gives overall picture of the institutional growth in all the
-                seven criteria’s identified by NAAC for the year . It also provides systematic data with
-                respect to various improvements to be taken up by the institution.
-              </p>
-              <div class="table-responsive">
+              <div class="text-center">
+                <h2>ADMISSION 2020-21</h2>
+                <h5>ADMISSION FOR FIRST YEAR OF FOUR YEAR –FULL TIME DEGREE COURSE IN ENGINEERING</h5>
+              </div>
+              <div class="mp-5">
+                <div class="table-responsive">
                 <table class="table table-hover">
                   <thead>
                     <tr>
                       <td>Sr. No</td>
-                      <td>Year</td>
-                      <td>AQAR</td>
-                      <td>Distinctiveness</td>
-                      <td>Practises</td>
-
+                      <td>Discipline</td>
+                      <td>Sanctioned Intake</td>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>2019-20</td>
-                      <td><a href="images/pdf/AQAR_Report_2019_20.pdf">AQAR</a></td>
-                      <td><a href="images/pdf/Institute_Distictiveness_2019_20.pdf">Institute Distinctiveness</a></td>
-                      <td><a href="images/pdf/Best_Practices_2019_20.pdf">Best Practices</a></td>
+                      <td>Electronics & Telecommunication Engineering</td>
+                      <td><p>60</p></td>
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>2018-19</td>
-                      <td><a href="images/pdf/AQAR_Report_2018_19.pdf">AQAR</a></td>
-                      <td><a href="images/pdf/Institute_Distictiveness_2018_19.pdf">Institute Distinctiveness</a></td>
-                      <td><a href="images/pdf/Best-Practices_2018_19.pdf">Best Practices</a></td>
+                      <td>Computer Engineering</td>
+                      <td><p>60</p></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Information Technology</td>
+                      <td><p>60</p></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Mechanical Engineering</td>
+                      <td><p>120</p></td>
                     </tr>
                   </tbody>
                 </table>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="range">
+            <div class="cell-lg-12">
+              <div class="text-center border-row">
+                <div class="mp-5">
+                  <h2>ADMISSION 2020-21</h2>
+                  <h5>ADMISSION FOR FIRST YEAR OF FOUR YEAR –FULL TIME DEGREE COURSE IN ENGINEERING</h5>
+                </div>
+              </div>
+            </div>
+            <div class="cell-lg-12 mp-5">
+              <ul class="my-ol">
+                <li>
+                  <h6>Eligibility for Admission:</h6>
+                    Eligibility criteria as prescribed by the Government of Maharashtra and given in the Admission Rules. Kindly refer to website http://www.dte.org.in/
+                    Every student seeking admission to the First Year of Engineering should register themselves with the Centralised Admission Process (CAP) conducted by DTE, Maharashtra State at the DTE facilitation Centres (FC).
+                    This Process is pre-requisite and mandatory also for Minority students seeking admission for Minority Category.
+                </li>
+                <li>
+                  <h6>CAP Seats :</h6>
+                    <strong>29% seats</strong> are filled through CAP conducted by DTE.
+                </li>
+                <li>
+                  <h6>Minority Seats :</h6>
+                    <strong>51% seats </strong> are reserve for Minority candidates (Roman Catholic Community).
+                </li>
+                <li>
+                  <h6>Institute Level Seats :</h6>
+                    <strong>20% seats </strong> are allotted as Institute Quota, Candidates who wish to avail of Institute Level Seat of the college, first must register at the <strong> DTE Facilitation Centre 
+                    </strong>, procure a merit number and only then apply at <strong> Don Bosco Institute of Technology </strong> for the Institute seat.
+                </li>
+                <li>
+                  <p>
+                    For latest updates of admission process check the college web site regularly (www.dbit.in).
+                    Telephone: 022-68878700
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="range">
+            <div class="cell-lg-12">
+              <div class="text-center border-row">
+                <div class="mp-5">
+                  <h2>Important Links</h2>
+                </div>
+              </div>
+              <div>
+                <a href="https://cetcell.mahacet.org/">MH-CET Exam Portal</a><br>
+                <a href="http://www.dte.org.in/">DTE Wesbite</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <!-- Page Footer-->
       <footer class="page-footer page-footer-classic">
         <section class="section-75 section-sm-80 section-md-100 section-xl-150">
@@ -422,7 +479,7 @@
               </div>
               <div class="cell-sm-3 cell-lg-2 cell-md-3"><span class="small text-spacing-340 text-white text-uppercase text-bold page-footer-classic-title">About us</span>
                 <ul class="list list-marked offset-top-30 list-xs offset-md-top-40">
-                  <li><a class="text-white" href="salesiandb.html">Salesian of Don Bosco</a></li>
+                  <li><a class="text-white" href="#">Salesian of Don Bosco</a></li>
                   <li><a class="text-white" href="institute.html">Institute</a></li>
                   <li><a class="text-white" href="management.html">Management</a></li>
                   <li><a class="text-white" href="visionmission.html">Vision & Mission</a></li>
@@ -481,11 +538,7 @@
           <div class="shell">
             <div class="range range-sm-middle spacing-30">
               <div class="cell-sm-8 text-sm-left">
-<<<<<<< HEAD
-                <p class="small-xs">Copyright	<span id="copyright-year"></span>	All rights reserved by Alma University	.
-=======
-                <p class="small-xs">Copyright <span id="copyright-year"></span> All rights reserved by Don Bosco Institute of Technology.
->>>>>>> ab94bfac5f31cf3459d0443d74d8c04d1f9c3ac5
+                <p class="small-xs">Copyright <span id="copyright-year"></span> All rights reserved by Don Bosco Institute of Technology. 
                 </p>
               </div>
               <div class="cell-sm-4 text-sm-right">
