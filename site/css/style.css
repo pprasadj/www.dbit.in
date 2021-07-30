@@ -108,6 +108,9 @@
 /***********************************************
 			CUSTOM NAVBAR CSS
 ***********************************************/
+.margin-0{
+	margin: 0;
+}
 .custom-navbar {
 	background-color: #212121;
 	height: 60px;
@@ -441,6 +444,8 @@
 #faculty-content p,
 #placement-content p {
 	padding-left: 50px;
+    font-size: 16px;
+    font-weight: 200;
 }
 
 .mobile-nav-container {
