@@ -111,6 +111,9 @@
 .margin-0{
 	margin: 0;
 }
+padding-left{
+	padding-left: 100px !important; 
+}
 .custom-navbar {
 	background-color: #212121;
 	height: 60px;
@@ -374,7 +377,7 @@
 	#mobile-nav-cust {
 		display: block;
 	}
-
+	
 	.rd-navbar--is-clone .custom-navbar {
 		display: none;
 	}
@@ -443,15 +446,42 @@
 #student-content p,
 #faculty-content p,
 #placement-content p {
-	padding-left: 50px;
-    font-size: 16px;
+	padding-left: 40px;
+    font-size: 15px;
     font-weight: 200;
 }
-
+.mobile-menu-wrapper{
+	max-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling:touch;
+}
+.mobile-menu-wrapper::-webkit-scrollbar{
+	display:none;
+}
+.mobile-menu-flex{
+	display: flex;
+	justify-content: space-between;
+}
+.side2{
+	padding-right: 10px;
+}
+@media (min-width: 768px) {
+	.side2{
+		padding-right: 100px;
+	}
+}
+.mobile-menu-flex .mobile-menu-innerheading{
+	color: #3B82F6;
+    font-size: 20px;
+    padding-left: 40px;
+    font-weight: 500;
+}
 .mobile-nav-container {
 	text-align: left;
 }
-
+.menu-text-align{
+	text-align: left;
+}
 @keyframes active-inactive {
 	from {
 		opacity: 1;
