@@ -520,6 +520,21 @@ padding-left{
 .placement-ele .description {
 	padding-right: 20px;
 }
+
+/* ************* Department ************************/
+.department-content{
+	margin:80px;
+}
+.dept-vision{
+	background-color: rgb(226, 226, 226);
+	padding: 12px 10px;
+}
+.department-heading{
+	font-size:48px;
+	color: #000;
+	font-weight: 500;
+	margin:0;
+}
 /*
  * Bootstrap Framework
  */
