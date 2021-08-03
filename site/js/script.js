@@ -2035,8 +2035,8 @@
 				e.preventDefault();
 				var filter = $(this);
 				clearTimeout(resizeTimout);
-				filter.parents(".isotope-filters").find('.active').removeClass("active");
-				filter.addClass("active");
+				filter.parents(".isotope-filters").find('.active-event').removeClass("active-event");
+				filter.addClass("active-event");
 				var iso = $('.isotope[data-isotope-group="' + this.getAttribute("data-isotope-group") + '"]');
 				iso.isotope({
 					itemSelector: '.isotope-item',
