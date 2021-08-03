@@ -42364,7 +42364,7 @@ html .page .isotope-filters .list-isotop > li > a {
 	}
 }
 
-html .page .isotope-filters .list-isotop > li > a:hover, html .page .isotope-filters .list-isotop > li > a.active {
+html .page .isotope-filters .list-isotop > li > a:hover, html .page .isotope-filters .list-isotop > li > a.active-event {
 	color: #3B82F6;
 }
 
