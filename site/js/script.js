@@ -2205,6 +2205,7 @@ document.getElementById('department-click').addEventListener("click", department
 document.getElementById('examination-click').addEventListener("click", examinationClick);
 document.getElementById('student-click').addEventListener("click", studentClick);
 document.getElementById('placement-click').addEventListener("click", placementClick);
+// document.getElementById('news-click').addEventListener("click", newsClick);
 
 const aboutContent = document.getElementById('about-content');
 const admissionContent = document.getElementById('admission-content');
@@ -2212,6 +2213,7 @@ const departmentContent = document.getElementById('department-content');
 const examinationContent = document.getElementById('examination-content');
 const studentContent = document.getElementById('student-content');
 const placementContent = document.getElementById('placement-content');
+// const newsContent = document.getElementById('news-content');
 
 /*********************************************
 ABOUT CLICK
@@ -2459,9 +2461,45 @@ function placementClick() {
 		studentContent.classList.remove('active');
 		studentContent.classList.add('inactive');
 	}
-	const ansF = facultyContent.classList.contains('active')
-	if (ansF) {
-		facultyContent.classList.remove('active');
-		facultyContent.classList.add('inactive');
-	}
 }
+
+/*********************************************
+News CLICK
+**********************************************/
+
+// function newsClick() {
+// 	if (newsContent.classList.contains('inactive')) {
+// 		newsContent.classList.remove('inactive');
+// 		newsContent.classList.add('active');
+// 	} else if (newsContent.classList.contains('active')) {
+// 		newsContent.classList.remove('active');
+// 		newsContent.classList.add('inactive');
+// 	}
+
+// 	const ansAb = aboutContent.classList.contains('active')
+// 	if (ansAb) {
+// 		aboutContent.classList.remove('active');
+// 		aboutContent.classList.add('inactive');
+// 	}
+// 	const ansAd = admissionContent.classList.contains('active')
+// 	if (ansAd) {
+// 		admissionContent.classList.remove('active');
+// 		admissionContent.classList.add('inactive');
+// 	}
+// 	const ansP = departmentContent.classList.contains('active')
+// 	if (ansP) {
+// 		departmentContent.classList.remove('active');
+// 		departmentContent.classList.add('inactive');
+// 	}
+// 	const ansS = studentContent.classList.contains('active')
+// 	if (ansS) {
+// 		studentContent.classList.remove('active');
+// 		studentContent.classList.add('inactive');
+// 	}
+	
+// 	const ansPl = placementContent.classList.contains('active')
+// 	if (ansPl) {
+// 		placementContent.classList.remove('active');
+// 		placementContent.classList.add('inactive');
+// 	}
+// }
