@@ -2198,14 +2198,13 @@ ham.addEventListener("click", function () {
 		mobilenav.style.height = "100vh";
 	}
 })
-
 document.getElementById('about-click').addEventListener("click", aboutClick);
 document.getElementById('admission-click').addEventListener("click", admissionClick);
 document.getElementById('department-click').addEventListener("click", departmentClick);
 document.getElementById('examination-click').addEventListener("click", examinationClick);
 document.getElementById('student-click').addEventListener("click", studentClick);
 document.getElementById('placement-click').addEventListener("click", placementClick);
-// document.getElementById('news-click').addEventListener("click", newsClick);
+document.getElementById('news-click').addEventListener("click", newsClick);
 
 const aboutContent = document.getElementById('about-content');
 const admissionContent = document.getElementById('admission-content');
@@ -2213,7 +2212,7 @@ const departmentContent = document.getElementById('department-content');
 const examinationContent = document.getElementById('examination-content');
 const studentContent = document.getElementById('student-content');
 const placementContent = document.getElementById('placement-content');
-// const newsContent = document.getElementById('news-content');
+const newsContent = document.getElementById('news-content');
 
 /*********************************************
 ABOUT CLICK
@@ -2253,6 +2252,11 @@ function aboutClick() {
 	if (ansPl) {
 		placementContent.classList.remove('active');
 		placementContent.classList.add('inactive');
+	}
+	const ansNew = newsContent.classList.contains('active')
+	if (ansNew) {
+		newsContent.classList.remove('active');
+		newsContent.classList.add('inactive');
 	}
 }
 
@@ -2296,6 +2300,11 @@ function admissionClick() {
 		placementContent.classList.remove('active');
 		placementContent.classList.add('inactive');
 	}
+	const ansNew = newsContent.classList.contains('active')
+	if (ansNew) {
+		newsContent.classList.remove('active');
+		newsContent.classList.add('inactive');
+	}
 }
 
 /*********************************************
@@ -2336,6 +2345,11 @@ function departmentClick() {
 	if (ansPl) {
 		placementContent.classList.remove('active');
 		placementContent.classList.add('inactive');
+	}
+	const ansNew = newsContent.classList.contains('active')
+	if (ansNew) {
+		newsContent.classList.remove('active');
+		newsContent.classList.add('inactive');
 	}
 }
 
@@ -2379,6 +2393,11 @@ function examinationClick() {
 		placementContent.classList.remove('active');
 		placementContent.classList.add('inactive');
 	}
+	const ansNew = newsContent.classList.contains('active')
+	if (ansNew) {
+		newsContent.classList.remove('active');
+		newsContent.classList.add('inactive');
+	}
 }
 
 /*********************************************
@@ -2419,6 +2438,11 @@ function studentClick() {
 	if (ansPl) {
 		placementContent.classList.remove('active');
 		placementContent.classList.add('inactive');
+	}
+	const ansNew = newsContent.classList.contains('active')
+	if (ansNew) {
+		newsContent.classList.remove('active');
+		newsContent.classList.add('inactive');
 	}
 }
 
@@ -2461,45 +2485,50 @@ function placementClick() {
 		studentContent.classList.remove('active');
 		studentContent.classList.add('inactive');
 	}
+	const ansNew = newsContent.classList.contains('active')
+	if (ansNew) {
+		newsContent.classList.remove('active');
+		newsContent.classList.add('inactive');
+	}
 }
 
 /*********************************************
 News CLICK
 **********************************************/
 
-// function newsClick() {
-// 	if (newsContent.classList.contains('inactive')) {
-// 		newsContent.classList.remove('inactive');
-// 		newsContent.classList.add('active');
-// 	} else if (newsContent.classList.contains('active')) {
-// 		newsContent.classList.remove('active');
-// 		newsContent.classList.add('inactive');
-// 	}
+function newsClick() {
+	if (newsContent.classList.contains('inactive')) {
+		newsContent.classList.remove('inactive');
+		newsContent.classList.add('active');
+	} else if (newsContent.classList.contains('active')) {
+		newsContent.classList.remove('active');
+		newsContent.classList.add('inactive');
+	}
 
-// 	const ansAb = aboutContent.classList.contains('active')
-// 	if (ansAb) {
-// 		aboutContent.classList.remove('active');
-// 		aboutContent.classList.add('inactive');
-// 	}
-// 	const ansAd = admissionContent.classList.contains('active')
-// 	if (ansAd) {
-// 		admissionContent.classList.remove('active');
-// 		admissionContent.classList.add('inactive');
-// 	}
-// 	const ansP = departmentContent.classList.contains('active')
-// 	if (ansP) {
-// 		departmentContent.classList.remove('active');
-// 		departmentContent.classList.add('inactive');
-// 	}
-// 	const ansS = studentContent.classList.contains('active')
-// 	if (ansS) {
-// 		studentContent.classList.remove('active');
-// 		studentContent.classList.add('inactive');
-// 	}
+	const ansAb = aboutContent.classList.contains('active')
+	if (ansAb) {
+		aboutContent.classList.remove('active');
+		aboutContent.classList.add('inactive');
+	}
+	const ansAd = admissionContent.classList.contains('active')
+	if (ansAd) {
+		admissionContent.classList.remove('active');
+		admissionContent.classList.add('inactive');
+	}
+	const ansP = departmentContent.classList.contains('active')
+	if (ansP) {
+		departmentContent.classList.remove('active');
+		departmentContent.classList.add('inactive');
+	}
+	const ansS = studentContent.classList.contains('active')
+	if (ansS) {
+		studentContent.classList.remove('active');
+		studentContent.classList.add('inactive');
+	}
 	
-// 	const ansPl = placementContent.classList.contains('active')
-// 	if (ansPl) {
-// 		placementContent.classList.remove('active');
-// 		placementContent.classList.add('inactive');
-// 	}
-// }
+	const ansPl = placementContent.classList.contains('active')
+	if (ansPl) {
+		placementContent.classList.remove('active');
+		placementContent.classList.add('inactive');
+	}
+}

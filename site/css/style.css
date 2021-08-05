@@ -370,6 +370,24 @@ padding-left {
 	display: block;
 }
 
+.news-mega-menu {
+	display: none;
+	transition: all .3s ease-in-out;
+}
+
+.news-ele:hover .news-mega-menu {
+	display: block;
+}
+
+.news-mega-menu h4{
+	font-weight: 500;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.news-mega-menu .right{
+	margin-left: 40px;
+}
 #mobile-nav-cust {
 	background: rgba(14, 14, 14, 0.98);
 	color: #fff;
@@ -879,7 +897,8 @@ padding-left {
 .examination span,
 .student span,
 .faculty span,
-.placement span {
+.placement span,
+.news span {
 	font-weight: 600;
 }
 
@@ -889,7 +908,8 @@ padding-left {
 #examination-content,
 #student-content,
 #faculty-content,
-#placement-content {
+#placement-content,
+#news-content {
 	padding: 10px;
 }
 
@@ -899,7 +919,8 @@ padding-left {
 #examination-content p,
 #student-content p,
 #faculty-content p,
-#placement-content p {
+#placement-content p,
+#news-content p {
 	padding-left: 40px;
 	font-size: 15px;
 	font-weight: 200;
