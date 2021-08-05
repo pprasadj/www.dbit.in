@@ -983,6 +983,10 @@ padding-left {
 .placement-ele .description {
 	padding-right: 20px;
 }
+/*************** Notice ****************************/
+.notice-wrapper{
+	padding : 50px;
+}
 
 /* ************* Department ************************/
 .program-wrapper {
@@ -14283,7 +14287,7 @@ fieldset[disabled] .btn-outline-primary {
 }
 
 .icon-primary {
-	color: #3B82F6;
+	color: rgba(58, 54, 54, 0.5);
 }
 
 .icon-silver-chalice {
