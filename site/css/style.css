@@ -379,15 +379,16 @@ padding-left {
 	display: block;
 }
 
-.news-mega-menu h4{
+.news-mega-menu h4 {
 	font-weight: 500;
 	font-size: 20px;
 	padding-bottom: 10px;
 }
 
-.news-mega-menu .right{
+.news-mega-menu .right {
 	margin-left: 40px;
 }
+
 #mobile-nav-cust {
 	background: rgba(14, 14, 14, 0.98);
 	color: #fff;
@@ -488,9 +489,11 @@ padding-left {
 	font-size: 15px;
 	font-weight: 200;
 }
-.flash-news{
+
+.flash-news {
 	transform: translate(0px, -3px);
 }
+
 /* .mobile-menu-wrapper{
 	height: 100vh;
   	overflow-y: scroll;
@@ -1006,27 +1009,28 @@ padding-left {
 }
 
 /*************** Course Offered *****************/
-.course-flex{
-	display:flex;
+.course-flex {
+	display: flex;
 	align-items: baseline;
 	flex-wrap: wrap;
 	margin: auto;
 	justify-content: center;
 }
+
 .newsCard {
 	position: relative;
 	width: 550px;
 	height: auto;
 	margin: 15px;
 	background-color: #fff;
-	color:#fff;
+	color: #fff;
 	overflow: hidden;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-	
-  }
- 
 
-  .newsCaption {
+}
+
+
+.newsCaption {
 	position: absolute;
 	top: auto;
 	bottom: 0;
@@ -1037,46 +1041,50 @@ padding-left {
 	background-color: #000;
 	padding: 20px;
 	-webkit-transform: translateY(80%);
-			transform: translateY(80%);
+	transform: translateY(80%);
 	-webkit-backface-visibility: hidden;
-			backface-visibility: hidden;
+	backface-visibility: hidden;
 	-webkit-transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
 	transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
 	transition: transform 0.4s, opacity 0.1s 0.3s;
 	transition: transform 0.4s, opacity 0.1s 0.3s, -webkit-transform 0.4s;
-  }
-  
-  .newsCaption-title {
+}
+
+.newsCaption-title {
 	/* margin-bottom: 15px; */
 	font-size: 20px;
 	color: #fff;
-	transform: translate(5px, -20px);
-  }
-  .newsCaption p{
-	  margin:5px 0;
-  }
-  .newsCaption-content {
-	color: #fff;
-	font-size:14px;
-  }
-  .newsCaption .btn{
-	  margin-top: 20px;
-	padding: 10px;
-  }
+	transform: translate(5px, -14px);
+}
 
-  
-  .news-Slide-up:hover .newsCaption {
+.newsCaption p {
+	margin: 5px 0;
+}
+
+.newsCaption-content {
+	color: #fff;
+	font-size: 14px;
+}
+
+.newsCaption .btn {
+	margin-top: 20px;
+	padding: 10px;
+}
+
+
+.news-Slide-up:hover .newsCaption {
 	opacity: .8;
 	-webkit-transform: translateY(0px);
-			transform: translateY(0px);
+	transform: translateY(0px);
 	-webkit-transition: opacity 0.1s, -webkit-transform 0.4s;
 	transition: opacity 0.1s, -webkit-transform 0.4s;
 	transition: transform 0.4s, opacity 0.1s;
 	transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
-  }
+}
+
 /*************** Notice ****************************/
-.notice-wrapper{
-	padding : 50px;
+.notice-wrapper {
+	padding: 50px;
 }
 
 /* ************* Department ************************/
@@ -1085,12 +1093,14 @@ padding-left {
 	justify-content: space-around;
 	/* flex-wrap: wrap; */
 }
+
 @media screen and (max-width:1102px) {
 	.program-wrapper {
 		flex-wrap: wrap;
 
 	}
 }
+
 .program-wrapper .left-content {
 	padding-right: 30px;
 	text-align: justify;
@@ -1099,16 +1109,20 @@ padding-left {
 .justify {
 	text-align: justify;
 }
-.left-flex{
-	text-align:initial;
+
+.left-flex {
+	text-align: initial;
 }
+
 .department-content {
 	margin: 60px 60px;
 }
-.flex-head{
+
+.flex-head {
 	font-size: 25px;
-	padding:20px 0 0 0;
+	padding: 20px 0 0 0;
 }
+
 @media screen and (max-width:550px) {
 	.department-content {
 		margin: 30px;
@@ -1127,51 +1141,63 @@ padding-left {
 .dept-head+p {
 	text-align: justify;
 }
-.dept-head p{
-	font-size:22px;
+
+.dept-head p {
+	font-size: 22px;
 	color: #000;
 }
+
 .department-heading {
 	font-size: 40px;
 	color: #000;
 	font-weight: 500;
 	margin: 0;
 }
-.flex-buttons{
-	display:flex;
+
+.flex-buttons {
+	display: flex;
 }
-.flex-buttons p{
-	margin:0;
-	margin-right:30px;
+
+.flex-buttons p {
+	margin: 0;
+	margin-right: 30px;
 }
+
 .border-table {
 	border: solid 1px #111;
 }
-.margin-dept{
-	margin:10px;
+
+.margin-dept {
+	margin: 10px;
 }
+
 @media screen and (max-width:768px) {
-	.margin-dept iframe{
-		margin:10px;
+	.margin-dept iframe {
+		margin: 10px;
 		width: 500px;
 	}
 }
+
 /* Program */
-.program-overview-wrapper{
-	margin:80px 0;
+.program-overview-wrapper {
+	margin: 80px 0;
 }
-.program-overview h3{
-	margin-bottom:10px;
+
+.program-overview h3 {
+	margin-bottom: 10px;
 }
-.margin-bottom-dept{
-	margin-bottom:50px;
+
+.margin-bottom-dept {
+	margin-bottom: 50px;
 }
+
 @media screen and (max-width:768px) {
-	.iframe-wrapper iframe{
+	.iframe-wrapper iframe {
 		width: 450px;
 		margin: 10px;
 	}
 }
+
 /********************** innovex *************/
 .inn-wrapper {
 	display: flex;
