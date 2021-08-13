@@ -50950,6 +50950,9 @@ html:not(.ie-11):not(.ios) .parallax-disabled {
 	display: -webkit-flex;
 	display: flex;
 	flex-shrink: 0;
+	justify-content: center !important;
+	background-repeat: no-repeat !important;
+	background-size: 100% 100% !important;
 }
 
 .swiper-container-android .swiper-slide,
