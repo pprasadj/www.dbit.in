@@ -1081,7 +1081,11 @@ padding-left {
 	transition: transform 0.4s, opacity 0.1s;
 	transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
 }
-
+/* ************ Feedback form ******** */
+.d-flex-center{
+	display: flex;
+	justify-content: center;
+}
 /*************** Notice ****************************/
 .notice-wrapper {
 	padding: 50px;
