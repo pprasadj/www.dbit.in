@@ -652,29 +652,24 @@
         <section class="section-50 section-md-75 section-md-100 section-lg-120 section-xl-150 bg-wild-sand d-flex-center">
             <div class="shell text-left">
                 <h2><span class="small">Feedback Form</span>It would be great to know your feedback!</h2>
-                <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact"
-                    method="post" action="bat/rd-mailform.php">
+                <form  data-form-type="contact" method="post" autocomplete="off" name="google-sheet-feedback" id="google-sheet-feedback">
                     <div class="range offset-top-40 offset-md-top-60">
                         <div class="cell-lg-12 cell-md-6">
                             <div class="form-group postfix-xl-right-40">
                                 <label class="form-label" for="contact-name">Name *</label>
-                                <input class="form-control" id="contact-name" type="text" name="name"
-                                    data-constraints="@Required">
+                                <input class="form-control" id="contact-name" type="text" name="name" data-constraints="@Required">
                             </div>
                             <div class="form-group postfix-xl-right-40">
                                 <label class="form-label" for="contact-email">E-mail *</label>
-                                <input class="form-control" id="contact-email" type="email" name="email"
-                                    data-constraints="@Email @Required">
+                                <input class="form-control" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
                             </div>
                             <div class="form-group postfix-xl-right-40">
                                 <label class="form-label" for="contact-subject">Subject *</label>
-                                <input class="form-control" id="contact-subject" type="text" name="subject"
-                                    data-constraints="@Required">
+                                <input class="form-control" id="contact-subject" type="text" name="subject" data-constraints="@Required">
                             </div>
                             <div class="form-group postfix-xl-right-40">
                                 <label class="form-label" for="contact-message">Message *</label>
-                                <textarea class="form-control" id="contact-message" name="message"
-                                    data-constraints="@Required"></textarea>
+                                <textarea class="form-control" id="contact-message" name="message" data-constraints="@Required"></textarea>
                             </div>
                         </div>
                         <div class="cell-lg-4 cell-md-6 offset-top-20 offset-md-top-0">
@@ -794,6 +789,22 @@
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Java script-->
+
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyU1HHZXF5y-CwFZXS5i11YnTK7jMPgJeYs87arapMCf1SDA2i9GFgQKndUv4la6ZLQ/exec'
+            const form = document.forms['google-sheet-feedback']
+
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
 </body>
