@@ -729,7 +729,7 @@
       <section class="section-50 section-md-75 section-md-100 section-lg-120 section-xl-150 ">
         <div class="shell text-left">
           <h2><span class="small">contact us</span>Feel free to get in touch with us</h2>
-          <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+          <form class="rd-mailform text-left" data-form-type="contact" method="post" name="google-sheet">
             <div class="range offset-top-40 offset-md-top-60">
               <div class="cell-lg-4 cell-md-6">
                 <div class="form-group postfix-xl-right-40">
@@ -743,8 +743,8 @@
               </div>
               <div class="cell-lg-4 cell-md-6 offset-top-20 offset-md-top-0">
                 <div class="form-group postfix-xl-right-40">
-                  <label class="form-label" for="contact-company">Phone</label>
-                  <input class="form-control" id="contact-company" type="text" name="company" data-constraints="@Required">
+                  <label class="form-label" for="contact-phone">Phone</label>
+                  <input class="form-control" id="contact-phone" type="text" name="phone" data-constraints="@Required">
                 </div>
                 <div class="form-group postfix-xl-right-40">
                   <label class="form-label" for="contact-subject">Subject</label>
@@ -754,7 +754,7 @@
               <div class="cell-lg-4 offset-top-20 offset-lg-top-0">
                 <div class="form-group postfix-xl-right-40">
                   <label class="form-label" for="contact-message">Message</label>
-                  <textarea class="form-control" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                  <textarea class="form-control" id="contact-message" type="text" name="message" data-constraints="@Required"></textarea>
                 </div>
               </div>
             </div>
@@ -867,7 +867,23 @@
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
+
     <!-- Java script-->
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwv5TG4tNBXdBgLi6rHO6xnxb5D3uhNY0NW1hK0hjX_QysJ4cauVOKv_ckiJlNyoAOQ/exec'
+      const form = document.forms['google-sheet']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>
