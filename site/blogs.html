@@ -649,7 +649,7 @@
                         <div class="countdown" data-type="until" data-time="31 Dec 2019 16:00" data-format="dhms"></div>
                         <p class="">DBIT Premium is a fun and comprehensive newsletter that lets you know about all the latest happenings on the campus. If you want to stay in the DBIT loop, this is your portal.</p>                        
                         <h2>Join the Waitlist Now!</h2>
-                  <form class="rd-mailform text-sm-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <form class="rd-mailform text-sm-left" data-form-type="contact" method="post" name="google-sheet">
                     <div class="range">
                       <div class="cell-sm-6">
                         <div class="form-group">
@@ -779,6 +779,21 @@
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Java script-->
+    <!-- Java script-->
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyuq7LUwYSEdp3Qd3lHOdPBLSKfJesOo8tU2_e_se3-uv-tvYx0FBH97Zj8XwGldLY/exec'
+      const form = document.forms['google-sheet']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Thanks for Subscribing..! Newsletters Will Be Mailed..."))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>
