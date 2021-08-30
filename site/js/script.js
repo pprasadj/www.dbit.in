@@ -2,81 +2,81 @@
 (function () {
 	// Global variables
 	var
-			userAgent = navigator.userAgent.toLowerCase(),
-			initialDate = new Date(),
+		userAgent = navigator.userAgent.toLowerCase(),
+		initialDate = new Date(),
 
-			$document = $(document),
-			$window = $(window),
-			$html = $("html"),
+		$document = $(document),
+		$window = $(window),
+		$html = $("html"),
 
-			isDesktop = $html.hasClass("desktop"),
-			isIE = userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1]) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false,
-			isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
-			isTouch = "ontouchstart" in window,
-			isNoviBuilder = false,
+		isDesktop = $html.hasClass("desktop"),
+		isIE = userAgent.indexOf("msie") != -1 ? parseInt(userAgent.split("msie")[1]) : userAgent.indexOf("trident") != -1 ? 11 : userAgent.indexOf("edge") != -1 ? 12 : false,
+		isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+		isTouch = "ontouchstart" in window,
+		isNoviBuilder = false,
 
-			plugins = {
-				pageLoader:              $(".page-loader"),
-				pointerEvents:           isIE < 11 ? "js/pointer-events.min.js" : false,
-				smoothScroll:            $html.hasClass("use--smoothscroll") ? "js/smoothscroll.min.js" : false,
-				bootstrapTooltip:        $("[data-toggle='tooltip']"),
-				bootstrapTabs:           $(".tabs"),
-				rdParallax:              $(".rd-parallax"),
-				rdAudioPlayer:           $(".rd-audio"),
-				rdVideoPlayer:           $(".rd-video-player"),
-				responsiveTabs:          $(".responsive-tabs"),
-				rdGoogleMaps:            $(".rd-google-map"),
-				captcha:                 $('.recaptcha'),
-				rdNavbar:                $(".rd-navbar"),
-				rdVideoBG:               $(".rd-video"),
-				rdRange:                 $('.rd-range'),
-				textRotator:             $(".text-rotator"),
-				owl:                     $(".owl-carousel"),
-				swiper:                  $(".swiper-slider"),
-				counter:                 $(".counter"),
-				flickrfeed:              $(".flickr"),
-				mailchimp:               $('.mailchimp-mailform'),
-				campaignMonitor:         $('.campaign-mailform'),
-				twitterfeed:             $(".twitter"),
-				maps:                    $(".google-map-container"),
-				progressBar:             $(".progress-bar-js"),
-				isotope:                 $(".isotope"),
-				countDown:               $(".countdown"),
-				calendar:                $(".rd-calendar"),
-				facebookfeed:            $(".facebook"),
-				instafeed:               $(".instafeed"),
-				facebookWidget:          $('#fb-root'),
-				materialParallax:        $(".parallax-container"),
-				materialTabs:            $('.rd-material-tabs'),
-				filePicker:              $('.rd-file-picker'),
-				fileDrop:                $('.rd-file-drop'),
-				popover:                 $('[data-toggle="popover"]'),
-				dateCountdown:           $('.DateCountdown'),
-				statefulButton:          $('.btn-stateful'),
-				slick:                   $('.slick-slider'),
-				scroller:                $(".scroll-wrap"),
-				socialite:               $(".socialite"),
-				viewAnimate:             $('.view-animate'),
-				selectFilter:            $("select"),
-				rdInputLabel:            $(".form-label"),
-				stacktable:              $("[data-responsive=true]"),
-				bootstrapDateTimePicker: $("[data-time-picker]"),
-				customWaypoints:         $('[data-custom-scroll-to]'),
-				photoSwipeGallery:       $("[data-photo-swipe-item]"),
-				lightGallery:            $("[data-lightgallery='group']"),
-				lightGalleryItem:        $("[data-lightgallery='item']"),
-				lightDynamicGalleryItem: $("[data-lightgallery='dynamic']"),
-				circleProgress:          $(".progress-bar-circle"),
-				stepper:                 $("input[type='number']"),
-				radio:                   $("input[type='radio']"),
-				checkbox:                $("input[type='checkbox']"),
-				customToggle:            $("[data-custom-toggle]"),
-				rdMailForm:              $(".rd-mailform"),
-				regula:                  $("[data-constraints]"),
-				search:                  $(".rd-search"),
-				searchResults:           $('.rd-search-results'),
-				imgZoom:                 $('[mag-thumb]')
-			};
+		plugins = {
+			pageLoader: $(".page-loader"),
+			pointerEvents: isIE < 11 ? "js/pointer-events.min.js" : false,
+			smoothScroll: $html.hasClass("use--smoothscroll") ? "js/smoothscroll.min.js" : false,
+			bootstrapTooltip: $("[data-toggle='tooltip']"),
+			bootstrapTabs: $(".tabs"),
+			rdParallax: $(".rd-parallax"),
+			rdAudioPlayer: $(".rd-audio"),
+			rdVideoPlayer: $(".rd-video-player"),
+			responsiveTabs: $(".responsive-tabs"),
+			rdGoogleMaps: $(".rd-google-map"),
+			captcha: $('.recaptcha'),
+			rdNavbar: $(".rd-navbar"),
+			rdVideoBG: $(".rd-video"),
+			rdRange: $('.rd-range'),
+			textRotator: $(".text-rotator"),
+			owl: $(".owl-carousel"),
+			swiper: $(".swiper-slider"),
+			counter: $(".counter"),
+			flickrfeed: $(".flickr"),
+			mailchimp: $('.mailchimp-mailform'),
+			campaignMonitor: $('.campaign-mailform'),
+			twitterfeed: $(".twitter"),
+			maps: $(".google-map-container"),
+			progressBar: $(".progress-bar-js"),
+			isotope: $(".isotope"),
+			countDown: $(".countdown"),
+			calendar: $(".rd-calendar"),
+			facebookfeed: $(".facebook"),
+			instafeed: $(".instafeed"),
+			facebookWidget: $('#fb-root'),
+			materialParallax: $(".parallax-container"),
+			materialTabs: $('.rd-material-tabs'),
+			filePicker: $('.rd-file-picker'),
+			fileDrop: $('.rd-file-drop'),
+			popover: $('[data-toggle="popover"]'),
+			dateCountdown: $('.DateCountdown'),
+			statefulButton: $('.btn-stateful'),
+			slick: $('.slick-slider'),
+			scroller: $(".scroll-wrap"),
+			socialite: $(".socialite"),
+			viewAnimate: $('.view-animate'),
+			selectFilter: $("select"),
+			rdInputLabel: $(".form-label"),
+			stacktable: $("[data-responsive=true]"),
+			bootstrapDateTimePicker: $("[data-time-picker]"),
+			customWaypoints: $('[data-custom-scroll-to]'),
+			photoSwipeGallery: $("[data-photo-swipe-item]"),
+			lightGallery: $("[data-lightgallery='group']"),
+			lightGalleryItem: $("[data-lightgallery='item']"),
+			lightDynamicGalleryItem: $("[data-lightgallery='dynamic']"),
+			circleProgress: $(".progress-bar-circle"),
+			stepper: $("input[type='number']"),
+			radio: $("input[type='radio']"),
+			checkbox: $("input[type='checkbox']"),
+			customToggle: $("[data-custom-toggle]"),
+			rdMailForm: $(".rd-mailform"),
+			regula: $("[data-constraints]"),
+			search: $(".rd-search"),
+			searchResults: $('.rd-search-results'),
+			imgZoom: $('[mag-thumb]')
+		};
 
 	/**
 	 * @desc Check the element was been scrolled into the view
@@ -105,7 +105,7 @@
 		$window.on('scroll', scrollHandler);
 	}
 
-// Initialize scripts that require a loaded page
+	// Initialize scripts that require a loaded page
 	$window.on('load', function () {
 
 		// Page loader
@@ -125,7 +125,9 @@
 					var $parallax = $(plugins.materialParallax[i]);
 
 					$parallax.addClass('parallax-disabled');
-					$parallax.css({"background-image": 'url(' + $parallax.data("parallax-img") + ')'});
+					$parallax.css({
+						"background-image": 'url(' + $parallax.data("parallax-img") + ')'
+					});
 				}
 			}
 		}
@@ -141,7 +143,7 @@
 		 */
 		function getSwiperHeight(object, attr) {
 			var val = object.attr("data-" + attr),
-					dim;
+				dim;
 
 			if (!val) {
 				return undefined;
@@ -169,8 +171,8 @@
 		 */
 		function toggleSwiperInnerVideos(swiper) {
 			var prevSlide = $(swiper.slides[swiper.previousIndex]),
-					nextSlide = $(swiper.slides[swiper.activeIndex]),
-					videos;
+				nextSlide = $(swiper.slides[swiper.activeIndex]),
+				videos;
 
 			prevSlide.find("video").each(function () {
 				this.pause();
@@ -188,31 +190,31 @@
 		 */
 		function toggleSwiperCaptionAnimation(swiper) {
 			var prevSlide = $(swiper.container),
-					nextSlide = $(swiper.slides[swiper.activeIndex]);
+				nextSlide = $(swiper.slides[swiper.activeIndex]);
 
 			prevSlide
-			.find("[data-caption-animate]")
-			.each(function () {
-				var $this = $(this);
-				$this
-				.removeClass("animated")
-				.removeClass($this.attr("data-caption-animate"))
-				.addClass("not-animated");
-			});
+				.find("[data-caption-animate]")
+				.each(function () {
+					var $this = $(this);
+					$this
+						.removeClass("animated")
+						.removeClass($this.attr("data-caption-animate"))
+						.addClass("not-animated");
+				});
 
 			nextSlide
-			.find("[data-caption-animate]")
-			.each(function () {
-				var $this = $(this),
+				.find("[data-caption-animate]")
+				.each(function () {
+					var $this = $(this),
 						delay = $this.attr("data-caption-delay");
 
-				setTimeout(function () {
-					$this
-					.removeClass("not-animated")
-					.addClass($this.attr("data-caption-animate"))
-					.addClass("animated");
-				}, delay ? parseInt(delay) : 0);
-			});
+					setTimeout(function () {
+						$this
+							.removeClass("not-animated")
+							.addClass($this.attr("data-caption-animate"))
+							.addClass("animated");
+					}, delay ? parseInt(delay) : 0);
+				});
 		}
 
 		/**
@@ -231,12 +233,12 @@
 
 				if (el.attr('data-fade') === 'true') {
 					var bound = el[0].getBoundingClientRect(),
-							offsetTop = bound.top * 2 + scrollY,
-							sceneHeight = wrapper.outerHeight(),
-							sceneDevider = wrapper.offset().top + sceneHeight / 2.0,
-							layerDevider = offsetTop + el.outerHeight() / 2.0,
-							pos = sceneHeight / 6.0,
-							opacity;
+						offsetTop = bound.top * 2 + scrollY,
+						sceneHeight = wrapper.outerHeight(),
+						sceneDevider = wrapper.offset().top + sceneHeight / 2.0,
+						layerDevider = offsetTop + el.outerHeight() / 2.0,
+						pos = sceneHeight / 6.0,
+						opacity;
 					if (sceneDevider + pos > layerDevider && sceneDevider - pos < layerDevider) {
 						el[0].style["opacity"] = 1;
 					} else {
@@ -264,12 +266,12 @@
 			if (!isNoviBuilder) {
 				$(itemsToInit).lightGallery({
 					thumbnail: $(itemsToInit).attr("data-lg-thumbnail") !== "false",
-					selector:  "[data-lightgallery='item']",
-					autoplay:  $(itemsToInit).attr("data-lg-autoplay") === "true",
-					pause:     parseInt($(itemsToInit).attr("data-lg-autoplay-delay")) || 5000,
-					addClass:  addClass,
-					mode:      $(itemsToInit).attr("data-lg-animation") || "lg-slide",
-					loop:      $(itemsToInit).attr("data-lg-loop") !== "false"
+					selector: "[data-lightgallery='item']",
+					autoplay: $(itemsToInit).attr("data-lg-autoplay") === "true",
+					pause: parseInt($(itemsToInit).attr("data-lg-autoplay-delay")) || 5000,
+					addClass: addClass,
+					mode: $(itemsToInit).attr("data-lg-animation") || "lg-slide",
+					loop: $(itemsToInit).attr("data-lg-loop") !== "false"
 				});
 			}
 		}
@@ -284,13 +286,13 @@
 				$(itemsToInit).on("click", function () {
 					$(itemsToInit).lightGallery({
 						thumbnail: $(itemsToInit).attr("data-lg-thumbnail") !== "false",
-						selector:  "[data-lightgallery='item']",
-						autoplay:  $(itemsToInit).attr("data-lg-autoplay") === "true",
-						pause:     parseInt($(itemsToInit).attr("data-lg-autoplay-delay")) || 5000,
-						addClass:  addClass,
-						mode:      $(itemsToInit).attr("data-lg-animation") || "lg-slide",
-						loop:      $(itemsToInit).attr("data-lg-loop") !== "false",
-						dynamic:   true,
+						selector: "[data-lightgallery='item']",
+						autoplay: $(itemsToInit).attr("data-lg-autoplay") === "true",
+						pause: parseInt($(itemsToInit).attr("data-lg-autoplay-delay")) || 5000,
+						addClass: addClass,
+						mode: $(itemsToInit).attr("data-lg-animation") || "lg-slide",
+						loop: $(itemsToInit).attr("data-lg-loop") !== "false",
+						dynamic: true,
 						dynamicEl: JSON.parse($(itemsToInit).attr("data-lg-dynamic-elements")) || []
 					});
 				});
@@ -305,17 +307,17 @@
 		function initLightGalleryItem(itemToInit, addClass) {
 			if (!isNoviBuilder) {
 				$(itemToInit).lightGallery({
-					selector:            "this",
-					addClass:            addClass,
-					counter:             false,
+					selector: "this",
+					addClass: addClass,
+					counter: false,
 					youtubePlayerParams: {
 						modestbranding: 1,
-						showinfo:       0,
-						rel:            0,
-						controls:       0
+						showinfo: 0,
+						rel: 0,
+						controls: 0
 					},
-					vimeoPlayerParams:   {
-						byline:   0,
+					vimeoPlayerParams: {
+						byline: 0,
 						portrait: 0
 					}
 				});
@@ -331,18 +333,20 @@
 			try {
 				coordinates = JSON.parse(str);
 				callback(new google.maps.LatLng(
-						coordinates.lat,
-						coordinates.lng
+					coordinates.lat,
+					coordinates.lng
 				), marker, map)
 			} catch (e) {
-				map.geocoder.geocode({'address': str}, function (results, status) {
+				map.geocoder.geocode({
+					'address': str
+				}, function (results, status) {
 					if (status === google.maps.GeocoderStatus.OK) {
 						var latitude = results[0].geometry.location.lat();
 						var longitude = results[0].geometry.location.lng();
 
 						callback(new google.maps.LatLng(
-								parseFloat(latitude),
-								parseFloat(longitude)
+							parseFloat(latitude),
+							parseFloat(longitude)
 						), marker, map)
 					}
 				})
@@ -364,7 +368,7 @@
 
 			$.getScript('//maps.google.com/maps/api/js?' + (key ? 'key=' + key + '&' : '') + 'sensor=false&libraries=geometry,places&v=quarterly', function () {
 				var head = document.getElementsByTagName('head')[0],
-						insertBefore = head.insertBefore;
+					insertBefore = head.insertBefore;
 
 				head.insertBefore = function (newElement, referenceElement) {
 					if (newElement.href && newElement.href.indexOf('//fonts.googleapis.com/css?family=Roboto') !== -1 || newElement.innerHTML.indexOf('gm-style') !== -1) {
@@ -380,10 +384,10 @@
 
 					// Initialize map
 					var map = new google.maps.Map(plugins.maps[i].querySelectorAll(".google-map")[0], {
-						zoom:        zoom,
-						styles:      styles,
+						zoom: zoom,
+						styles: styles,
 						scrollwheel: false,
-						center:      {
+						center: {
 							lat: 0,
 							lng: 0
 						}
@@ -416,7 +420,7 @@
 								markerElement.infoWindow = infoWindow;
 								var markerData = {
 									position: location,
-									map:      mapElement.map
+									map: mapElement.map
 								}
 								if (icon) {
 									markerData.icon = icon;
@@ -425,7 +429,7 @@
 								markerElement.gmarker = marker;
 								markers.push({
 									markerElement: markerElement,
-									infoWindow:    infoWindow
+									infoWindow: infoWindow
 								});
 								marker.isActive = false;
 								// Handle infoWindow close click
@@ -440,7 +444,8 @@
 								// Set marker active on Click and open infoWindow
 								google.maps.event.addListener(marker, 'click', (function (markerElement, mapElement) {
 									if (markerElement.infoWindow.getContent().length === 0) return;
-									var gMarker, currentMarker = markerElement.gmarker, currentInfoWindow;
+									var gMarker, currentMarker = markerElement.gmarker,
+										currentInfoWindow;
 									for (var k = 0; k < markers.length; k++) {
 										var markerIcon;
 										if (markers[k].markerElement === markerElement) {
@@ -485,12 +490,12 @@
 			options.current++;
 			options.spin.addClass('loading');
 			$.get(handler, {
-				s:          decodeURI(options.term),
+				s: decodeURI(options.term),
 				liveSearch: options.live,
-				dataType:   "html",
-				liveCount:  options.liveCount,
-				filter:     options.filter,
-				template:   options.template
+				dataType: "html",
+				liveCount: options.liveCount,
+				filter: options.filter,
+				template: options.template
 			}, function (data) {
 				options.processed++;
 				var live = $('#' + options.live);
@@ -529,25 +534,28 @@
 		function attachFormValidator(elements) {
 			// Custom validator - phone number
 			regula.custom({
-				name:           'PhoneNumber',
+				name: 'PhoneNumber',
 				defaultMessage: 'Invalid phone number format',
-				validator:      function () {
+				validator: function () {
 					if (this.value === '') return true;
 					else return /^(\+\d)?[0-9\-\(\) ]{5,}$/i.test(this.value);
 				}
 			});
 
 			for (var i = 0; i < elements.length; i++) {
-				var o = $(elements[i]), v;
+				var o = $(elements[i]),
+					v;
 				o.addClass("form-control-has-validation").after("<span class='form-validation'></span>");
 				v = o.parent().find(".form-validation");
 				if (v.is(":last-child")) o.addClass("form-control-last-child");
 			}
 
 			elements.on('input change propertychange blur', function (e) {
-				var $this = $(this), results;
+				var $this = $(this),
+					results;
 
-				if (e.type !== "blur") if (!$this.parent().hasClass("has-error")) return;
+				if (e.type !== "blur")
+					if (!$this.parent().hasClass("has-error")) return;
 				if ($this.parents('.rd-mailform').hasClass('success')) return;
 
 				if ((results = $this.regula('validate')).length) {
@@ -559,21 +567,20 @@
 				}
 			}).regula('bind');
 
-			var regularConstraintsMessages = [
-				{
-					type:       regula.Constraint.Required,
+			var regularConstraintsMessages = [{
+					type: regula.Constraint.Required,
 					newMessage: "The text field is required."
 				},
 				{
-					type:       regula.Constraint.Email,
+					type: regula.Constraint.Email,
 					newMessage: "The email is not a valid email."
 				},
 				{
-					type:       regula.Constraint.Numeric,
+					type: regula.Constraint.Numeric,
 					newMessage: "Only numbers are required"
 				},
 				{
-					type:       regula.Constraint.Selected,
+					type: regula.Constraint.Selected,
 					newMessage: "Please choose an option."
 				}
 			];
@@ -633,25 +640,25 @@
 
 			if (captchaToken.length === 0) {
 				captcha
-				.siblings('.form-validation')
-				.html('Please, prove that you are not robot.')
-				.addClass('active');
+					.siblings('.form-validation')
+					.html('Please, prove that you are not robot.')
+					.addClass('active');
 				captcha
-				.closest('.form-wrap')
-				.addClass('has-error');
+					.closest('.form-wrap')
+					.addClass('has-error');
 
 				captcha.on('propertychange', function () {
 					var $this = $(this),
-							captchaToken = $this.find('.g-recaptcha-response').val();
+						captchaToken = $this.find('.g-recaptcha-response').val();
 
 					if (captchaToken.length > 0) {
 						$this
-						.closest('.form-wrap')
-						.removeClass('has-error');
+							.closest('.form-wrap')
+							.removeClass('has-error');
 						$this
-						.siblings('.form-validation')
-						.removeClass('active')
-						.html('');
+							.siblings('.form-validation')
+							.removeClass('active')
+							.html('');
 						$this.off('propertychange');
 					}
 				});
@@ -670,15 +677,14 @@
 				var $capthcaItem = $(plugins.captcha[i]);
 
 				grecaptcha.render(
-						$capthcaItem.attr('id'),
-						{
-							sitekey:  $capthcaItem.attr('data-sitekey'),
-							size:     $capthcaItem.attr('data-size') ? $capthcaItem.attr('data-size') : 'normal',
-							theme:    $capthcaItem.attr('data-theme') ? $capthcaItem.attr('data-theme') : 'light',
-							callback: function (e) {
-								$('.recaptcha').trigger('propertychange');
-							}
+					$capthcaItem.attr('id'), {
+						sitekey: $capthcaItem.attr('data-sitekey'),
+						size: $capthcaItem.attr('data-size') ? $capthcaItem.attr('data-size') : 'normal',
+						theme: $capthcaItem.attr('data-theme') ? $capthcaItem.attr('data-theme') : 'light',
+						callback: function (e) {
+							$('.recaptcha').trigger('propertychange');
 						}
+					}
 				);
 				$capthcaItem.after("<span class='form-validation'></span>");
 			}
@@ -703,7 +709,7 @@
 		if (plugins.mailchimp.length) {
 			for (i = 0; i < plugins.mailchimp.length; i++) {
 				var $mailchimpItem = $(plugins.mailchimp[i]),
-						$email = $mailchimpItem.find('input[type="email"]');
+					$email = $mailchimpItem.find('input[type="email"]');
 
 				// Required by MailChimp
 				$mailchimpItem.attr('novalidate', 'true');
@@ -715,26 +721,26 @@
 					var $this = this;
 
 					var data = {},
-							url = $this.attr('action').replace('/post?', '/post-json?').concat('&c=?'),
-							dataArray = $this.serializeArray(),
-							$output = $("#" + $this.attr("data-form-output"));
+						url = $this.attr('action').replace('/post?', '/post-json?').concat('&c=?'),
+						dataArray = $this.serializeArray(),
+						$output = $("#" + $this.attr("data-form-output"));
 
 					for (i = 0; i < dataArray.length; i++) {
 						data[dataArray[i].name] = dataArray[i].value;
 					}
 
 					$.ajax({
-						data:       data,
-						url:        url,
-						dataType:   'jsonp',
-						error:      function (resp, text) {
+						data: data,
+						url: url,
+						dataType: 'jsonp',
+						error: function (resp, text) {
 							$output.html('Server error: ' + text);
 
 							setTimeout(function () {
 								$output.removeClass("active");
 							}, 4000);
 						},
-						success:    function (resp) {
+						success: function (resp) {
 							$output.html(resp.msg).addClass('active');
 							$email[0].value = '';
 							var $label = $('[for="' + $email.attr('id') + '"]');
@@ -796,27 +802,27 @@
 
 				$campaignItem.on('submit', $.proxy(function (e) {
 					var data = {},
-							url = this.attr('action'),
-							dataArray = this.serializeArray(),
-							$output = $("#" + plugins.campaignMonitor.attr("data-form-output")),
-							$this = $(this);
+						url = this.attr('action'),
+						dataArray = this.serializeArray(),
+						$output = $("#" + plugins.campaignMonitor.attr("data-form-output")),
+						$this = $(this);
 
 					for (i = 0; i < dataArray.length; i++) {
 						data[dataArray[i].name] = dataArray[i].value;
 					}
 
 					$.ajax({
-						data:       data,
-						url:        url,
-						dataType:   'jsonp',
-						error:      function (resp, text) {
+						data: data,
+						url: url,
+						dataType: 'jsonp',
+						error: function (resp, text) {
 							$output.html('Server error: ' + text);
 
 							setTimeout(function () {
 								$output.removeClass("active");
 							}, 4000);
 						},
-						success:    function (resp) {
+						success: function (resp) {
 							$output.html(resp.Message).addClass('active');
 
 							setTimeout(function () {
@@ -848,34 +854,34 @@
 		// RD Mailform
 		if (plugins.rdMailForm.length) {
 			var i, j, k,
-					msg = {
-						'MF000': 'Successfully sent!',
-						'MF001': 'Recipients are not set!',
-						'MF002': 'Form will not work locally!',
-						'MF003': 'Please, define email field in your form!',
-						'MF004': 'Please, define type of your form!',
-						'MF254': 'Something went wrong with PHPMailer!',
-						'MF255': 'Aw, snap! Something went wrong.'
-					};
+				msg = {
+					'MF000': 'Successfully sent!',
+					'MF001': 'Recipients are not set!',
+					'MF002': 'Form will not work locally!',
+					'MF003': 'Please, define email field in your form!',
+					'MF004': 'Please, define type of your form!',
+					'MF254': 'Something went wrong with PHPMailer!',
+					'MF255': 'Aw, snap! Something went wrong.'
+				};
 
 			for (i = 0; i < plugins.rdMailForm.length; i++) {
 				var $form = $(plugins.rdMailForm[i]),
-						formHasCaptcha = false;
+					formHasCaptcha = false;
 
 				$form.attr('novalidate', 'novalidate').ajaxForm({
-					data:         {
+					data: {
 						"form-type": $form.attr("data-form-type") || "contact",
-						"counter":   i
+						"counter": i
 					},
 					beforeSubmit: function (arr, $form, options) {
 						if (isNoviBuilder)
 							return;
 
 						var form = $(plugins.rdMailForm[this.extraData.counter]),
-								inputs = form.find("[data-constraints]"),
-								output = $("#" + form.attr("data-form-output")),
-								captcha = form.find('.recaptcha'),
-								captchaFlag = true;
+							inputs = form.find("[data-constraints]"),
+							output = $("#" + form.attr("data-form-output")),
+							captcha = form.find('.recaptcha'),
+							captchaFlag = true;
 
 						output.removeClass("active error success");
 
@@ -884,36 +890,38 @@
 							// veify reCaptcha
 							if (captcha.length) {
 								var captchaToken = captcha.find('.g-recaptcha-response').val(),
-										captchaMsg = {
-											'CPT001': 'Please, setup you "site key" and "secret key" of reCaptcha',
-											'CPT002': 'Something wrong with google reCaptcha'
-										};
+									captchaMsg = {
+										'CPT001': 'Please, setup you "site key" and "secret key" of reCaptcha',
+										'CPT002': 'Something wrong with google reCaptcha'
+									};
 
 								formHasCaptcha = true;
 
 								$.ajax({
-									method: "POST",
-									url:    "bat/reCaptcha.php",
-									data:   {'g-recaptcha-response': captchaToken},
-									async:  false
-								})
-								.done(function (responceCode) {
-									if (responceCode !== 'CPT000') {
-										if (output.hasClass("snackbars")) {
-											output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + captchaMsg[responceCode] + '</span></p>')
+										method: "POST",
+										url: "bat/reCaptcha.php",
+										data: {
+											'g-recaptcha-response': captchaToken
+										},
+										async: false
+									})
+									.done(function (responceCode) {
+										if (responceCode !== 'CPT000') {
+											if (output.hasClass("snackbars")) {
+												output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + captchaMsg[responceCode] + '</span></p>')
 
-											setTimeout(function () {
-												output.removeClass("active");
-											}, 3500);
+												setTimeout(function () {
+													output.removeClass("active");
+												}, 3500);
 
-											captchaFlag = false;
-										} else {
-											output.html(captchaMsg[responceCode]);
+												captchaFlag = false;
+											} else {
+												output.html(captchaMsg[responceCode]);
+											}
+
+											output.addClass("active");
 										}
-
-										output.addClass("active");
-									}
-								});
+									});
 							}
 
 							if (!captchaFlag) {
@@ -930,12 +938,12 @@
 							return false;
 						}
 					},
-					error:        function (result) {
+					error: function (result) {
 						if (isNoviBuilder)
 							return;
 
 						var output = $("#" + $(plugins.rdMailForm[this.extraData.counter]).attr("data-form-output")),
-								form = $(plugins.rdMailForm[this.extraData.counter]);
+							form = $(plugins.rdMailForm[this.extraData.counter]);
 
 						output.text(msg[result]);
 						form.removeClass('form-in-process');
@@ -944,17 +952,17 @@
 							grecaptcha.reset();
 						}
 					},
-					success:      function (result) {
+					success: function (result) {
 						if (isNoviBuilder)
 							return;
 
 						var form = $(plugins.rdMailForm[this.extraData.counter]),
-								output = $("#" + form.attr("data-form-output")),
-								select = form.find('select');
+							output = $("#" + form.attr("data-form-output")),
+							select = form.find('select');
 
 						form
-						.addClass('success')
-						.removeClass('form-in-process');
+							.addClass('success')
+							.removeClass('form-in-process');
 
 						if (formHasCaptcha) {
 							grecaptcha.reset();
@@ -1015,10 +1023,10 @@
 			if (isIE < 11) {
 				if (plugins.pointerEvents) {
 					$.getScript(plugins.pointerEvents)
-					.done(function () {
-						$html.addClass("ie-10");
-						PointerEventsPolyfill.initialize({});
-					});
+						.done(function () {
+							$html.addClass("ie-10");
+							PointerEventsPolyfill.initialize({});
+						});
 				}
 			}
 
@@ -1073,8 +1081,8 @@
 
 			for (var z = 0; z < plugins.lightGalleryItem.length; z++) {
 				if (!$(plugins.lightGalleryItem[z]).parents('.owl-carousel').length &&
-						!$(plugins.lightGalleryItem[z]).parents('.swiper-slider').length &&
-						!$(plugins.lightGalleryItem[z]).parents('.slick-slider').length) {
+					!$(plugins.lightGalleryItem[z]).parents('.swiper-slider').length &&
+					!$(plugins.lightGalleryItem[z]).parents('.slick-slider').length) {
 					notCarouselItems.push(plugins.lightGalleryItem[z]);
 				}
 			}
@@ -1258,7 +1266,7 @@
 		if (plugins.stepper.length) {
 			plugins.stepper.stepper({
 				labels: {
-					up:   "",
+					up: "",
 					down: ""
 				}
 			});
@@ -1307,8 +1315,8 @@
 
 				$(fileDropItem).RDFilepicker({
 					metaFieldClass: "rd-file-drop-meta",
-					buttonClass:    "rd-file-drop-btn",
-					dropZoneClass:  "rd-file-drop"
+					buttonClass: "rd-file-drop-btn",
+					dropZoneClass: "rd-file-drop"
 				});
 			}
 		}
@@ -1334,11 +1342,11 @@
 			var i;
 			for (i = 0; i < plugins.countDown.length; i++) {
 				var countDownItem = plugins.countDown[i],
-						d = new Date(),
-						type = countDownItem.getAttribute('data-type'),
-						time = countDownItem.getAttribute('data-time'),
-						format = countDownItem.getAttribute('data-format'),
-						settings = [];
+					d = new Date(),
+					type = countDownItem.getAttribute('data-type'),
+					time = countDownItem.getAttribute('data-time'),
+					format = countDownItem.getAttribute('data-format'),
+					settings = [];
 
 				d.setTime(Date.parse(time)).toLocaleString();
 				settings[type] = d;
@@ -1354,34 +1362,34 @@
 		if (plugins.dateCountdown.length) {
 			for (i = 0; i < plugins.dateCountdown.length; i++) {
 				var dateCountdownItem = $(plugins.dateCountdown[i]),
-						time = {
-							"Days":    {
-								"text":  "Days",
-								"color": "#0b7750",
-								"show":  true
-							},
-							"Hours":   {
-								"text":  "Hours",
-								"color": "#0b7750",
-								"show":  true
-							},
-							"Minutes": {
-								"text":  "Minutes",
-								"color": "#0b7750",
-								"show":  true
-							},
-							"Seconds": {
-								"text":  "Seconds",
-								"color": "#0b7750",
-								"show":  true
-							}
-						};
+					time = {
+						"Days": {
+							"text": "Days",
+							"color": "#0b7750",
+							"show": true
+						},
+						"Hours": {
+							"text": "Hours",
+							"color": "#0b7750",
+							"show": true
+						},
+						"Minutes": {
+							"text": "Minutes",
+							"color": "#0b7750",
+							"show": true
+						},
+						"Seconds": {
+							"text": "Seconds",
+							"color": "#0b7750",
+							"show": true
+						}
+					};
 				dateCountdownItem.TimeCircles({
-					"animation":       "smooth",
-					"bg_width":        .1,
-					"fg_width":        0.04,
+					"animation": "smooth",
+					"bg_width": .1,
+					"fg_width": 0.04,
 					"circle_bg_color": dateCountdownItem.attr('data-bg') ? dateCountdownItem.attr('data-bg') : "rgba(11,119,80, 1)",
-					"time":            time
+					"time": time
 				});
 
 				$(window).on('load resize orientationchange', (function ($dateCountdownItem, time) {
@@ -1389,18 +1397,26 @@
 						if (window.innerWidth < 479) {
 							$dateCountdownItem.TimeCircles({
 								time: {
-									Minutes: {show: true},
-									Seconds: {show: false}
+									Minutes: {
+										show: true
+									},
+									Seconds: {
+										show: false
+									}
 								}
 							}).rebuild();
 						} else if (window.innerWidth < 767) {
 							$dateCountdownItem.TimeCircles({
 								time: {
-									Seconds: {show: false}
+									Seconds: {
+										show: false
+									}
 								}
 							}).rebuild();
 						} else {
-							$dateCountdownItem.TimeCircles({time: time}).rebuild();
+							$dateCountdownItem.TimeCircles({
+								time: time
+							}).rebuild();
 						}
 					}
 
@@ -1433,7 +1449,7 @@
 				var calendarItem = $(plugins.calendar[i]);
 
 				calendarItem.rdCalendar({
-					days:  calendarItem.attr("data-days") ? calendarItem.attr("data-days").split(/\s?,\s?/i) : ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+					days: calendarItem.attr("data-days") ? calendarItem.attr("data-days").split(/\s?,\s?/i) : ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
 					month: calendarItem.attr("data-months") ? calendarItem.attr("data-months").split(/\s?,\s?/i) : ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 				});
 			}
@@ -1448,29 +1464,29 @@
 			for (i = 0; i < plugins.circleProgress.length; i++) {
 				var circleProgressItem = $(plugins.circleProgress[i]);
 				$document
-				.on("scroll", function () {
-					if (!circleProgressItem.hasClass('animated')) {
+					.on("scroll", function () {
+						if (!circleProgressItem.hasClass('animated')) {
 
-						var arrayGradients = circleProgressItem.attr('data-gradient').split(",");
+							var arrayGradients = circleProgressItem.attr('data-gradient').split(",");
 
-						circleProgressItem.circleProgress({
-							value:      circleProgressItem.attr('data-value'),
-							size:       circleProgressItem.attr('data-size') ? circleProgressItem.attr('data-size') : 175,
-							fill:       {
-								gradient:      arrayGradients,
-								gradientAngle: Math.PI / 4
-							},
-							startAngle: -Math.PI / 4 * 2,
-							emptyFill:  circleProgressItem.attr('data-empty-fill') ? circleProgressItem.attr('data-empty-fill') : "rgb(245,245,245)",
-							thickness:  circleProgressItem.attr('data-thickness') ? parseInt(circleProgressItem.attr('data-thickness')) : 10,
+							circleProgressItem.circleProgress({
+								value: circleProgressItem.attr('data-value'),
+								size: circleProgressItem.attr('data-size') ? circleProgressItem.attr('data-size') : 175,
+								fill: {
+									gradient: arrayGradients,
+									gradientAngle: Math.PI / 4
+								},
+								startAngle: -Math.PI / 4 * 2,
+								emptyFill: circleProgressItem.attr('data-empty-fill') ? circleProgressItem.attr('data-empty-fill') : "rgb(245,245,245)",
+								thickness: circleProgressItem.attr('data-thickness') ? parseInt(circleProgressItem.attr('data-thickness')) : 10,
 
-						}).on('circle-animation-progress', function (event, progress, stepValue) {
-							$(this).find('span').text(String(stepValue.toFixed(3)).replace('0.', '').replace('1.', '1'));
-						});
-						circleProgressItem.addClass('animated');
-					}
-				})
-				.trigger("scroll");
+							}).on('circle-animation-progress', function (event, progress, stepValue) {
+								$(this).find('span').text(String(stepValue.toFixed(3)).replace('0.', '').replace('1.', '1'));
+							});
+							circleProgressItem.addClass('animated');
+						}
+					})
+					.trigger("scroll");
 			}
 		}
 
@@ -1480,8 +1496,8 @@
 		 */
 		if (plugins.progressBar.length) {
 			var i,
-					bar,
-					type;
+				bar,
+				type;
 
 			for (i = 0; i < plugins.progressBar.length; i++) {
 				var progressItem = plugins.progressBar[i];
@@ -1498,11 +1514,11 @@
 				if (progressItem.getAttribute("data-stroke") && progressItem.getAttribute("data-value") && type) {
 					bar = new ProgressBar[type](progressItem, {
 						strokeWidth: Math.round(parseFloat(progressItem.getAttribute("data-stroke")) / progressItem.offsetWidth * 100),
-						trailWidth:  progressItem.getAttribute("data-trail") ? Math.round(parseFloat(progressItem.getAttribute("data-trail")) / progressItem.offsetWidth * 100) : 0,
-						text:        {
-							value:     progressItem.getAttribute("data-counter") === "true" ? '0' : null,
+						trailWidth: progressItem.getAttribute("data-trail") ? Math.round(parseFloat(progressItem.getAttribute("data-trail")) / progressItem.offsetWidth * 100) : 0,
+						text: {
+							value: progressItem.getAttribute("data-counter") === "true" ? '0' : null,
 							className: 'progress-bar__body',
-							style:     null
+							style: null
 						}
 					});
 					bar.svg.setAttribute('preserveAspectRatio', "none meet");
@@ -1519,26 +1535,28 @@
 
 					if (progressItem.getAttribute("data-easing") && !isIE) {
 						$(document)
-						.on("scroll", {"barItem": bar}, $.proxy(function (event) {
-							var bar = event.data.barItem;
-							var $this = $(this);
+							.on("scroll", {
+								"barItem": bar
+							}, $.proxy(function (event) {
+								var bar = event.data.barItem;
+								var $this = $(this);
 
-							if (isScrolledIntoView($this) && this.className.indexOf("progress-bar--animated") === -1) {
-								this.className += " progress-bar--animated";
-								bar.animate(parseInt($this.attr("data-value")) / 100.0, {
-									easing:   $this.attr("data-easing"),
-									duration: $this.attr("data-duration") ? parseInt($this.attr("data-duration")) : 800,
-									step:     function (state, b) {
-										if (b._container.className.indexOf("progress-bar-horizontal") > -1 ||
+								if (isScrolledIntoView($this) && this.className.indexOf("progress-bar--animated") === -1) {
+									this.className += " progress-bar--animated";
+									bar.animate(parseInt($this.attr("data-value")) / 100.0, {
+										easing: $this.attr("data-easing"),
+										duration: $this.attr("data-duration") ? parseInt($this.attr("data-duration")) : 800,
+										step: function (state, b) {
+											if (b._container.className.indexOf("progress-bar-horizontal") > -1 ||
 												b._container.className.indexOf("progress-bar-vertical") > -1) {
-											b.text.style.width = Math.abs(b.value() * 100).toFixed(0) + "%"
+												b.text.style.width = Math.abs(b.value() * 100).toFixed(0) + "%"
+											}
+											b.setText(Math.abs(b.value() * 100).toFixed(0));
 										}
-										b.setText(Math.abs(b.value() * 100).toFixed(0));
-									}
-								});
-							}
-						}, progressItem))
-						.trigger("scroll");
+									});
+								}
+							}, progressItem))
+							.trigger("scroll");
 					} else {
 						bar.set(parseInt($(progressItem).attr("data-value")) / 100.0);
 						bar.setText($(progressItem).attr("data-value"));
@@ -1558,7 +1576,7 @@
 		 */
 		if (isDesktop) {
 			$().UItoTop({
-				easingType:     'easeOutQuart',
+				easingType: 'easeOutQuart',
 				containerClass: 'ui-to-top fa fa-angle-up'
 			});
 		}
@@ -1585,11 +1603,11 @@
 			for (i = 0; i < plugins.viewAnimate.length; i++) {
 				var $view = $(plugins.viewAnimate[i]).not('.active');
 				$document.on("scroll", $.proxy(function () {
-					if (isScrolledIntoView(this)) {
-						this.addClass("active");
-					}
-				}, $view))
-				.trigger("scroll");
+						if (isScrolledIntoView(this)) {
+							this.addClass("active");
+						}
+					}, $view))
+					.trigger("scroll");
 			}
 		}
 
@@ -1603,85 +1621,85 @@
 			for (i = 0; i < plugins.swiper.length; i++) {
 				var s = $(plugins.swiper[i]);
 				var pag = s.find(".swiper-pagination"),
-						next = s.find(".swiper-button-next"),
-						prev = s.find(".swiper-button-prev"),
-						bar = s.find(".swiper-scrollbar"),
-						parallax = s.parents('.rd-parallax').length,
-						swiperSlide = s.find(".swiper-slide");
+					next = s.find(".swiper-button-next"),
+					prev = s.find(".swiper-button-prev"),
+					bar = s.find(".swiper-scrollbar"),
+					parallax = s.parents('.rd-parallax').length,
+					swiperSlide = s.find(".swiper-slide");
 
 				for (j = 0; j < swiperSlide.length; j++) {
 					var $this = $(swiperSlide[j]),
-							url;
+						url;
 
 					if (url = $this.attr("data-slide-bg")) {
 						$this.css({
 							"background-image": "url(" + url + ")",
-							"background-size":  "cover"
+							"background-size": "cover"
 						})
 					}
 				}
 
 				swiperSlide.end()
-				.find("[data-caption-animate]")
-				.addClass("not-animated")
-				.end()
-				.swiper({
-					autoplay:                 s.attr('data-autoplay') ? s.attr('data-autoplay') === "false" ? undefined : s.attr('data-autoplay') : 5000,
-					direction:                s.attr('data-direction') ? s.attr('data-direction') : "horizontal",
-					effect:                   s.attr('data-slide-effect') ? s.attr('data-slide-effect') : "slide",
-					speed:                    s.attr('data-slide-speed') ? s.attr('data-slide-speed') : 600,
-					keyboardControl:          s.attr('data-keyboard') === "true",
-					mousewheelControl:        s.attr('data-mousewheel') === "true",
-					mousewheelReleaseOnEdges: s.attr('data-mousewheel-release') === "true",
-					nextButton:               next.length ? next.get(0) : null,
-					prevButton:               prev.length ? prev.get(0) : null,
-					pagination:               pag.length ? pag.get(0) : null,
-					paginationClickable:      pag.length ? pag.attr("data-clickable") !== "false" : false,
-					paginationBulletRender:   pag.length ? pag.attr("data-index-bullet") === "true" ? function (index, className) {
-						return '<span class="' + className + '">' + (index + 1) + '</span>';
-					} : null : null,
-					scrollbar:                bar.length ? bar.get(0) : null,
-					scrollbarDraggable:       bar.length ? bar.attr("data-draggable") !== "false" : true,
-					scrollbarHide:            bar.length ? bar.attr("data-draggable") === "false" : false,
-					loop:                     s.attr('data-loop') !== "false",
-					simulateTouch:            s.attr('data-simulate-touch') ? s.attr('data-simulate-touch') === "true" : false,
-					onTransitionStart:        function (swiper) {
-						toggleSwiperInnerVideos(swiper);
-					},
-					onTransitionEnd:          function (swiper) {
-						toggleSwiperCaptionAnimation(swiper);
-					},
-					onInit:                   function (swiper) {
-						toggleSwiperInnerVideos(swiper);
-						toggleSwiperCaptionAnimation(swiper);
+					.find("[data-caption-animate]")
+					.addClass("not-animated")
+					.end()
+					.swiper({
+						autoplay: s.attr('data-autoplay') ? s.attr('data-autoplay') === "false" ? undefined : s.attr('data-autoplay') : 5000,
+						direction: s.attr('data-direction') ? s.attr('data-direction') : "horizontal",
+						effect: s.attr('data-slide-effect') ? s.attr('data-slide-effect') : "slide",
+						speed: s.attr('data-slide-speed') ? s.attr('data-slide-speed') : 600,
+						keyboardControl: s.attr('data-keyboard') === "true",
+						mousewheelControl: s.attr('data-mousewheel') === "true",
+						mousewheelReleaseOnEdges: s.attr('data-mousewheel-release') === "true",
+						nextButton: next.length ? next.get(0) : null,
+						prevButton: prev.length ? prev.get(0) : null,
+						pagination: pag.length ? pag.get(0) : null,
+						paginationClickable: pag.length ? pag.attr("data-clickable") !== "false" : false,
+						paginationBulletRender: pag.length ? pag.attr("data-index-bullet") === "true" ? function (index, className) {
+							return '<span class="' + className + '">' + (index + 1) + '</span>';
+						} : null : null,
+						scrollbar: bar.length ? bar.get(0) : null,
+						scrollbarDraggable: bar.length ? bar.attr("data-draggable") !== "false" : true,
+						scrollbarHide: bar.length ? bar.attr("data-draggable") === "false" : false,
+						loop: s.attr('data-loop') !== "false",
+						simulateTouch: s.attr('data-simulate-touch') ? s.attr('data-simulate-touch') === "true" : false,
+						onTransitionStart: function (swiper) {
+							toggleSwiperInnerVideos(swiper);
+						},
+						onTransitionEnd: function (swiper) {
+							toggleSwiperCaptionAnimation(swiper);
+						},
+						onInit: function (swiper) {
+							toggleSwiperInnerVideos(swiper);
+							toggleSwiperCaptionAnimation(swiper);
 
-						var swiperParalax = s.find(".swiper-parallax");
+							var swiperParalax = s.find(".swiper-parallax");
 
-						for (var k = 0; k < swiperParalax.length; k++) {
-							var $this = $(swiperParalax[k]),
+							for (var k = 0; k < swiperParalax.length; k++) {
+								var $this = $(swiperParalax[k]),
 									speed;
 
-							if (parallax && !isIEBrows && !isMobile) {
-								if (speed = $this.attr("data-speed")) {
-									makeParallax($this, speed, s, false);
+								if (parallax && !isIEBrows && !isMobile) {
+									if (speed = $this.attr("data-speed")) {
+										makeParallax($this, speed, s, false);
+									}
 								}
 							}
+							$(window).on('resize', function () {
+								swiper.update(true);
+							})
 						}
-						$(window).on('resize', function () {
-							swiper.update(true);
-						})
-					}
-				});
+					});
 
 				$(window)
-				.on("resize", function () {
-					var mh = getSwiperHeight(s, "min-height"),
+					.on("resize", function () {
+						var mh = getSwiperHeight(s, "min-height"),
 							h = getSwiperHeight(s, "height");
-					if (h) {
-						s.css("height", mh ? mh > h ? mh : h : h);
-					}
-				})
-				.trigger("resize");
+						if (h) {
+							s.css("height", mh ? mh > h ? mh : h : h);
+						}
+					})
+					.trigger("resize");
 			}
 		}
 
@@ -1693,7 +1711,7 @@
 			var i;
 			for (i = 0; i < plugins.rdVideoPlayer.length; i++) {
 				var videoItem = plugins.rdVideoPlayer[i],
-						volumeWrap = $(".rd-video-volume-wrap");
+					volumeWrap = $(".rd-video-volume-wrap");
 
 				$(videoItem).RDVideoPlayer({});
 
@@ -1726,24 +1744,24 @@
 		if (plugins.search.length || plugins.searchResults) {
 			var handler = "bat/rd-search.php";
 			var defaultTemplate = '<h5 class="search_title"><a target="_top" href="#{href}" class="search_link">#{title}</a></h5>' +
-					'<p>...#{token}...</p>' +
-					'<p class="match"><em>Terms matched: #{count} - URL: #{href}</em></p>';
+				'<p>...#{token}...</p>' +
+				'<p class="match"><em>Terms matched: #{count} - URL: #{href}</em></p>';
 			var defaultFilter = '*.html';
 
 			if (plugins.search.length) {
 
 				for (i = 0; i < plugins.search.length; i++) {
 					var searchItem = $(plugins.search[i]),
-							options = {
-								element:   searchItem,
-								filter:    (searchItem.attr('data-search-filter')) ? searchItem.attr('data-search-filter') : defaultFilter,
-								template:  (searchItem.attr('data-search-template')) ? searchItem.attr('data-search-template') : defaultTemplate,
-								live:      (searchItem.attr('data-search-live')) ? searchItem.attr('data-search-live') : false,
-								liveCount: (searchItem.attr('data-search-live-count')) ? parseInt(searchItem.attr('data-search-live')) : 4,
-								current:   0,
-								processed: 0,
-								timer:     {}
-							};
+						options = {
+							element: searchItem,
+							filter: (searchItem.attr('data-search-filter')) ? searchItem.attr('data-search-filter') : defaultFilter,
+							template: (searchItem.attr('data-search-template')) ? searchItem.attr('data-search-template') : defaultTemplate,
+							live: (searchItem.attr('data-search-live')) ? searchItem.attr('data-search-live') : false,
+							liveCount: (searchItem.attr('data-search-live-count')) ? parseInt(searchItem.attr('data-search-live')) : 4,
+							current: 0,
+							processed: 0,
+							timer: {}
+						};
 
 					if ($('.rd-navbar-search-toggle').length) {
 						var toggle = $('.rd-navbar-search-toggle');
@@ -1784,9 +1802,9 @@
 
 					searchItem.submit($.proxy(function () {
 						$('<input />').attr('type', 'hidden')
-						.attr('name', "filter")
-						.attr('value', this.filter)
-						.appendTo(this.element);
+							.attr('name', "filter")
+							.attr('value', this.filter)
+							.appendTo(this.element);
 						return true;
 					}, options, this))
 				}
@@ -1798,11 +1816,11 @@
 
 				if (match != null) {
 					$.get(handler, {
-						s:        decodeURI(match[1]),
+						s: decodeURI(match[1]),
 						dataType: "html",
-						filter:   match[2],
+						filter: match[2],
 						template: defaultTemplate,
-						live:     ''
+						live: ''
 					}, function (data) {
 						plugins.searchResults.html(data);
 					})
@@ -1820,60 +1838,59 @@
 				var $slickItem = $(plugins.slick[i]);
 
 				$slickItem.slick({
-					slidesToScroll: parseInt($slickItem.attr('data-slide-to-scroll')) || 1,
-					asNavFor:       $slickItem.attr('data-for') || false,
-					dots:           $slickItem.attr("data-dots") == "true",
-					infinite:       $slickItem.attr("data-loop") == "true",
-					focusOnSelect:  true,
-					arrows:         $slickItem.attr("data-arrows") == "true",
-					swipe:          $slickItem.attr("data-swipe") == "true",
-					autoplay:       $slickItem.attr("data-autoplay") == "true",
-					vertical:       $slickItem.attr("data-vertical") == "true",
-					centerMode:     $slickItem.attr("data-center-mode") == "true",
-					centerPadding:  $slickItem.attr("data-center-padding") ? $slickItem.attr("data-center-padding") : '0.50',
-					mobileFirst:    true,
-					responsive:     [
-						{
-							breakpoint: 0,
-							settings:   {
-								slidesToShow: parseInt($slickItem.attr('data-items')) || 1,
+						slidesToScroll: parseInt($slickItem.attr('data-slide-to-scroll')) || 1,
+						asNavFor: $slickItem.attr('data-for') || false,
+						dots: $slickItem.attr("data-dots") == "true",
+						infinite: $slickItem.attr("data-loop") == "true",
+						focusOnSelect: true,
+						arrows: $slickItem.attr("data-arrows") == "true",
+						swipe: $slickItem.attr("data-swipe") == "true",
+						autoplay: $slickItem.attr("data-autoplay") == "true",
+						vertical: $slickItem.attr("data-vertical") == "true",
+						centerMode: $slickItem.attr("data-center-mode") == "true",
+						centerPadding: $slickItem.attr("data-center-padding") ? $slickItem.attr("data-center-padding") : '0.50',
+						mobileFirst: true,
+						responsive: [{
+								breakpoint: 0,
+								settings: {
+									slidesToShow: parseInt($slickItem.attr('data-items')) || 1,
+								}
+							},
+							{
+								breakpoint: 480,
+								settings: {
+									slidesToShow: parseInt($slickItem.attr('data-xs-items')) || 1,
+								}
+							},
+							{
+								breakpoint: 768,
+								settings: {
+									slidesToShow: parseInt($slickItem.attr('data-sm-items')) || 1,
+								}
+							},
+							{
+								breakpoint: 992,
+								settings: {
+									slidesToShow: parseInt($slickItem.attr('data-md-items')) || 1,
+								}
+							},
+							{
+								breakpoint: 1200,
+								settings: {
+									slidesToShow: parseInt($slickItem.attr('data-lg-items')) || 1,
+								}
 							}
-						},
-						{
-							breakpoint: 480,
-							settings:   {
-								slidesToShow: parseInt($slickItem.attr('data-xs-items')) || 1,
-							}
-						},
-						{
-							breakpoint: 768,
-							settings:   {
-								slidesToShow: parseInt($slickItem.attr('data-sm-items')) || 1,
-							}
-						},
-						{
-							breakpoint: 992,
-							settings:   {
-								slidesToShow: parseInt($slickItem.attr('data-md-items')) || 1,
-							}
-						},
-						{
-							breakpoint: 1200,
-							settings:   {
-								slidesToShow: parseInt($slickItem.attr('data-lg-items')) || 1,
-							}
-						}
-					]
-				})
-				.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-					var $this = $(this),
+						]
+					})
+					.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+						var $this = $(this),
 							childCarousel = $this.attr('data-child');
 
-					if (childCarousel) {
-						$(childCarousel + ' .slick-slide').removeClass('slick-current');
-						$(childCarousel + ' .slick-slide').eq(currentSlide).addClass('slick-current');
-					}
-				});
+						if (childCarousel) {
+							$(childCarousel + ' .slick-slide').removeClass('slick-current');
+							$(childCarousel + ' .slick-slide').eq(currentSlide).addClass('slick-current');
+						}
+					});
 			}
 		}
 
@@ -1885,11 +1902,11 @@
 			var k;
 			for (k = 0; k < plugins.owl.length; k++) {
 				var c = $(plugins.owl[k]),
-						responsive = {};
+					responsive = {};
 
 				var aliaces = ["-", "-xs-", "-sm-", "-md-", "-lg-", "-xl-"],
-						values = [0, 480, 768, 992, 1200, 1485],
-						i, j;
+					values = [0, 480, 768, 992, 1200, 1485],
+					i, j;
 
 				for (i = 0; i < values.length; i++) {
 					responsive[values[i]] = {};
@@ -1913,8 +1930,8 @@
 				if (c.attr('data-dots-custom')) {
 					c.on("initialized.owl.carousel", function (event) {
 						var carousel = $(event.currentTarget),
-								customPag = $(carousel.attr("data-dots-custom")),
-								active = 0;
+							customPag = $(carousel.attr("data-dots-custom")),
+							active = 0;
 
 						if (carousel.attr('data-active')) {
 							active = parseInt(carousel.attr('data-active'));
@@ -1939,7 +1956,7 @@
 				if (c.attr('data-nav-custom')) {
 					c.on("initialized.owl.carousel", function (event) {
 						var carousel = $(event.currentTarget),
-								customNav = $(carousel.attr("data-nav-custom"));
+							customNav = $(carousel.attr("data-nav-custom"));
 
 						customNav.find("[data-owl-prev]").on('click', function (e) {
 							e.preventDefault();
@@ -1954,22 +1971,22 @@
 				}
 
 				c.owlCarousel({
-					autoplay:        c.attr("data-autoplay") === "true",
-					loop:            c.attr("data-loop") === "true",
-					items:           1,
-					autoplaySpeed:   600,
+					autoplay: c.attr("data-autoplay") === "true",
+					loop: c.attr("data-loop") === "true",
+					items: 1,
+					autoplaySpeed: 600,
 					autoplayTimeout: 3000,
-					dotsContainer:   c.attr("data-pagination-class") || false,
-					navContainer:    c.attr("data-navigation-class") || false,
-					mouseDrag:       c.attr("data-mouse-drag") === "true",
-					nav:             c.attr("data-nav") === "true",
-					dots:            c.attr("data-dots") === "true",
-					dotsEach:        c.attr("data-dots-each") ? parseInt(c.attr("data-dots-each")) : false,
-					responsive:      responsive,
-					animateOut:      c.attr("data-animation-out") || false,
-					animateIn:       c.attr("data-animation-in") || false,
-					navText:         c.attr("data-nav-text") ? $.parseJSON(c.attr("data-nav-text")) : [],
-					navClass:        c.attr("data-nav-class") ? $.parseJSON(c.attr("data-nav-class")) : ['owl-prev', 'owl-next']
+					dotsContainer: c.attr("data-pagination-class") || false,
+					navContainer: c.attr("data-navigation-class") || false,
+					mouseDrag: c.attr("data-mouse-drag") === "true",
+					nav: c.attr("data-nav") === "true",
+					dots: c.attr("data-dots") === "true",
+					dotsEach: c.attr("data-dots-each") ? parseInt(c.attr("data-dots-each")) : false,
+					responsive: responsive,
+					animateOut: c.attr("data-animation-out") || false,
+					animateIn: c.attr("data-animation-in") || false,
+					navText: c.attr("data-nav-text") ? $.parseJSON(c.attr("data-nav-text")) : [],
+					navClass: c.attr("data-nav-class") ? $.parseJSON(c.attr("data-nav-class")) : ['owl-prev', 'owl-next']
 				});
 
 			}
@@ -1986,18 +2003,18 @@
 			for (i = 0; i < plugins.counter.length; i++) {
 				var $counterNotAnimated = $(plugins.counter[i]).not('.animated');
 				$document
-				.on("scroll", $.proxy(function () {
-					var $this = this;
+					.on("scroll", $.proxy(function () {
+						var $this = this;
 
-					if ((!$this.hasClass("animated")) && (isScrolledIntoView($this))) {
-						$this.countTo({
-							refreshInterval: 40,
-							speed:           $this.attr("data-speed") || 1000
-						});
-						$this.addClass('animated');
-					}
-				}, $counterNotAnimated))
-				.trigger("scroll");
+						if ((!$this.hasClass("animated")) && (isScrolledIntoView($this))) {
+							$this.countTo({
+								refreshInterval: 40,
+								speed: $this.attr("data-speed") || 1000
+							});
+							$this.addClass('animated');
+						}
+					}, $counterNotAnimated))
+					.trigger("scroll");
 			}
 		}
 
@@ -2008,13 +2025,13 @@
 		if (plugins.isotope.length) {
 			var i, isogroup = [];
 			for (i = 0; i < plugins.isotope.length; i++) {
-				var isotopeItem = plugins.isotope[i]
-						, iso = new Isotope(isotopeItem, {
-					itemSelector: '.isotope-item',
-					layoutMode:   isotopeItem.getAttribute('data-isotope-layout') ? isotopeItem.getAttribute('data-isotope-layout') : 'masonry',
-					filter:       '*',
-					// masonry: {columnWidth: .42}
-				});
+				var isotopeItem = plugins.isotope[i],
+					iso = new Isotope(isotopeItem, {
+						itemSelector: '.isotope-item',
+						layoutMode: isotopeItem.getAttribute('data-isotope-layout') ? isotopeItem.getAttribute('data-isotope-layout') : 'masonry',
+						filter: '*',
+						// masonry: {columnWidth: .42}
+					});
 
 				isogroup.push(iso);
 			}
@@ -2040,8 +2057,8 @@
 				var iso = $('.isotope[data-isotope-group="' + this.getAttribute("data-isotope-group") + '"]');
 				iso.isotope({
 					itemSelector: '.isotope-item',
-					layoutMode:   iso.attr('data-isotope-layout') ? iso.attr('data-isotope-layout') : 'masonry',
-					filter:       this.getAttribute("data-isotope-filter") == '*' ? '*' : '[data-filter*="' + this.getAttribute("data-isotope-filter") + '"]',
+					layoutMode: iso.attr('data-isotope-layout') ? iso.attr('data-isotope-layout') : 'masonry',
+					filter: this.getAttribute("data-isotope-filter") == '*' ? '*' : '[data-filter*="' + this.getAttribute("data-isotope-filter") + '"]',
 					// masonry: {columnWidth: .42}
 				});
 			}).eq(0).trigger("click")
@@ -2082,7 +2099,9 @@
 
 				scrollerItem.mCustomScrollbar({
 					scrollInertia: 200,
-					scrollButtons: {enable: true}
+					scrollButtons: {
+						enable: true
+					}
 				});
 			}
 		}
@@ -2247,7 +2266,7 @@ function aboutClick() {
 		studentContent.classList.remove('active');
 		studentContent.classList.add('inactive');
 	}
-	
+
 	const ansPl = placementContent.classList.contains('active')
 	if (ansPl) {
 		placementContent.classList.remove('active');
@@ -2294,7 +2313,7 @@ function admissionClick() {
 		studentContent.classList.remove('active');
 		studentContent.classList.add('inactive');
 	}
-	
+
 	const ansPl = placementContent.classList.contains('active')
 	if (ansPl) {
 		placementContent.classList.remove('active');
@@ -2340,7 +2359,7 @@ function departmentClick() {
 		studentContent.classList.remove('active');
 		studentContent.classList.add('inactive');
 	}
-	
+
 	const ansPl = placementContent.classList.contains('active')
 	if (ansPl) {
 		placementContent.classList.remove('active');
@@ -2387,7 +2406,7 @@ function examinationClick() {
 		studentContent.classList.remove('active');
 		studentContent.classList.add('inactive');
 	}
-	
+
 	const ansPl = placementContent.classList.contains('active')
 	if (ansPl) {
 		placementContent.classList.remove('active');
@@ -2433,7 +2452,7 @@ function studentClick() {
 		examinationContent.classList.remove('active');
 		examinationContent.classList.add('inactive');
 	}
-	
+
 	const ansPl = placementContent.classList.contains('active')
 	if (ansPl) {
 		placementContent.classList.remove('active');
@@ -2525,10 +2544,28 @@ function newsClick() {
 		studentContent.classList.remove('active');
 		studentContent.classList.add('inactive');
 	}
-	
+
 	const ansPl = placementContent.classList.contains('active')
 	if (ansPl) {
 		placementContent.classList.remove('active');
 		placementContent.classList.add('inactive');
 	}
 }
+
+var openModal = document.getElementById('open-modal');
+var modal = document.getElementById('modal-demo');
+var closeModal = document.getElementsByClassName('close-modal')[0];
+
+setTimeout(function () {
+
+	modal.classList.toggle('visible');
+	// Close modal event listener
+	closeModal.addEventListener('click', function () {
+		modal.classList.remove('visible');
+	});
+}, 5000);
+
+function myfunction() {
+	// Open modal event listener
+
+};

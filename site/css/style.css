@@ -108,6 +108,52 @@
 /***********************************************
 			CUSTOM NAVBAR CSS
 ***********************************************/
+.img-container {
+	position: relative !important;
+}
+
+.pos-play {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-top: 13%;
+}
+
+@media screen and (max-width:992px) {
+	.pos-play {
+		position: absolute !important;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding-top: 35%;
+	}
+}
+@media screen and (max-width:768px) {
+	.slick-next {
+		right: 50px !important;
+		top: 85% !important;
+	}
+
+	.slick-prev {
+		top: 85% !important;
+		left: 50px !important;
+	}
+}
+.slick-next {
+	right: 50px !important;
+}
+
+.slick-prev {
+	left: 50px !important;
+}
+
+.slick-prev,
+.slick-next {
+	width: 40px !important;
+	height: 40px !important;
+}
+
 .margin-0 {
 	margin: 0;
 }
@@ -1081,11 +1127,13 @@ padding-left {
 	transition: transform 0.4s, opacity 0.1s;
 	transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
 }
+
 /* ************ Feedback form ******** */
-.d-flex-center{
+.d-flex-center {
 	display: flex;
 	justify-content: center;
 }
+
 /*************** Notice ****************************/
 .notice-wrapper {
 	padding: 50px;
@@ -8922,7 +8970,6 @@ button.close {
 	background-color: #fff;
 	border: 1px solid #999;
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-radius: 8px;
 	-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
 	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
 	background-clip: padding-box;
