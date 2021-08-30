@@ -780,20 +780,19 @@
     <div class="snackbars" id="form-output-global"></div>
     <!-- Java script-->
     <!-- Java script-->
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyuq7LUwYSEdp3Qd3lHOdPBLSKfJesOo8tU2_e_se3-uv-tvYx0FBH97Zj8XwGldLY/exec'
-      const form = document.forms['google-sheet']
-
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => alert("Thanks for Subscribing..! Newsletters Will Be Mailed..."))
-          .catch(error => console.error('Error!', error.message))
-      })
+    <script type="text/javascript">
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxzJLdmVdx93o2ZQhnzQfg4v_EIOb5u45vTDqLtOwTJY4Wtcf2mqL4DltwwNMx2D_Om/exec'
+              const form = document.forms['google-sheet']
+            
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                  .then(response => alert("You have been Subscribed to DBIT Premium!"))
+                  .catch(error => console.error('Error!', error.message))
+              })
     </script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>
