@@ -46616,7 +46616,7 @@ html .page .isotope-filters .list-isotop>li>a.active-event {
 	}
 }
 
-/* 
+/*
  *  Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -46659,7 +46659,7 @@ html .page .isotope-filters .list-isotop>li>a.active-event {
 	}
 }
 
-/* 
+/*
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
@@ -46670,7 +46670,7 @@ html .page .isotope-filters .list-isotop>li>a.active-event {
 	transition: height 500ms ease-in-out;
 }
 
-/* 
+/*
  *  Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -46777,7 +46777,7 @@ html .page .isotope-filters .list-isotop>li>a.active-event {
 	display: block;
 }
 
-/* 
+/*
  * 	Owl Carousel - Lazy Load Plugin
  */
 .owl-carousel .owl-item .owl-lazy {
@@ -46789,7 +46789,7 @@ html .page .isotope-filters .list-isotop>li>a.active-event {
 	transition: opacity 400ms ease;
 }
 
-/* 
+/*
  * 	Owl Carousel - Video Plugin
  */
 .owl-carousel .owl-video-wrapper {
@@ -55994,7 +55994,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .select2-container--bootstrap .select2-selection--single {
 	text-align: left;
 	height: 60px;
-	line-height: 6px;
+	line-height: 16px;
 	padding: 7px 12px 7px 0;
 }
 
@@ -56050,7 +56050,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	margin-top: 5px;
 }
 
-.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
+	.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
 	color: #686868;
 	background: #1c1c1c;
 	border: 1px solid #1c1c1c;
