@@ -33416,7 +33416,7 @@ html .page .blog+.blog {
 
 .blog-masonry-content,
 .blog-grid-content {
-	margin-top: 35px;
+	margin-top: 0px;
 	padding: 0 15px;
 }
 
