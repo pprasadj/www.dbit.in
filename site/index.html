@@ -3,14 +3,14 @@
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LW4VH4EC6T"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW4VH4EC6T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-LW4VH4EC6T');
-</script>
+    gtag('config', 'G-LW4VH4EC6T');
+  </script>
   <meta name="google-site-verification" content="vMyBRXJKcNIkmVHSirLgTaEf242_lqTFP0Ra-0UXe-o" />
   <!-- Site Title-->
   <title> Don Bosco Institute of Technology, Mumbai </title>
@@ -33,23 +33,20 @@
     <script src="js/html5shiv.min.js"></script>
 		<![endif]-->
   <style>
-    .close-modal {
-      float: right;
-    }
-
     .modal-wrap {
       background: rgba(0, 0, 0, 0.8);
-      height: 100%;
-      left: 0;
+      height: 100vh;
+      visibility: hidden;
       opacity: 0;
+
       overflow: auto;
       position: fixed;
-      top: 0;
-      visibility: hidden;
-      width: 100%;
+      /* top: 0; */
+      /* left: 0; */
+      width: 100vw;
       z-index: 10000;
-      display: -webkit-box;
-      display: -ms-flexbox;
+      /* display: -webkit-box; */
+      /* display: -ms-flexbox; */
       display: flex;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -68,9 +65,12 @@
 
     .modal-wrap .modal-container {
       background: #fff;
+      /* margin: 20% 10% !important; */
       margin: 1em;
-      max-width: 100%;
+      max-width: 95%;
       width: 900px;
+      /* height: 100vh; */
+      /* width: 900px; */
       z-index: 100;
 
     }
@@ -78,43 +78,71 @@
     .modal-wrap .modal-container .modal-header,
     .modal-wrap .modal-container .modal-footer {
       background: #3B82F6;
-      float: left;
-      width: 100%;
+      /* float: left; */
+      /* width: 100%; */
     }
 
     .modal-wrap .modal-title {
       color: #3B82F6;
-      float: left;
-      font-size: 26px;
+      /* float: left; */
+      font-size: 1.2em;
       font-weight: 500;
-      margin: 0;
-      padding: 15px 0 5px 25px;
+      /* margin: 0; */
+      /* padding: 15px 0 5px 25px; */
+      margin: 10px 20px;
+    }
+
+    .modal-wrap .modal-text {
+      font-size: 0.9em;
+      margin: 10px;
+      /* padding-right: 10px; */
+    }
+    .modal-wrap ol li {
+      padding-left: 10px;
+    }
+
+    .contact-text-modal {
+      padding: 10px;
+      padding-bottom: 20px;
+    }
+
+    .modal-wrap .modal-btn {
+      padding: 15px 20px;
+      margin: 10px;
+      max-width: 90%;
+      font-size: 0.9em;
     }
 
     .modal-wrap .close-modal {
       background: #3B82F6;
-      border: 0;
+      /* border: 0; */
       color: #fff;
-      cursor: pointer;
-      float: right;
+      /* cursor: pointer; */
+      /* float: right; */
       font-size: 18px;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
+      /* -webkit-transition: all 0.3s ease-in-out; */
+      /* transition: all 0.3s ease-in-out; */
+    }
+
+    .close-modal {
+      float: right;
+      padding: 5px 10px;
+      margin: 10px;
     }
 
     .modal-wrap .modal-header .close-modal:hover {
-      opacity: 1;
+      /* opacity: 1; */
     }
 
     .modal-wrap .modal-content {
-      float: left;
-      margin: 0;
-      padding: 15px 30px;
-      width: 100%;
+      /* float: left; */
+      /* margin: 0; */
+      /* padding: 15px 30px; */
+      /* width: 100%; */
     }
 
     .modal-wrap .modal-content p:last-child {
-      margin-bottom: 0;
+      /* margin-bottom: 0; */
     }
 
     .modal-wrap .modal-footer {
@@ -125,7 +153,7 @@
       color: #ccc;
       font-size: 12px;
       font-style: italic;
-      margin: 10px;
+      /* margin: 10px; */
     }
 
     .modal-wrap .modal-footer a {
@@ -133,20 +161,53 @@
     }
 
     .modal-wrap .btn {
-      padding: 15px 10px 25px 10px;
-      height: 20px;
-      margin: 13px 55px 20px 0;
+      /* padding: 15px 10px 25px 10px; */
+      /* height: 20px; */
+      /* margin: 13px 55px 20px 0; */
     }
 
     .subheader {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding-top: 30px;
+      /* display: flex; */
+      /* flex-wrap: wrap; */
+      /* justify-content: space-between; */
+      /* padding-top: 30px; */
     }
 
     .modal-wrap ol {
-      padding: 30px;
+      /* padding: 30px; */
+    }
+
+    @media only screen and (min-width: 880px) {
+      .modal-wrap .modal-title {
+        color: #3B82F6;
+        font-size: 1.3em;
+        font-weight: 500;
+        margin: 20px 40px;
+      }
+
+      .modal-wrap .modal-text {
+        font-size: 1.1em;
+        margin: 5px 25px;
+        padding-left: 20px;
+      }
+
+      .contact-text-modal {
+        padding: 10px;
+        padding-bottom: 20px;
+      }
+
+      .modal-wrap .modal-btn {
+        padding: 15px 20px;
+        margin: 10px;
+      }
+
+      .modal-wrap .close-modal {
+        padding: 7px 12px;
+        margin: 10px;
+        /* height: 30px; */
+        /* width: 30px; */
+        /* text-align: center; */
+      }
     }
   </style>
 </head>
@@ -159,17 +220,18 @@
         <div class="subheader">
           <h6 class="modal-title">Looking for 1'st year Engineering Admissions 2021-22? </h6>
         </div><br>
-        We offer following branches,
-        <ol>
+        <p class="modal-text">
+          We offer following branches,
+        </p>
+        <ol class="modal-text">
           <li>1. Computer Engineering (60 seats)</li>
           <li>2. Information Technology (60 seats)</li>
           <li>3. Electronics and Telecommunication(60 seats)</li>
-          <li>4. Mechanical Engineerings (120 seats)</li>
-          <a class="btn" href="admission-enquiry.html">Admission Enquery Form</a>
-          <a class="btn" href="procedure-eligibility.html">Seats, Procedure & Eligibility</a>
+          <li style="margin-bottom: 20px;">4. Mechanical Engineerings (120 seats)</li>
+          <a class="btn modal-btn" href="admission-enquiry.html">Admission Enquery Form</a>
+          <a class="btn modal-btn" href="procedure-eligibility.html">Seats, Procedure & Eligibility</a>
         </ol>
-
-        <center>Contact for admission : 87790 75420 / 022 68878700</center>
+        <p class="text-center contact-text-modal">Contact for admission : 87790 75420 / 022 68878700</p>
 
       </div>
       <div class="modal-footer">
@@ -570,7 +632,7 @@
               </li>
 
               <li class="nav-list-element admission-ele">
-                <a href="">Admission <img src="./images/flash-new-icon.gif" alt="" class="flash-news">  </a>
+                <a href="">Admission <img src="./images/flash-new-icon.gif" alt="" class="flash-news"> </a>
                 <div class="admission-mega-menu mega-menu">
                   <div class="d-flex">
                     <div class="left">
@@ -677,7 +739,8 @@
                         <div class="rest-links">
                           <h3>Exam Links</h3>
                           <p><a href="exam-notice.html"> <i class="fa fa-angle-right"></i> Notices</a></p>
-                          <p><a href="exam-results.html"> <i class="fa fa-angle-right"></i> Exam Results <img src="./images/flash-new-icon.gif" alt="" class="flash-news"></a></p>
+                          <p><a href="exam-results.html"> <i class="fa fa-angle-right"></i> Exam Results <img
+                                src="./images/flash-new-icon.gif" alt="" class="flash-news"></a></p>
                           <p><a href="hall-ticket.html"> <i class="fa fa-angle-right"></i> Exam Hall Ticket</a></p>
                           <p><a href="timetable.html"> <i class="fa fa-angle-right"></i> Time Table</a></p>
                         </div>
@@ -846,10 +909,10 @@
         <div class="your-class">
           <div class="card-wrapper">
             <div class="swiper-slide-caption img-container">
-                <source media="(min-width:992px)" srcset="images/slider-images/1510_SliderA.png">
-                <source media="(min-width:650px)" srcset="images/slider-images/650_SliderA.png">
-                <source media="(min-width:325px)" srcset="images/slider-images/400_SliderA.png">
-                <img src="images/slider-images/1510_SliderA.png" alt="Sliders Images" width="100%" height="600px">
+              <source media="(min-width:992px)" srcset="images/slider-images/1510_SliderA.png">
+              <source media="(min-width:650px)" srcset="images/slider-images/650_SliderA.png">
+              <source media="(min-width:325px)" srcset="images/slider-images/400_SliderA.png">
+              <img src="images/slider-images/1510_SliderA.png" alt="Sliders Images" width="100%" height="600px">
               </picture>
               <div class="shell pos-play" style="text-align: center;">
                 <div class="range range-xs-middle range-xs-center">
@@ -1404,7 +1467,7 @@
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-  </script>
+    </script>
   <script>
     $(document).ready(function () {
       $('.your-class').slick({
