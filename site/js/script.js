@@ -568,21 +568,21 @@
 			}).regula('bind');
 
 			var regularConstraintsMessages = [{
-					type: regula.Constraint.Required,
-					newMessage: "The text field is required."
-				},
-				{
-					type: regula.Constraint.Email,
-					newMessage: "The email is not a valid email."
-				},
-				{
-					type: regula.Constraint.Numeric,
-					newMessage: "Only numbers are required"
-				},
-				{
-					type: regula.Constraint.Selected,
-					newMessage: "Please choose an option."
-				}
+				type: regula.Constraint.Required,
+				newMessage: "The text field is required."
+			},
+			{
+				type: regula.Constraint.Email,
+				newMessage: "The email is not a valid email."
+			},
+			{
+				type: regula.Constraint.Numeric,
+				newMessage: "Only numbers are required"
+			},
+			{
+				type: regula.Constraint.Selected,
+				newMessage: "Please choose an option."
+			}
 			];
 
 
@@ -678,13 +678,13 @@
 
 				grecaptcha.render(
 					$capthcaItem.attr('id'), {
-						sitekey: $capthcaItem.attr('data-sitekey'),
-						size: $capthcaItem.attr('data-size') ? $capthcaItem.attr('data-size') : 'normal',
-						theme: $capthcaItem.attr('data-theme') ? $capthcaItem.attr('data-theme') : 'light',
-						callback: function (e) {
-							$('.recaptcha').trigger('propertychange');
-						}
+					sitekey: $capthcaItem.attr('data-sitekey'),
+					size: $capthcaItem.attr('data-size') ? $capthcaItem.attr('data-size') : 'normal',
+					theme: $capthcaItem.attr('data-theme') ? $capthcaItem.attr('data-theme') : 'light',
+					callback: function (e) {
+						$('.recaptcha').trigger('propertychange');
 					}
+				}
 				);
 				$capthcaItem.after("<span class='form-validation'></span>");
 			}
@@ -898,13 +898,13 @@
 								formHasCaptcha = true;
 
 								$.ajax({
-										method: "POST",
-										url: "bat/reCaptcha.php",
-										data: {
-											'g-recaptcha-response': captchaToken
-										},
-										async: false
-									})
+									method: "POST",
+									url: "bat/reCaptcha.php",
+									data: {
+										'g-recaptcha-response': captchaToken
+									},
+									async: false
+								})
 									.done(function (responceCode) {
 										if (responceCode !== 'CPT000') {
 											if (output.hasClass("snackbars")) {
@@ -1603,10 +1603,10 @@
 			for (i = 0; i < plugins.viewAnimate.length; i++) {
 				var $view = $(plugins.viewAnimate[i]).not('.active');
 				$document.on("scroll", $.proxy(function () {
-						if (isScrolledIntoView(this)) {
-							this.addClass("active");
-						}
-					}, $view))
+					if (isScrolledIntoView(this)) {
+						this.addClass("active");
+					}
+				}, $view))
 					.trigger("scroll");
 			}
 		}
@@ -1838,50 +1838,50 @@
 				var $slickItem = $(plugins.slick[i]);
 
 				$slickItem.slick({
-						slidesToScroll: parseInt($slickItem.attr('data-slide-to-scroll')) || 1,
-						asNavFor: $slickItem.attr('data-for') || false,
-						dots: $slickItem.attr("data-dots") == "true",
-						infinite: $slickItem.attr("data-loop") == "true",
-						focusOnSelect: true,
-						arrows: $slickItem.attr("data-arrows") == "true",
-						swipe: $slickItem.attr("data-swipe") == "true",
-						autoplay: $slickItem.attr("data-autoplay") == "true",
-						vertical: $slickItem.attr("data-vertical") == "true",
-						centerMode: $slickItem.attr("data-center-mode") == "true",
-						centerPadding: $slickItem.attr("data-center-padding") ? $slickItem.attr("data-center-padding") : '0.50',
-						mobileFirst: true,
-						responsive: [{
-								breakpoint: 0,
-								settings: {
-									slidesToShow: parseInt($slickItem.attr('data-items')) || 1,
-								}
-							},
-							{
-								breakpoint: 480,
-								settings: {
-									slidesToShow: parseInt($slickItem.attr('data-xs-items')) || 1,
-								}
-							},
-							{
-								breakpoint: 768,
-								settings: {
-									slidesToShow: parseInt($slickItem.attr('data-sm-items')) || 1,
-								}
-							},
-							{
-								breakpoint: 992,
-								settings: {
-									slidesToShow: parseInt($slickItem.attr('data-md-items')) || 1,
-								}
-							},
-							{
-								breakpoint: 1200,
-								settings: {
-									slidesToShow: parseInt($slickItem.attr('data-lg-items')) || 1,
-								}
-							}
-						]
-					})
+					slidesToScroll: parseInt($slickItem.attr('data-slide-to-scroll')) || 1,
+					asNavFor: $slickItem.attr('data-for') || false,
+					dots: $slickItem.attr("data-dots") == "true",
+					infinite: $slickItem.attr("data-loop") == "true",
+					focusOnSelect: true,
+					arrows: $slickItem.attr("data-arrows") == "true",
+					swipe: $slickItem.attr("data-swipe") == "true",
+					autoplay: $slickItem.attr("data-autoplay") == "true",
+					vertical: $slickItem.attr("data-vertical") == "true",
+					centerMode: $slickItem.attr("data-center-mode") == "true",
+					centerPadding: $slickItem.attr("data-center-padding") ? $slickItem.attr("data-center-padding") : '0.50',
+					mobileFirst: true,
+					responsive: [{
+						breakpoint: 0,
+						settings: {
+							slidesToShow: parseInt($slickItem.attr('data-items')) || 1,
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: parseInt($slickItem.attr('data-xs-items')) || 1,
+						}
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: parseInt($slickItem.attr('data-sm-items')) || 1,
+						}
+					},
+					{
+						breakpoint: 992,
+						settings: {
+							slidesToShow: parseInt($slickItem.attr('data-md-items')) || 1,
+						}
+					},
+					{
+						breakpoint: 1200,
+						settings: {
+							slidesToShow: parseInt($slickItem.attr('data-lg-items')) || 1,
+						}
+					}
+					]
+				})
 					.on('afterChange', function (event, slick, currentSlide, nextSlide) {
 						var $this = $(this),
 							childCarousel = $this.attr('data-child');
@@ -2552,18 +2552,25 @@ function newsClick() {
 	}
 }
 
+
 var openModal = document.getElementById('open-modal');
 var modal = document.getElementById('modal-demo');
 var closeModal = document.getElementsByClassName('close-modal')[0];
 
-setTimeout(function () {
+try {
+	setTimeout(function () {
 
-	modal.classList.toggle('visible');
-	// Close modal event listener
-	closeModal.addEventListener('click', function () {
-		modal.classList.remove('visible');
-	});
-}, 5000);
+		modal.classList.toggle('visible');
+		// Close modal event listener
+		closeModal.addEventListener('click', function () {
+			modal.classList.remove('visible');
+		});
+	}, 5000);	
+} catch (error) {
+	
+}
+
+
 
 function myfunction() {
 	// Open modal event listener
