@@ -2305,15 +2305,15 @@ th {
 .table>tbody>tr>td,
 .table>tfoot>tr>th,
 .table>tfoot>tr>td {
-	padding: 22px 36px;
-	line-height: 1.625;
+	padding: 1px 5px;
+	line-height: 1.0;
 	vertical-align: top;
-	border-top: 1px solid #e1e1e1;
+	border-top: .5px solid #e1e1e1;
 }
 
 .table>thead>tr>th {
 	vertical-align: bottom;
-	border-bottom: 2px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
 }
 
 .table>caption+thead>tr:first-child>th,
@@ -2339,7 +2339,7 @@ th {
 .table-condensed>tbody>tr>td,
 .table-condensed>tfoot>tr>th,
 .table-condensed>tfoot>tr>td {
-	padding: 5px;
+	padding: 2px;
 }
 
 .table-bordered {
@@ -2504,7 +2504,7 @@ table th[class*="col-"] {
 @media screen and (max-width: 767px) {
 	.table-responsive {
 		width: 100%;
-		margin-bottom: 19.5px;
+		margin-bottom: 10.5px;
 		overflow-y: hidden;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
 		border: 1px solid #e1e1e1;
@@ -2524,7 +2524,7 @@ table th[class*="col-"] {
 	}
 
 	.table-responsive>.table-bordered {
-		border: 0;
+		border: 1;
 	}
 
 	.table-responsive>.table-bordered>thead>tr>th:first-child,
