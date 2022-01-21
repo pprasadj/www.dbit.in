@@ -226,6 +226,7 @@ padding-left {
 
 .nav-list-element a:hover {
 	color: #3B82F6;
+	cursor: pointer;
 }
 
 .rest-links h3 {
@@ -12820,6 +12821,12 @@ html.lt-ie-10 .range>[class*="cell-xxl-preffix-"] {
 
 .veil {
 	display: none !important;
+}
+
+@media (max-width: 480px) {
+	.rd-navbar-brand{
+		width: 255px;
+	}
 }
 
 @media (min-width: 480px) {
