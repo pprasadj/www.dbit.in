@@ -226,6 +226,7 @@ padding-left {
 
 .nav-list-element a:hover {
 	color: #3B82F6;
+	cursor: pointer;
 }
 
 .rest-links h3 {
