@@ -489,19 +489,26 @@ padding-left {
 	cursor: default;
 	border-bottom: solid 0.5px rgba(255, 255, 255, 0.4);
 	border-top: solid 0.5px rgba(255, 255, 255, 0.4);
-	;
 	padding: 45px;
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
 
 .mobile-link {
-	cursor: default;
+	cursor: pointer;
 	border-bottom: solid 0.5px rgba(255, 255, 255, 0.4);
 	border-top: solid 0.5px rgba(255, 255, 255, 0.4);
 	padding: 45px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+.down-arrow{
+	padding:0 0.5rem;
+}
+.down-arrow:hover{
+	cursor: pointer;
+	transform: translateY(5px);
 }
 
 .about-us span,
@@ -537,7 +544,8 @@ padding-left {
 }
 
 .flash-news {
-	transform: translate(0px, -3px);
+	position:relative;
+	width:3rem;
 }
 
 /* .mobile-menu-wrapper{
@@ -47205,7 +47213,6 @@ html .page .isotope-filters .list-isotop>li>a.active-event {
 	background: #fff;
 	box-shadow: none;
 }
-
 .rd-navbar-toggle {
 	display: inline-block;
 	position: relative;
