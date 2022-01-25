@@ -2558,14 +2558,13 @@ var modal = document.getElementById('modal-demo');
 var closeModal = document.getElementsByClassName('close-modal')[0];
 
 try {
-	setTimeout(function () {
-
-		modal.classList.toggle('visible');
-		// Close modal event listener
-		closeModal.addEventListener('click', function () {
-			modal.classList.remove('visible');
-		});
-	}, 5000);	
+	// setTimeout(function () {
+	// 	modal.classList.toggle('visible');
+	// 	Close modal event listener
+	// 	closeModal.addEventListener('click', function () {
+	// 		modal.classList.remove('visible');
+	// 	});
+	// }, 5000);	
 } catch (error) {
 	
 }

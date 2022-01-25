@@ -1000,9 +1000,9 @@ padding-left {
 	-webkit-overflow-scrolling: touch;
 }
 
-.mobile-menu-wrapper::-webkit-scrollbar {
+/* .mobile-menu-wrapper::-webkit-scrollbar {
 	display: none;
-}
+} */
 
 .mobile-menu-flex {
 	display: flex;
