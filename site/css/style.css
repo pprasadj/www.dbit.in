@@ -169,7 +169,7 @@ padding-left {
 	justify-content: space-between;
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width:1199.5px) {
 	.custom-navbar {
 		display: none;
 	}
@@ -207,7 +207,7 @@ padding-left {
 }
 
 .nav-list h3 {
-	color: #111;
+	color: #3B82F6;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 500;
 }
@@ -458,19 +458,19 @@ padding-left {
 	transition: all .4s ease-in-out;
 }
 
-@media screen and (max-width:1536px) {
+/* @media screen and (max-width:1536px) {
 	#mobile-nav-cust {
 		display: none;
 	}
-}
+} */
 
-@media screen and (max-width:1200px) {
+/* @media screen and (max-width:1200px) {
 	.rd-navbar--is-clone .custom-navbar {
 		display: none;
 	}
-}
+} */
 
-@media screen and (max-width:992px) {
+/* @media screen and (max-width:992px) {
 	#mobile-nav-cust {
 		display: block;
 	}
@@ -478,7 +478,7 @@ padding-left {
 	.rd-navbar--is-clone .custom-navbar {
 		display: none;
 	}
-}
+} */
 
 .mobile-nav-container a {
 	color: #fff !important;
@@ -495,15 +495,29 @@ padding-left {
 .examination,
 .student,
 .faculty,
-.placement {
+.placement,
+.news {
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	cursor: default;
-	border-bottom: solid 0.5px rgba(255, 255, 255, 0.4);
-	border-top: solid 0.5px rgba(255, 255, 255, 0.4);
-	padding: 45px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	 border-bottom: solid 0.5px rgba(255, 255, 255, 0.4); 
+	 border-top: solid 0.5px rgba(255, 255, 255, 0.4); 
+	 padding: 45px;
+	 padding-top: 15px; 
+	 padding-bottom: 15px; 
+}
+
+.about-us i,
+.admission i,
+.department i,
+.examination i,
+.student i,
+.faculty i,
+.placement i,
+.news i{
+	position: absolute;
+	right: 2rem;
+	padding: 1rem;
 }
 
 .mobile-link {
@@ -639,7 +653,7 @@ padding-left {
 	padding-right: 20px;
 }
 
-.margin-0 {
+/* .margin-0 {
 	margin: 0;
 }
 
@@ -654,7 +668,7 @@ padding-left {
 	justify-content: space-between;
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width:1199.5px) {
 	.custom-navbar {
 		display: none;
 	}
@@ -689,11 +703,11 @@ padding-left {
 		padding: 0 5px;
 		align-items: center;
 	}
-}
+} */
 
-.nav-list h3 {
+/* .nav-list h3 {
 	color: #3B82F6;
-}
+} */
 
 .nav-list-element a{
 	padding: 20px 15px;
@@ -890,7 +904,7 @@ padding-left {
 	display: block;
 }
 
-#mobile-nav-cust {
+/* #mobile-nav-cust {
 	background: rgba(14, 14, 14, 0.98);
 	color: #fff;
 	position: fixed;
@@ -929,9 +943,9 @@ padding-left {
 
 .mobile-nav-container a:hover {
 	color: #3b82f6 !important;
-}
+} */
 
-.about-us,
+/* .about-us,
 .admission,
 .department,
 .examination,
@@ -947,7 +961,7 @@ padding-left {
 	padding: 45px;
 	padding-top: 15px;
 	padding-bottom: 15px;
-}
+} */
 
 .mobile-link {
 	cursor: default;
