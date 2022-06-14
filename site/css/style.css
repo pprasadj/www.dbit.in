@@ -193,7 +193,7 @@ padding-left {
 .nav-list {
 	display: flex;
 	height: 100%;
-	padding: 0 40px;
+	padding: 0 10px;
 	align-items: center;
 }
 
@@ -216,7 +216,7 @@ padding-left {
 	/* cursor:pointer; */
 	/* margin: 0 0.3rem; */
 	/* padding: 20px 15px; */
-	padding: 1.5rem 1.3rem;
+	padding: 1.5rem 1rem;
 	color: #fff;
 }
 .nav-list-tag{
