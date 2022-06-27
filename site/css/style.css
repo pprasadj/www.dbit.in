@@ -1088,6 +1088,30 @@ padding-left {
 	padding-right: 20px;
 }
 
+td[scope="col1"] {
+    /* background-color: #53fae3; */
+    background-color: #3b82f6;
+}
+
+td[scope="col2"] {
+    /* background-color: #ffc465; */
+    background-color: #61bdfb;
+}
+
+td[scope="col3"] {
+    background-color: #3b82f6;
+    /* background-color: #f38595; */
+}
+
+td[scope="col4"] {
+    background-color: #61bdfb;
+    /* background-color: #98bffa; */
+}
+
+tr[scope="col1"] {
+    background-color: #e1e0e376;
+    /* background-color: #e1e0e376; */
+}
 /*************** Course Offered *****************/
 .course-flex {
 	display: flex;
